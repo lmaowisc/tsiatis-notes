@@ -6,17 +6,21 @@
 - Derive semiparametric estimators under monotone missingness
 - Connect censoring to monotone coarsening
 
-## Prerequisites and notation
+## Chapter Summary
 
-## Expository notes
+## Notes and Extensions
 
-## Expanded derivations
 
-## Worked examples
+## Solutions to Exercises
 
-## Solutions to exercises
+### Exercise 9.1
 
-## Additional exercises
+::: {.solution}
 
-## Chapter summary
+
+
+:::
+
+## Additional Exercises
+
 

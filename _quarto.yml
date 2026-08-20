@@ -3,7 +3,7 @@ project:
   output-dir: _book
 
 book:
-  title: "Notes and Solutions for Semiparametric Theory and Missing Data"
+  title: "Notes and Solutions for *Semiparametric Theory and Missing Data*"
   subtitle: "A companion to Tsiatis (2006)"
   author: "Lu Mao"
   date: today

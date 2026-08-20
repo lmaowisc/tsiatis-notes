@@ -1,20 +1,107 @@
 # Introduction to semiparametric models
 
-## Learning objectives
+## Learning Objectives
 
 - Distinguish parametric, nonparametric, and semiparametric models
 - Identify parameters of interest and nuisance parameters
 - Recognize restricted moment and proportional hazards models as semiparametric
 
-## Prerequisites and notation
 
-## Expository notes
 
-## Expanded derivations
+## Chapter Summary
 
-## Worked examples
+A **parametric model** specifies the data distribution through a finite-dimensional
+parameter:
+$$
+p(z; \theta), \qquad \theta \in \mathbb{R}^p.
+$$
 
-## Additional exercises
+A **semiparametric model** retains a finite-dimensional parameter of interest,
+$\beta$, while leaving other aspects of the distribution unspecified through an
+infinite-dimensional nuisance parameter $\eta(\cdot)$:
+$$
+p\{z; \beta, \eta(\cdot)\}, \qquad
+\beta \in \mathbb{R}^q.
+$$
 
-## Chapter summary
+The nuisance parameter is often an unknown function, such as a conditional
+distribution, a covariate distribution, or a baseline hazard function. This
+allows the model to target $\beta$ without imposing a fully parametric model
+for the data.
 
+Key examples include:
+
+- **Restricted moment model.** Only the conditional mean is specified:
+  $$
+  E(Y \mid X) = \mu(X, \beta).
+  $$
+
+- **Proportional hazards model.** Covariate effects are modeled by $\beta$,
+  while the baseline hazard remains unspecified:
+  $$
+  \lambda(t \mid X) = \lambda_0(t)\exp(\beta^\top X).
+  $$
+
+- **Nonparametric model.** The distribution is unrestricted, and the parameter
+  of interest is a functional of that distribution:
+  $$
+  p_Z(z) = \eta(z), \qquad
+  \beta = E(Z) \quad \text{or} \quad E(Z^2).
+  $$
+
+A semiparametric estimator $\widehat{\beta}_n$ is typically required to be
+consistent and asymptotically normal:
+$$
+\widehat{\beta}_n \xrightarrow{P} \beta,
+\qquad
+n^{1/2}(\widehat{\beta}_n - \beta)
+\xrightarrow{D} N(0, \Sigma).
+$$
+
+The chapter motivates two questions developed throughout the book:
+
+- How can regular semiparametric estimators be constructed?
+- How can the estimator with the smallest asymptotic variance be identified?
+
+The answers rely on the geometry of influence functions, tangent spaces,
+orthogonality, and projection in Hilbert spaces.
+
+
+
+## Additional Exercises
+
+### Exercise 1.1 {.unnumbered}
+
+Classify each model as parametric, semiparametric, or nonparametric. Identify
+the parameter of interest and any nuisance parameter.
+
+1. $Y \sim N(\mu, \sigma^2)$, with interest in $\mu$.
+
+2. $E(Y \mid X) = \beta_0 + \beta_1 X$.
+
+3. $p_Z(z)$ is unrestricted, with interest in $E(Z)$
+
+### Exercise 1.2 {.unnumbered}
+
+Suppose that
+$$
+E(Y \mid X) = \beta^\top X,
+$$
+where $X$ is a $q$-dimensional random vector and
+$E(XX^\top)$ is nonsingular.
+
+1. Show that $\beta$ satisfies
+   $$
+   E\left[X\{Y-\beta^\top X\}\right] = 0.
+   $$
+
+2. Show that
+   $$
+   \beta = \{E(XX^\top)\}^{-1}E(XY).
+   $$
+
+3. Propose an estimator of $\beta$ based on an iid sample
+   $(Y_i, X_i)$, $i=1,\ldots,n$.
+
+4. Explain why this estimator does not require a parametric model for
+   $Y \mid X$.

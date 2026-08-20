@@ -6,17 +6,20 @@
 - Derive influence functions for M-estimators
 - Characterize the efficient influence function geometrically
 
-## Prerequisites and notation
+## Chapter Summary
 
-## Expository notes
+## Notes and Extensions
 
-## Expanded derivations
 
-## Worked examples
+## Solutions to Exercises
 
-## Solutions to exercises
+### Exercise 3.1
 
-## Additional exercises
+::: {.solution}
 
-## Chapter summary
+
+
+:::
+
+## Additional Exercises
 

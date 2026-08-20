@@ -14,5 +14,5 @@
 | $R$ | Indicator that the full data are observed |
 | $\pi$ | Observation or response probability |
 
-Add chapter-specific notation to this table as the manuscript develops.
+I will add chapter-specific notation to this table as the manuscript develops.
 

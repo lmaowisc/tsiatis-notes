@@ -6,15 +6,19 @@
 - Derive the asymptotic distribution of multiple-imputation estimators
 - Explain proper imputation and Rubin's variance estimator
 
-## Prerequisites and notation
+## Chapter Summary
 
-## Expository notes
+## Notes and Extensions
 
-## Expanded derivations
 
-## Worked examples
+## Solutions to Exercises
 
-## Additional exercises
+### Exercise 14.1
 
-## Chapter summary
+::: {.solution}
 
+
+
+:::
+
+## Additional Exercises

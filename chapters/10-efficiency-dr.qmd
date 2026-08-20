@@ -6,17 +6,19 @@
 - Construct efficient augmented IPW estimators
 - Explain double robustness under different coarsening patterns
 
-## Prerequisites and notation
+## Chapter Summary
 
-## Expository notes
+## Notes and Extensions
 
-## Expanded derivations
 
-## Worked examples
+## Solutions to Exercises
 
-## Solutions to exercises
+### Exercise 10.1
 
-## Additional exercises
+::: {.solution}
 
-## Chapter summary
 
+
+:::
+
+## Additional Exercises

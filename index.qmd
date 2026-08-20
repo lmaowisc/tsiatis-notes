@@ -10,14 +10,10 @@ The objective is to make the geometry of semiparametric models and the theory of
 
 Each chapter contains the following components:
 
-- Learning objectives and prerequisites
-- A notation guide
-- Expository notes and geometric intuition
-- Expanded derivations
-- Worked examples
-- Solutions to selected exercises
-- Additional exercises and computational illustrations
-- A short chapter summary
+- Learning objectives
+- A concise chapter summary
+- Solutions to selected exercises from the source text
+- Additional exercises
 
 ::: {.callout-note title="Source text"}
 Readers should consult @tsiatis2006 for the original statements, examples, and exercises. Exercise numbers in this companion refer to that text.

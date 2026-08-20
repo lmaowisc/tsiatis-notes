@@ -6,17 +6,20 @@
 - State coarsening-at-random assumptions
 - Relate full-data and observed-data models
 
-## Prerequisites and notation
+## Chapter Summary
 
-## Expository notes
+## Notes and Extensions
 
-## Expanded derivations
 
-## Worked examples
+## Solutions to Exercises
 
-## Solutions to exercises
+### Exercise 7.1
 
-## Additional exercises
+::: {.solution}
 
-## Chapter summary
+
+
+:::
+
+## Additional Exercises
 

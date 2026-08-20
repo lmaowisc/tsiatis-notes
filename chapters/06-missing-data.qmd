@@ -6,17 +6,21 @@
 - Compare likelihood, imputation, and inverse-probability methods
 - Explain the basis of doubly robust estimation
 
-## Prerequisites and notation
+## Chapter Summary
 
-## Expository notes
+## Notes and Extensions
 
-## Expanded derivations
 
-## Worked examples
+## Solutions to Exercises
 
-## Solutions to exercises
+### Exercise 6.1
 
-## Additional exercises
+::: {.solution}
 
-## Chapter summary
+
+
+:::
+
+## Additional Exercises
+
 

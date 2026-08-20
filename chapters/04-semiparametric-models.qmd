@@ -6,17 +6,21 @@
 - Define nuisance tangent spaces
 - Derive influence functions and efficiency bounds in semiparametric models
 
-## Prerequisites and notation
+## Chapter Summary
 
-## Expository notes
+## Notes and Extensions
 
-## Expanded derivations
 
-## Worked examples
+## Solutions to Exercises
 
-## Solutions to exercises
+### Exercise 4.1
 
-## Additional exercises
+::: {.solution}
 
-## Chapter summary
+
+
+:::
+
+## Additional Exercises
+
 

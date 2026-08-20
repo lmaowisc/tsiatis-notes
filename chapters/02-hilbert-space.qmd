@@ -6,27 +6,22 @@
 - Interpret orthogonality through covariance
 - Use the projection theorem in statistical problems
 
-## Prerequisites and notation
+## Chapter Summary
 
-## Expository notes
+## Notes and Extensions
 
-## Expanded derivations
 
-## Worked examples
-
-## Solutions to exercises
+## Solutions to Exercises
 
 ### Exercise 2.1
 
 ::: {.solution}
-**Key idea.**
 
-**Derivation.**
 
-**Result and interpretation.**
+
 :::
 
-## Additional exercises
+## Additional Exercises
 
-## Chapter summary
+
 
