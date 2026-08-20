@@ -52,1375 +52,1375 @@
   {
     "objectID": "notation.html",
     "href": "notation.html",
-    "title": "1  Notation",
+    "title": "Notation",
     "section": "",
-    "text": "Symbol\nMeaning\n\n\n\n\n\\(Z\\)\nFull observed random vector for one independent unit\n\n\n\\(Z_1,\\ldots,Z_n\\)\nIndependent and identically distributed observations\n\n\n\\(\\beta\\)\nFinite-dimensional parameter of interest\n\n\n\\(\\eta\\)\nNuisance parameter, often infinite-dimensional\n\n\n\\(S_\\beta\\)\nScore for \\(\\beta\\)\n\n\n\\(\\Lambda\\)\nTangent space\n\n\n\\(\\Lambda^\\perp\\)\nOrthogonal complement of a tangent space\n\n\n\\(\\varphi\\)\nInfluence function\n\n\n\\(\\varphi_{\\mathrm{eff}}\\)\nEfficient influence function\n\n\n\\(R\\)\nIndicator that the full data are observed\n\n\n\\(\\pi\\)\nObservation or response probability\n\n\n\nAdd chapter-specific notation to this table as the manuscript develops.",
+    "text": "Symbol\nMeaning\n\n\n\n\n\\(Z\\)\nFull observed random vector for one independent unit\n\n\n\\(Z_1,\\ldots,Z_n\\)\nIndependent and identically distributed observations\n\n\n\\(\\beta\\)\nFinite-dimensional parameter of interest\n\n\n\\(\\eta\\)\nNuisance parameter, often infinite-dimensional\n\n\n\\(S_\\beta\\)\nScore for \\(\\beta\\)\n\n\n\\(\\Lambda\\)\nTangent space\n\n\n\\(\\Lambda^\\perp\\)\nOrthogonal complement of a tangent space\n\n\n\\(\\varphi\\)\nInfluence function\n\n\n\\(\\varphi^{\\mathrm{eff}}\\)\nEfficient influence function\n\n\n\\(R\\)\nIndicator that the full data are observed\n\n\n\\(\\pi\\)\nObservation or response probability\n\n\n\nAdd chapter-specific notation to this table as the manuscript develops.",
     "crumbs": [
-      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Notation</span>"
+      "Notation"
     ]
   },
   {
     "objectID": "chapters/01-introduction.html",
     "href": "chapters/01-introduction.html",
-    "title": "2  Introduction to semiparametric models",
+    "title": "1  Introduction to semiparametric models",
     "section": "",
-    "text": "2.1 Learning objectives",
+    "text": "1.1 Learning objectives",
     "crumbs": [
       "I. Semiparametric foundations",
-      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Introduction to semiparametric models</span>"
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Introduction to semiparametric models</span>"
     ]
   },
   {
     "objectID": "chapters/01-introduction.html#learning-objectives",
     "href": "chapters/01-introduction.html#learning-objectives",
-    "title": "2  Introduction to semiparametric models",
+    "title": "1  Introduction to semiparametric models",
     "section": "",
     "text": "Distinguish parametric, nonparametric, and semiparametric models\nIdentify parameters of interest and nuisance parameters\nRecognize restricted moment and proportional hazards models as semiparametric",
     "crumbs": [
       "I. Semiparametric foundations",
-      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Introduction to semiparametric models</span>"
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Introduction to semiparametric models</span>"
     ]
   },
   {
     "objectID": "chapters/01-introduction.html#prerequisites-and-notation",
     "href": "chapters/01-introduction.html#prerequisites-and-notation",
-    "title": "2  Introduction to semiparametric models",
-    "section": "2.2 Prerequisites and notation",
-    "text": "2.2 Prerequisites and notation",
+    "title": "1  Introduction to semiparametric models",
+    "section": "1.2 Prerequisites and notation",
+    "text": "1.2 Prerequisites and notation",
     "crumbs": [
       "I. Semiparametric foundations",
-      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Introduction to semiparametric models</span>"
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Introduction to semiparametric models</span>"
     ]
   },
   {
     "objectID": "chapters/01-introduction.html#expository-notes",
     "href": "chapters/01-introduction.html#expository-notes",
-    "title": "2  Introduction to semiparametric models",
-    "section": "2.3 Expository notes",
-    "text": "2.3 Expository notes",
+    "title": "1  Introduction to semiparametric models",
+    "section": "1.3 Expository notes",
+    "text": "1.3 Expository notes",
     "crumbs": [
       "I. Semiparametric foundations",
-      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Introduction to semiparametric models</span>"
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Introduction to semiparametric models</span>"
     ]
   },
   {
     "objectID": "chapters/01-introduction.html#expanded-derivations",
     "href": "chapters/01-introduction.html#expanded-derivations",
-    "title": "2  Introduction to semiparametric models",
-    "section": "2.4 Expanded derivations",
-    "text": "2.4 Expanded derivations",
+    "title": "1  Introduction to semiparametric models",
+    "section": "1.4 Expanded derivations",
+    "text": "1.4 Expanded derivations",
     "crumbs": [
       "I. Semiparametric foundations",
-      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Introduction to semiparametric models</span>"
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Introduction to semiparametric models</span>"
     ]
   },
   {
     "objectID": "chapters/01-introduction.html#worked-examples",
     "href": "chapters/01-introduction.html#worked-examples",
-    "title": "2  Introduction to semiparametric models",
-    "section": "2.5 Worked examples",
-    "text": "2.5 Worked examples",
+    "title": "1  Introduction to semiparametric models",
+    "section": "1.5 Worked examples",
+    "text": "1.5 Worked examples",
     "crumbs": [
       "I. Semiparametric foundations",
-      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Introduction to semiparametric models</span>"
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Introduction to semiparametric models</span>"
     ]
   },
   {
     "objectID": "chapters/01-introduction.html#additional-exercises",
     "href": "chapters/01-introduction.html#additional-exercises",
-    "title": "2  Introduction to semiparametric models",
-    "section": "2.6 Additional exercises",
-    "text": "2.6 Additional exercises",
+    "title": "1  Introduction to semiparametric models",
+    "section": "1.6 Additional exercises",
+    "text": "1.6 Additional exercises",
     "crumbs": [
       "I. Semiparametric foundations",
-      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Introduction to semiparametric models</span>"
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Introduction to semiparametric models</span>"
     ]
   },
   {
     "objectID": "chapters/01-introduction.html#chapter-summary",
     "href": "chapters/01-introduction.html#chapter-summary",
-    "title": "2  Introduction to semiparametric models",
-    "section": "2.7 Chapter summary",
-    "text": "2.7 Chapter summary",
+    "title": "1  Introduction to semiparametric models",
+    "section": "1.7 Chapter summary",
+    "text": "1.7 Chapter summary",
     "crumbs": [
       "I. Semiparametric foundations",
-      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Introduction to semiparametric models</span>"
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Introduction to semiparametric models</span>"
     ]
   },
   {
     "objectID": "chapters/02-hilbert-space.html",
     "href": "chapters/02-hilbert-space.html",
-    "title": "3  Hilbert space for random vectors",
+    "title": "2  Hilbert space for random vectors",
     "section": "",
-    "text": "3.1 Learning objectives",
+    "text": "2.1 Learning objectives",
     "crumbs": [
       "I. Semiparametric foundations",
-      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Hilbert space for random vectors</span>"
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Hilbert space for random vectors</span>"
     ]
   },
   {
     "objectID": "chapters/02-hilbert-space.html#learning-objectives",
     "href": "chapters/02-hilbert-space.html#learning-objectives",
-    "title": "3  Hilbert space for random vectors",
+    "title": "2  Hilbert space for random vectors",
     "section": "",
     "text": "Work with mean-zero, square-integrable random functions\nInterpret orthogonality through covariance\nUse the projection theorem in statistical problems",
     "crumbs": [
       "I. Semiparametric foundations",
-      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Hilbert space for random vectors</span>"
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Hilbert space for random vectors</span>"
     ]
   },
   {
     "objectID": "chapters/02-hilbert-space.html#prerequisites-and-notation",
     "href": "chapters/02-hilbert-space.html#prerequisites-and-notation",
-    "title": "3  Hilbert space for random vectors",
-    "section": "3.2 Prerequisites and notation",
-    "text": "3.2 Prerequisites and notation",
+    "title": "2  Hilbert space for random vectors",
+    "section": "2.2 Prerequisites and notation",
+    "text": "2.2 Prerequisites and notation",
     "crumbs": [
       "I. Semiparametric foundations",
-      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Hilbert space for random vectors</span>"
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Hilbert space for random vectors</span>"
     ]
   },
   {
     "objectID": "chapters/02-hilbert-space.html#expository-notes",
     "href": "chapters/02-hilbert-space.html#expository-notes",
-    "title": "3  Hilbert space for random vectors",
-    "section": "3.3 Expository notes",
-    "text": "3.3 Expository notes",
+    "title": "2  Hilbert space for random vectors",
+    "section": "2.3 Expository notes",
+    "text": "2.3 Expository notes",
     "crumbs": [
       "I. Semiparametric foundations",
-      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Hilbert space for random vectors</span>"
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Hilbert space for random vectors</span>"
     ]
   },
   {
     "objectID": "chapters/02-hilbert-space.html#expanded-derivations",
     "href": "chapters/02-hilbert-space.html#expanded-derivations",
-    "title": "3  Hilbert space for random vectors",
-    "section": "3.4 Expanded derivations",
-    "text": "3.4 Expanded derivations",
+    "title": "2  Hilbert space for random vectors",
+    "section": "2.4 Expanded derivations",
+    "text": "2.4 Expanded derivations",
     "crumbs": [
       "I. Semiparametric foundations",
-      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Hilbert space for random vectors</span>"
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Hilbert space for random vectors</span>"
     ]
   },
   {
     "objectID": "chapters/02-hilbert-space.html#worked-examples",
     "href": "chapters/02-hilbert-space.html#worked-examples",
-    "title": "3  Hilbert space for random vectors",
-    "section": "3.5 Worked examples",
-    "text": "3.5 Worked examples",
+    "title": "2  Hilbert space for random vectors",
+    "section": "2.5 Worked examples",
+    "text": "2.5 Worked examples",
     "crumbs": [
       "I. Semiparametric foundations",
-      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Hilbert space for random vectors</span>"
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Hilbert space for random vectors</span>"
     ]
   },
   {
     "objectID": "chapters/02-hilbert-space.html#solutions-to-exercises",
     "href": "chapters/02-hilbert-space.html#solutions-to-exercises",
-    "title": "3  Hilbert space for random vectors",
-    "section": "3.6 Solutions to exercises",
-    "text": "3.6 Solutions to exercises\n\n3.6.1 Exercise 2.1\n\nSolution. Key idea.\nDerivation.\nResult and interpretation.",
+    "title": "2  Hilbert space for random vectors",
+    "section": "2.6 Solutions to exercises",
+    "text": "2.6 Solutions to exercises\n\n2.6.1 Exercise 2.1\n\nSolution. Key idea.\nDerivation.\nResult and interpretation.",
     "crumbs": [
       "I. Semiparametric foundations",
-      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Hilbert space for random vectors</span>"
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Hilbert space for random vectors</span>"
     ]
   },
   {
     "objectID": "chapters/02-hilbert-space.html#additional-exercises",
     "href": "chapters/02-hilbert-space.html#additional-exercises",
-    "title": "3  Hilbert space for random vectors",
-    "section": "3.7 Additional exercises",
-    "text": "3.7 Additional exercises",
+    "title": "2  Hilbert space for random vectors",
+    "section": "2.7 Additional exercises",
+    "text": "2.7 Additional exercises",
     "crumbs": [
       "I. Semiparametric foundations",
-      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Hilbert space for random vectors</span>"
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Hilbert space for random vectors</span>"
     ]
   },
   {
     "objectID": "chapters/02-hilbert-space.html#chapter-summary",
     "href": "chapters/02-hilbert-space.html#chapter-summary",
-    "title": "3  Hilbert space for random vectors",
-    "section": "3.8 Chapter summary",
-    "text": "3.8 Chapter summary",
+    "title": "2  Hilbert space for random vectors",
+    "section": "2.8 Chapter summary",
+    "text": "2.8 Chapter summary",
     "crumbs": [
       "I. Semiparametric foundations",
-      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Hilbert space for random vectors</span>"
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Hilbert space for random vectors</span>"
     ]
   },
   {
     "objectID": "chapters/03-influence-functions.html",
     "href": "chapters/03-influence-functions.html",
-    "title": "4  The geometry of influence functions",
+    "title": "3  The geometry of influence functions",
     "section": "",
-    "text": "4.1 Learning objectives",
+    "text": "3.1 Learning objectives",
     "crumbs": [
       "I. Semiparametric foundations",
-      "<span class='chapter-number'>4</span>  <span class='chapter-title'>The geometry of influence functions</span>"
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>The geometry of influence functions</span>"
     ]
   },
   {
     "objectID": "chapters/03-influence-functions.html#learning-objectives",
     "href": "chapters/03-influence-functions.html#learning-objectives",
-    "title": "4  The geometry of influence functions",
+    "title": "3  The geometry of influence functions",
     "section": "",
     "text": "Define regular asymptotically linear estimators\nDerive influence functions for M-estimators\nCharacterize the efficient influence function geometrically",
     "crumbs": [
       "I. Semiparametric foundations",
-      "<span class='chapter-number'>4</span>  <span class='chapter-title'>The geometry of influence functions</span>"
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>The geometry of influence functions</span>"
     ]
   },
   {
     "objectID": "chapters/03-influence-functions.html#prerequisites-and-notation",
     "href": "chapters/03-influence-functions.html#prerequisites-and-notation",
-    "title": "4  The geometry of influence functions",
-    "section": "4.2 Prerequisites and notation",
-    "text": "4.2 Prerequisites and notation",
+    "title": "3  The geometry of influence functions",
+    "section": "3.2 Prerequisites and notation",
+    "text": "3.2 Prerequisites and notation",
     "crumbs": [
       "I. Semiparametric foundations",
-      "<span class='chapter-number'>4</span>  <span class='chapter-title'>The geometry of influence functions</span>"
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>The geometry of influence functions</span>"
     ]
   },
   {
     "objectID": "chapters/03-influence-functions.html#expository-notes",
     "href": "chapters/03-influence-functions.html#expository-notes",
-    "title": "4  The geometry of influence functions",
-    "section": "4.3 Expository notes",
-    "text": "4.3 Expository notes",
+    "title": "3  The geometry of influence functions",
+    "section": "3.3 Expository notes",
+    "text": "3.3 Expository notes",
     "crumbs": [
       "I. Semiparametric foundations",
-      "<span class='chapter-number'>4</span>  <span class='chapter-title'>The geometry of influence functions</span>"
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>The geometry of influence functions</span>"
     ]
   },
   {
     "objectID": "chapters/03-influence-functions.html#expanded-derivations",
     "href": "chapters/03-influence-functions.html#expanded-derivations",
-    "title": "4  The geometry of influence functions",
-    "section": "4.4 Expanded derivations",
-    "text": "4.4 Expanded derivations",
+    "title": "3  The geometry of influence functions",
+    "section": "3.4 Expanded derivations",
+    "text": "3.4 Expanded derivations",
     "crumbs": [
       "I. Semiparametric foundations",
-      "<span class='chapter-number'>4</span>  <span class='chapter-title'>The geometry of influence functions</span>"
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>The geometry of influence functions</span>"
     ]
   },
   {
     "objectID": "chapters/03-influence-functions.html#worked-examples",
     "href": "chapters/03-influence-functions.html#worked-examples",
-    "title": "4  The geometry of influence functions",
-    "section": "4.5 Worked examples",
-    "text": "4.5 Worked examples",
+    "title": "3  The geometry of influence functions",
+    "section": "3.5 Worked examples",
+    "text": "3.5 Worked examples",
     "crumbs": [
       "I. Semiparametric foundations",
-      "<span class='chapter-number'>4</span>  <span class='chapter-title'>The geometry of influence functions</span>"
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>The geometry of influence functions</span>"
     ]
   },
   {
     "objectID": "chapters/03-influence-functions.html#solutions-to-exercises",
     "href": "chapters/03-influence-functions.html#solutions-to-exercises",
-    "title": "4  The geometry of influence functions",
-    "section": "4.6 Solutions to exercises",
-    "text": "4.6 Solutions to exercises",
+    "title": "3  The geometry of influence functions",
+    "section": "3.6 Solutions to exercises",
+    "text": "3.6 Solutions to exercises",
     "crumbs": [
       "I. Semiparametric foundations",
-      "<span class='chapter-number'>4</span>  <span class='chapter-title'>The geometry of influence functions</span>"
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>The geometry of influence functions</span>"
     ]
   },
   {
     "objectID": "chapters/03-influence-functions.html#additional-exercises",
     "href": "chapters/03-influence-functions.html#additional-exercises",
-    "title": "4  The geometry of influence functions",
-    "section": "4.7 Additional exercises",
-    "text": "4.7 Additional exercises",
+    "title": "3  The geometry of influence functions",
+    "section": "3.7 Additional exercises",
+    "text": "3.7 Additional exercises",
     "crumbs": [
       "I. Semiparametric foundations",
-      "<span class='chapter-number'>4</span>  <span class='chapter-title'>The geometry of influence functions</span>"
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>The geometry of influence functions</span>"
     ]
   },
   {
     "objectID": "chapters/03-influence-functions.html#chapter-summary",
     "href": "chapters/03-influence-functions.html#chapter-summary",
-    "title": "4  The geometry of influence functions",
-    "section": "4.8 Chapter summary",
-    "text": "4.8 Chapter summary",
+    "title": "3  The geometry of influence functions",
+    "section": "3.8 Chapter summary",
+    "text": "3.8 Chapter summary",
     "crumbs": [
       "I. Semiparametric foundations",
-      "<span class='chapter-number'>4</span>  <span class='chapter-title'>The geometry of influence functions</span>"
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>The geometry of influence functions</span>"
     ]
   },
   {
     "objectID": "chapters/04-semiparametric-models.html",
     "href": "chapters/04-semiparametric-models.html",
-    "title": "5  Semiparametric models",
+    "title": "4  Semiparametric models",
     "section": "",
-    "text": "5.1 Learning objectives",
+    "text": "4.1 Learning objectives",
     "crumbs": [
       "I. Semiparametric foundations",
-      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Semiparametric models</span>"
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Semiparametric models</span>"
     ]
   },
   {
     "objectID": "chapters/04-semiparametric-models.html#learning-objectives",
     "href": "chapters/04-semiparametric-models.html#learning-objectives",
-    "title": "5  Semiparametric models",
+    "title": "4  Semiparametric models",
     "section": "",
     "text": "Construct parametric submodels\nDefine nuisance tangent spaces\nDerive influence functions and efficiency bounds in semiparametric models",
     "crumbs": [
       "I. Semiparametric foundations",
-      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Semiparametric models</span>"
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Semiparametric models</span>"
     ]
   },
   {
     "objectID": "chapters/04-semiparametric-models.html#prerequisites-and-notation",
     "href": "chapters/04-semiparametric-models.html#prerequisites-and-notation",
-    "title": "5  Semiparametric models",
-    "section": "5.2 Prerequisites and notation",
-    "text": "5.2 Prerequisites and notation",
+    "title": "4  Semiparametric models",
+    "section": "4.2 Prerequisites and notation",
+    "text": "4.2 Prerequisites and notation",
     "crumbs": [
       "I. Semiparametric foundations",
-      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Semiparametric models</span>"
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Semiparametric models</span>"
     ]
   },
   {
     "objectID": "chapters/04-semiparametric-models.html#expository-notes",
     "href": "chapters/04-semiparametric-models.html#expository-notes",
-    "title": "5  Semiparametric models",
-    "section": "5.3 Expository notes",
-    "text": "5.3 Expository notes",
+    "title": "4  Semiparametric models",
+    "section": "4.3 Expository notes",
+    "text": "4.3 Expository notes",
     "crumbs": [
       "I. Semiparametric foundations",
-      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Semiparametric models</span>"
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Semiparametric models</span>"
     ]
   },
   {
     "objectID": "chapters/04-semiparametric-models.html#expanded-derivations",
     "href": "chapters/04-semiparametric-models.html#expanded-derivations",
-    "title": "5  Semiparametric models",
-    "section": "5.4 Expanded derivations",
-    "text": "5.4 Expanded derivations",
+    "title": "4  Semiparametric models",
+    "section": "4.4 Expanded derivations",
+    "text": "4.4 Expanded derivations",
     "crumbs": [
       "I. Semiparametric foundations",
-      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Semiparametric models</span>"
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Semiparametric models</span>"
     ]
   },
   {
     "objectID": "chapters/04-semiparametric-models.html#worked-examples",
     "href": "chapters/04-semiparametric-models.html#worked-examples",
-    "title": "5  Semiparametric models",
-    "section": "5.5 Worked examples",
-    "text": "5.5 Worked examples",
+    "title": "4  Semiparametric models",
+    "section": "4.5 Worked examples",
+    "text": "4.5 Worked examples",
     "crumbs": [
       "I. Semiparametric foundations",
-      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Semiparametric models</span>"
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Semiparametric models</span>"
     ]
   },
   {
     "objectID": "chapters/04-semiparametric-models.html#solutions-to-exercises",
     "href": "chapters/04-semiparametric-models.html#solutions-to-exercises",
-    "title": "5  Semiparametric models",
-    "section": "5.6 Solutions to exercises",
-    "text": "5.6 Solutions to exercises",
+    "title": "4  Semiparametric models",
+    "section": "4.6 Solutions to exercises",
+    "text": "4.6 Solutions to exercises",
     "crumbs": [
       "I. Semiparametric foundations",
-      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Semiparametric models</span>"
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Semiparametric models</span>"
     ]
   },
   {
     "objectID": "chapters/04-semiparametric-models.html#additional-exercises",
     "href": "chapters/04-semiparametric-models.html#additional-exercises",
-    "title": "5  Semiparametric models",
-    "section": "5.7 Additional exercises",
-    "text": "5.7 Additional exercises",
+    "title": "4  Semiparametric models",
+    "section": "4.7 Additional exercises",
+    "text": "4.7 Additional exercises",
     "crumbs": [
       "I. Semiparametric foundations",
-      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Semiparametric models</span>"
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Semiparametric models</span>"
     ]
   },
   {
     "objectID": "chapters/04-semiparametric-models.html#chapter-summary",
     "href": "chapters/04-semiparametric-models.html#chapter-summary",
-    "title": "5  Semiparametric models",
-    "section": "5.8 Chapter summary",
-    "text": "5.8 Chapter summary",
+    "title": "4  Semiparametric models",
+    "section": "4.8 Chapter summary",
+    "text": "4.8 Chapter summary",
     "crumbs": [
       "I. Semiparametric foundations",
-      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Semiparametric models</span>"
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Semiparametric models</span>"
     ]
   },
   {
     "objectID": "chapters/05-examples.html",
     "href": "chapters/05-examples.html",
-    "title": "6  Other examples of semiparametric models",
+    "title": "5  Other examples of semiparametric models",
     "section": "",
-    "text": "6.1 Learning objectives",
+    "text": "5.1 Learning objectives",
     "crumbs": [
       "I. Semiparametric foundations",
-      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Other examples of semiparametric models</span>"
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Other examples of semiparametric models</span>"
     ]
   },
   {
     "objectID": "chapters/05-examples.html#learning-objectives",
     "href": "chapters/05-examples.html#learning-objectives",
-    "title": "6  Other examples of semiparametric models",
+    "title": "5  Other examples of semiparametric models",
     "section": "",
     "text": "Analyze location-shift regression models\nConnect proportional hazards estimation to tangent-space geometry\nDerive efficient estimators for means and treatment contrasts",
     "crumbs": [
       "I. Semiparametric foundations",
-      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Other examples of semiparametric models</span>"
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Other examples of semiparametric models</span>"
     ]
   },
   {
     "objectID": "chapters/05-examples.html#prerequisites-and-notation",
     "href": "chapters/05-examples.html#prerequisites-and-notation",
-    "title": "6  Other examples of semiparametric models",
-    "section": "6.2 Prerequisites and notation",
-    "text": "6.2 Prerequisites and notation",
+    "title": "5  Other examples of semiparametric models",
+    "section": "5.2 Prerequisites and notation",
+    "text": "5.2 Prerequisites and notation",
     "crumbs": [
       "I. Semiparametric foundations",
-      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Other examples of semiparametric models</span>"
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Other examples of semiparametric models</span>"
     ]
   },
   {
     "objectID": "chapters/05-examples.html#expository-notes",
     "href": "chapters/05-examples.html#expository-notes",
-    "title": "6  Other examples of semiparametric models",
-    "section": "6.3 Expository notes",
-    "text": "6.3 Expository notes",
+    "title": "5  Other examples of semiparametric models",
+    "section": "5.3 Expository notes",
+    "text": "5.3 Expository notes",
     "crumbs": [
       "I. Semiparametric foundations",
-      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Other examples of semiparametric models</span>"
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Other examples of semiparametric models</span>"
     ]
   },
   {
     "objectID": "chapters/05-examples.html#expanded-derivations",
     "href": "chapters/05-examples.html#expanded-derivations",
-    "title": "6  Other examples of semiparametric models",
-    "section": "6.4 Expanded derivations",
-    "text": "6.4 Expanded derivations",
+    "title": "5  Other examples of semiparametric models",
+    "section": "5.4 Expanded derivations",
+    "text": "5.4 Expanded derivations",
     "crumbs": [
       "I. Semiparametric foundations",
-      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Other examples of semiparametric models</span>"
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Other examples of semiparametric models</span>"
     ]
   },
   {
     "objectID": "chapters/05-examples.html#worked-examples",
     "href": "chapters/05-examples.html#worked-examples",
-    "title": "6  Other examples of semiparametric models",
-    "section": "6.5 Worked examples",
-    "text": "6.5 Worked examples",
+    "title": "5  Other examples of semiparametric models",
+    "section": "5.5 Worked examples",
+    "text": "5.5 Worked examples",
     "crumbs": [
       "I. Semiparametric foundations",
-      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Other examples of semiparametric models</span>"
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Other examples of semiparametric models</span>"
     ]
   },
   {
     "objectID": "chapters/05-examples.html#solutions-to-exercises",
     "href": "chapters/05-examples.html#solutions-to-exercises",
-    "title": "6  Other examples of semiparametric models",
-    "section": "6.6 Solutions to exercises",
-    "text": "6.6 Solutions to exercises",
+    "title": "5  Other examples of semiparametric models",
+    "section": "5.6 Solutions to exercises",
+    "text": "5.6 Solutions to exercises",
     "crumbs": [
       "I. Semiparametric foundations",
-      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Other examples of semiparametric models</span>"
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Other examples of semiparametric models</span>"
     ]
   },
   {
     "objectID": "chapters/05-examples.html#additional-exercises",
     "href": "chapters/05-examples.html#additional-exercises",
-    "title": "6  Other examples of semiparametric models",
-    "section": "6.7 Additional exercises",
-    "text": "6.7 Additional exercises",
+    "title": "5  Other examples of semiparametric models",
+    "section": "5.7 Additional exercises",
+    "text": "5.7 Additional exercises",
     "crumbs": [
       "I. Semiparametric foundations",
-      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Other examples of semiparametric models</span>"
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Other examples of semiparametric models</span>"
     ]
   },
   {
     "objectID": "chapters/05-examples.html#chapter-summary",
     "href": "chapters/05-examples.html#chapter-summary",
-    "title": "6  Other examples of semiparametric models",
-    "section": "6.8 Chapter summary",
-    "text": "6.8 Chapter summary",
+    "title": "5  Other examples of semiparametric models",
+    "section": "5.8 Chapter summary",
+    "text": "5.8 Chapter summary",
     "crumbs": [
       "I. Semiparametric foundations",
-      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Other examples of semiparametric models</span>"
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Other examples of semiparametric models</span>"
     ]
   },
   {
     "objectID": "chapters/06-missing-data.html",
     "href": "chapters/06-missing-data.html",
-    "title": "7  Models and methods for missing data",
+    "title": "6  Models and methods for missing data",
     "section": "",
-    "text": "7.1 Learning objectives",
+    "text": "6.1 Learning objectives",
     "crumbs": [
       "II. Missing and coarsened data",
-      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Models and methods for missing data</span>"
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Models and methods for missing data</span>"
     ]
   },
   {
     "objectID": "chapters/06-missing-data.html#learning-objectives",
     "href": "chapters/06-missing-data.html#learning-objectives",
-    "title": "7  Models and methods for missing data",
+    "title": "6  Models and methods for missing data",
     "section": "",
     "text": "Distinguish MCAR, MAR, and nonignorable missingness\nCompare likelihood, imputation, and inverse-probability methods\nExplain the basis of doubly robust estimation",
     "crumbs": [
       "II. Missing and coarsened data",
-      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Models and methods for missing data</span>"
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Models and methods for missing data</span>"
     ]
   },
   {
     "objectID": "chapters/06-missing-data.html#prerequisites-and-notation",
     "href": "chapters/06-missing-data.html#prerequisites-and-notation",
-    "title": "7  Models and methods for missing data",
-    "section": "7.2 Prerequisites and notation",
-    "text": "7.2 Prerequisites and notation",
+    "title": "6  Models and methods for missing data",
+    "section": "6.2 Prerequisites and notation",
+    "text": "6.2 Prerequisites and notation",
     "crumbs": [
       "II. Missing and coarsened data",
-      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Models and methods for missing data</span>"
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Models and methods for missing data</span>"
     ]
   },
   {
     "objectID": "chapters/06-missing-data.html#expository-notes",
     "href": "chapters/06-missing-data.html#expository-notes",
-    "title": "7  Models and methods for missing data",
-    "section": "7.3 Expository notes",
-    "text": "7.3 Expository notes",
+    "title": "6  Models and methods for missing data",
+    "section": "6.3 Expository notes",
+    "text": "6.3 Expository notes",
     "crumbs": [
       "II. Missing and coarsened data",
-      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Models and methods for missing data</span>"
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Models and methods for missing data</span>"
     ]
   },
   {
     "objectID": "chapters/06-missing-data.html#expanded-derivations",
     "href": "chapters/06-missing-data.html#expanded-derivations",
-    "title": "7  Models and methods for missing data",
-    "section": "7.4 Expanded derivations",
-    "text": "7.4 Expanded derivations",
+    "title": "6  Models and methods for missing data",
+    "section": "6.4 Expanded derivations",
+    "text": "6.4 Expanded derivations",
     "crumbs": [
       "II. Missing and coarsened data",
-      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Models and methods for missing data</span>"
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Models and methods for missing data</span>"
     ]
   },
   {
     "objectID": "chapters/06-missing-data.html#worked-examples",
     "href": "chapters/06-missing-data.html#worked-examples",
-    "title": "7  Models and methods for missing data",
-    "section": "7.5 Worked examples",
-    "text": "7.5 Worked examples",
+    "title": "6  Models and methods for missing data",
+    "section": "6.5 Worked examples",
+    "text": "6.5 Worked examples",
     "crumbs": [
       "II. Missing and coarsened data",
-      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Models and methods for missing data</span>"
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Models and methods for missing data</span>"
     ]
   },
   {
     "objectID": "chapters/06-missing-data.html#solutions-to-exercises",
     "href": "chapters/06-missing-data.html#solutions-to-exercises",
-    "title": "7  Models and methods for missing data",
-    "section": "7.6 Solutions to exercises",
-    "text": "7.6 Solutions to exercises",
+    "title": "6  Models and methods for missing data",
+    "section": "6.6 Solutions to exercises",
+    "text": "6.6 Solutions to exercises",
     "crumbs": [
       "II. Missing and coarsened data",
-      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Models and methods for missing data</span>"
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Models and methods for missing data</span>"
     ]
   },
   {
     "objectID": "chapters/06-missing-data.html#additional-exercises",
     "href": "chapters/06-missing-data.html#additional-exercises",
-    "title": "7  Models and methods for missing data",
-    "section": "7.7 Additional exercises",
-    "text": "7.7 Additional exercises",
+    "title": "6  Models and methods for missing data",
+    "section": "6.7 Additional exercises",
+    "text": "6.7 Additional exercises",
     "crumbs": [
       "II. Missing and coarsened data",
-      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Models and methods for missing data</span>"
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Models and methods for missing data</span>"
     ]
   },
   {
     "objectID": "chapters/06-missing-data.html#chapter-summary",
     "href": "chapters/06-missing-data.html#chapter-summary",
-    "title": "7  Models and methods for missing data",
-    "section": "7.8 Chapter summary",
-    "text": "7.8 Chapter summary",
+    "title": "6  Models and methods for missing data",
+    "section": "6.8 Chapter summary",
+    "text": "6.8 Chapter summary",
     "crumbs": [
       "II. Missing and coarsened data",
-      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Models and methods for missing data</span>"
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Models and methods for missing data</span>"
     ]
   },
   {
     "objectID": "chapters/07-car.html",
     "href": "chapters/07-car.html",
-    "title": "8  Missing and coarsening at random for semiparametric models",
+    "title": "7  Missing and coarsening at random for semiparametric models",
     "section": "",
-    "text": "8.1 Learning objectives",
+    "text": "7.1 Learning objectives",
     "crumbs": [
       "II. Missing and coarsened data",
-      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Missing and coarsening at random for semiparametric models</span>"
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Missing and coarsening at random for semiparametric models</span>"
     ]
   },
   {
     "objectID": "chapters/07-car.html#learning-objectives",
     "href": "chapters/07-car.html#learning-objectives",
-    "title": "8  Missing and coarsening at random for semiparametric models",
+    "title": "7  Missing and coarsening at random for semiparametric models",
     "section": "",
     "text": "Formalize missing and coarsened data\nState coarsening-at-random assumptions\nRelate full-data and observed-data models",
     "crumbs": [
       "II. Missing and coarsened data",
-      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Missing and coarsening at random for semiparametric models</span>"
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Missing and coarsening at random for semiparametric models</span>"
     ]
   },
   {
     "objectID": "chapters/07-car.html#prerequisites-and-notation",
     "href": "chapters/07-car.html#prerequisites-and-notation",
-    "title": "8  Missing and coarsening at random for semiparametric models",
-    "section": "8.2 Prerequisites and notation",
-    "text": "8.2 Prerequisites and notation",
+    "title": "7  Missing and coarsening at random for semiparametric models",
+    "section": "7.2 Prerequisites and notation",
+    "text": "7.2 Prerequisites and notation",
     "crumbs": [
       "II. Missing and coarsened data",
-      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Missing and coarsening at random for semiparametric models</span>"
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Missing and coarsening at random for semiparametric models</span>"
     ]
   },
   {
     "objectID": "chapters/07-car.html#expository-notes",
     "href": "chapters/07-car.html#expository-notes",
-    "title": "8  Missing and coarsening at random for semiparametric models",
-    "section": "8.3 Expository notes",
-    "text": "8.3 Expository notes",
+    "title": "7  Missing and coarsening at random for semiparametric models",
+    "section": "7.3 Expository notes",
+    "text": "7.3 Expository notes",
     "crumbs": [
       "II. Missing and coarsened data",
-      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Missing and coarsening at random for semiparametric models</span>"
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Missing and coarsening at random for semiparametric models</span>"
     ]
   },
   {
     "objectID": "chapters/07-car.html#expanded-derivations",
     "href": "chapters/07-car.html#expanded-derivations",
-    "title": "8  Missing and coarsening at random for semiparametric models",
-    "section": "8.4 Expanded derivations",
-    "text": "8.4 Expanded derivations",
+    "title": "7  Missing and coarsening at random for semiparametric models",
+    "section": "7.4 Expanded derivations",
+    "text": "7.4 Expanded derivations",
     "crumbs": [
       "II. Missing and coarsened data",
-      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Missing and coarsening at random for semiparametric models</span>"
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Missing and coarsening at random for semiparametric models</span>"
     ]
   },
   {
     "objectID": "chapters/07-car.html#worked-examples",
     "href": "chapters/07-car.html#worked-examples",
-    "title": "8  Missing and coarsening at random for semiparametric models",
-    "section": "8.5 Worked examples",
-    "text": "8.5 Worked examples",
+    "title": "7  Missing and coarsening at random for semiparametric models",
+    "section": "7.5 Worked examples",
+    "text": "7.5 Worked examples",
     "crumbs": [
       "II. Missing and coarsened data",
-      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Missing and coarsening at random for semiparametric models</span>"
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Missing and coarsening at random for semiparametric models</span>"
     ]
   },
   {
     "objectID": "chapters/07-car.html#solutions-to-exercises",
     "href": "chapters/07-car.html#solutions-to-exercises",
-    "title": "8  Missing and coarsening at random for semiparametric models",
-    "section": "8.6 Solutions to exercises",
-    "text": "8.6 Solutions to exercises",
+    "title": "7  Missing and coarsening at random for semiparametric models",
+    "section": "7.6 Solutions to exercises",
+    "text": "7.6 Solutions to exercises",
     "crumbs": [
       "II. Missing and coarsened data",
-      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Missing and coarsening at random for semiparametric models</span>"
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Missing and coarsening at random for semiparametric models</span>"
     ]
   },
   {
     "objectID": "chapters/07-car.html#additional-exercises",
     "href": "chapters/07-car.html#additional-exercises",
-    "title": "8  Missing and coarsening at random for semiparametric models",
-    "section": "8.7 Additional exercises",
-    "text": "8.7 Additional exercises",
+    "title": "7  Missing and coarsening at random for semiparametric models",
+    "section": "7.7 Additional exercises",
+    "text": "7.7 Additional exercises",
     "crumbs": [
       "II. Missing and coarsened data",
-      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Missing and coarsening at random for semiparametric models</span>"
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Missing and coarsening at random for semiparametric models</span>"
     ]
   },
   {
     "objectID": "chapters/07-car.html#chapter-summary",
     "href": "chapters/07-car.html#chapter-summary",
-    "title": "8  Missing and coarsening at random for semiparametric models",
-    "section": "8.8 Chapter summary",
-    "text": "8.8 Chapter summary",
+    "title": "7  Missing and coarsening at random for semiparametric models",
+    "section": "7.8 Chapter summary",
+    "text": "7.8 Chapter summary",
     "crumbs": [
       "II. Missing and coarsened data",
-      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Missing and coarsening at random for semiparametric models</span>"
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Missing and coarsening at random for semiparametric models</span>"
     ]
   },
   {
     "objectID": "chapters/08-ipwcc.html",
     "href": "chapters/08-ipwcc.html",
-    "title": "9  Inverse probability weighted complete-case estimators",
+    "title": "8  Inverse probability weighted complete-case estimators",
     "section": "",
-    "text": "9.1 Learning objectives",
+    "text": "8.1 Learning objectives",
     "crumbs": [
       "II. Missing and coarsened data",
-      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Inverse probability weighted complete-case estimators</span>"
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Inverse probability weighted complete-case estimators</span>"
     ]
   },
   {
     "objectID": "chapters/08-ipwcc.html#learning-objectives",
     "href": "chapters/08-ipwcc.html#learning-objectives",
-    "title": "9  Inverse probability weighted complete-case estimators",
+    "title": "8  Inverse probability weighted complete-case estimators",
     "section": "",
     "text": "Construct IPW complete-case estimating equations\nEstablish consistency and asymptotic normality\nEstimate asymptotic variance when response probabilities are estimated",
     "crumbs": [
       "II. Missing and coarsened data",
-      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Inverse probability weighted complete-case estimators</span>"
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Inverse probability weighted complete-case estimators</span>"
     ]
   },
   {
     "objectID": "chapters/08-ipwcc.html#prerequisites-and-notation",
     "href": "chapters/08-ipwcc.html#prerequisites-and-notation",
-    "title": "9  Inverse probability weighted complete-case estimators",
-    "section": "9.2 Prerequisites and notation",
-    "text": "9.2 Prerequisites and notation",
+    "title": "8  Inverse probability weighted complete-case estimators",
+    "section": "8.2 Prerequisites and notation",
+    "text": "8.2 Prerequisites and notation",
     "crumbs": [
       "II. Missing and coarsened data",
-      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Inverse probability weighted complete-case estimators</span>"
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Inverse probability weighted complete-case estimators</span>"
     ]
   },
   {
     "objectID": "chapters/08-ipwcc.html#expository-notes",
     "href": "chapters/08-ipwcc.html#expository-notes",
-    "title": "9  Inverse probability weighted complete-case estimators",
-    "section": "9.3 Expository notes",
-    "text": "9.3 Expository notes",
+    "title": "8  Inverse probability weighted complete-case estimators",
+    "section": "8.3 Expository notes",
+    "text": "8.3 Expository notes",
     "crumbs": [
       "II. Missing and coarsened data",
-      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Inverse probability weighted complete-case estimators</span>"
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Inverse probability weighted complete-case estimators</span>"
     ]
   },
   {
     "objectID": "chapters/08-ipwcc.html#expanded-derivations",
     "href": "chapters/08-ipwcc.html#expanded-derivations",
-    "title": "9  Inverse probability weighted complete-case estimators",
-    "section": "9.4 Expanded derivations",
-    "text": "9.4 Expanded derivations",
+    "title": "8  Inverse probability weighted complete-case estimators",
+    "section": "8.4 Expanded derivations",
+    "text": "8.4 Expanded derivations",
     "crumbs": [
       "II. Missing and coarsened data",
-      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Inverse probability weighted complete-case estimators</span>"
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Inverse probability weighted complete-case estimators</span>"
     ]
   },
   {
     "objectID": "chapters/08-ipwcc.html#worked-examples",
     "href": "chapters/08-ipwcc.html#worked-examples",
-    "title": "9  Inverse probability weighted complete-case estimators",
-    "section": "9.5 Worked examples",
-    "text": "9.5 Worked examples",
+    "title": "8  Inverse probability weighted complete-case estimators",
+    "section": "8.5 Worked examples",
+    "text": "8.5 Worked examples",
     "crumbs": [
       "II. Missing and coarsened data",
-      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Inverse probability weighted complete-case estimators</span>"
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Inverse probability weighted complete-case estimators</span>"
     ]
   },
   {
     "objectID": "chapters/08-ipwcc.html#solutions-to-exercises",
     "href": "chapters/08-ipwcc.html#solutions-to-exercises",
-    "title": "9  Inverse probability weighted complete-case estimators",
-    "section": "9.6 Solutions to exercises",
-    "text": "9.6 Solutions to exercises",
+    "title": "8  Inverse probability weighted complete-case estimators",
+    "section": "8.6 Solutions to exercises",
+    "text": "8.6 Solutions to exercises",
     "crumbs": [
       "II. Missing and coarsened data",
-      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Inverse probability weighted complete-case estimators</span>"
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Inverse probability weighted complete-case estimators</span>"
     ]
   },
   {
     "objectID": "chapters/08-ipwcc.html#additional-exercises",
     "href": "chapters/08-ipwcc.html#additional-exercises",
-    "title": "9  Inverse probability weighted complete-case estimators",
-    "section": "9.7 Additional exercises",
-    "text": "9.7 Additional exercises",
+    "title": "8  Inverse probability weighted complete-case estimators",
+    "section": "8.7 Additional exercises",
+    "text": "8.7 Additional exercises",
     "crumbs": [
       "II. Missing and coarsened data",
-      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Inverse probability weighted complete-case estimators</span>"
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Inverse probability weighted complete-case estimators</span>"
     ]
   },
   {
     "objectID": "chapters/08-ipwcc.html#chapter-summary",
     "href": "chapters/08-ipwcc.html#chapter-summary",
-    "title": "9  Inverse probability weighted complete-case estimators",
-    "section": "9.8 Chapter summary",
-    "text": "9.8 Chapter summary",
+    "title": "8  Inverse probability weighted complete-case estimators",
+    "section": "8.8 Chapter summary",
+    "text": "8.8 Chapter summary",
     "crumbs": [
       "II. Missing and coarsened data",
-      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Inverse probability weighted complete-case estimators</span>"
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Inverse probability weighted complete-case estimators</span>"
     ]
   },
   {
     "objectID": "chapters/09-monotone-coarsening.html",
     "href": "chapters/09-monotone-coarsening.html",
-    "title": "10  Semiparametric estimators with monotone coarsening",
+    "title": "9  Semiparametric estimators with monotone coarsening",
     "section": "",
-    "text": "10.1 Learning objectives",
+    "text": "9.1 Learning objectives",
     "crumbs": [
       "II. Missing and coarsened data",
-      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Semiparametric estimators with monotone coarsening</span>"
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Semiparametric estimators with monotone coarsening</span>"
     ]
   },
   {
     "objectID": "chapters/09-monotone-coarsening.html#learning-objectives",
     "href": "chapters/09-monotone-coarsening.html#learning-objectives",
-    "title": "10  Semiparametric estimators with monotone coarsening",
+    "title": "9  Semiparametric estimators with monotone coarsening",
     "section": "",
     "text": "Represent monotone coarsening processes\nDerive semiparametric estimators under monotone missingness\nConnect censoring to monotone coarsening",
     "crumbs": [
       "II. Missing and coarsened data",
-      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Semiparametric estimators with monotone coarsening</span>"
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Semiparametric estimators with monotone coarsening</span>"
     ]
   },
   {
     "objectID": "chapters/09-monotone-coarsening.html#prerequisites-and-notation",
     "href": "chapters/09-monotone-coarsening.html#prerequisites-and-notation",
-    "title": "10  Semiparametric estimators with monotone coarsening",
-    "section": "10.2 Prerequisites and notation",
-    "text": "10.2 Prerequisites and notation",
+    "title": "9  Semiparametric estimators with monotone coarsening",
+    "section": "9.2 Prerequisites and notation",
+    "text": "9.2 Prerequisites and notation",
     "crumbs": [
       "II. Missing and coarsened data",
-      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Semiparametric estimators with monotone coarsening</span>"
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Semiparametric estimators with monotone coarsening</span>"
     ]
   },
   {
     "objectID": "chapters/09-monotone-coarsening.html#expository-notes",
     "href": "chapters/09-monotone-coarsening.html#expository-notes",
-    "title": "10  Semiparametric estimators with monotone coarsening",
-    "section": "10.3 Expository notes",
-    "text": "10.3 Expository notes",
+    "title": "9  Semiparametric estimators with monotone coarsening",
+    "section": "9.3 Expository notes",
+    "text": "9.3 Expository notes",
     "crumbs": [
       "II. Missing and coarsened data",
-      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Semiparametric estimators with monotone coarsening</span>"
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Semiparametric estimators with monotone coarsening</span>"
     ]
   },
   {
     "objectID": "chapters/09-monotone-coarsening.html#expanded-derivations",
     "href": "chapters/09-monotone-coarsening.html#expanded-derivations",
-    "title": "10  Semiparametric estimators with monotone coarsening",
-    "section": "10.4 Expanded derivations",
-    "text": "10.4 Expanded derivations",
+    "title": "9  Semiparametric estimators with monotone coarsening",
+    "section": "9.4 Expanded derivations",
+    "text": "9.4 Expanded derivations",
     "crumbs": [
       "II. Missing and coarsened data",
-      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Semiparametric estimators with monotone coarsening</span>"
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Semiparametric estimators with monotone coarsening</span>"
     ]
   },
   {
     "objectID": "chapters/09-monotone-coarsening.html#worked-examples",
     "href": "chapters/09-monotone-coarsening.html#worked-examples",
-    "title": "10  Semiparametric estimators with monotone coarsening",
-    "section": "10.5 Worked examples",
-    "text": "10.5 Worked examples",
+    "title": "9  Semiparametric estimators with monotone coarsening",
+    "section": "9.5 Worked examples",
+    "text": "9.5 Worked examples",
     "crumbs": [
       "II. Missing and coarsened data",
-      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Semiparametric estimators with monotone coarsening</span>"
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Semiparametric estimators with monotone coarsening</span>"
     ]
   },
   {
     "objectID": "chapters/09-monotone-coarsening.html#solutions-to-exercises",
     "href": "chapters/09-monotone-coarsening.html#solutions-to-exercises",
-    "title": "10  Semiparametric estimators with monotone coarsening",
-    "section": "10.6 Solutions to exercises",
-    "text": "10.6 Solutions to exercises",
+    "title": "9  Semiparametric estimators with monotone coarsening",
+    "section": "9.6 Solutions to exercises",
+    "text": "9.6 Solutions to exercises",
     "crumbs": [
       "II. Missing and coarsened data",
-      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Semiparametric estimators with monotone coarsening</span>"
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Semiparametric estimators with monotone coarsening</span>"
     ]
   },
   {
     "objectID": "chapters/09-monotone-coarsening.html#additional-exercises",
     "href": "chapters/09-monotone-coarsening.html#additional-exercises",
-    "title": "10  Semiparametric estimators with monotone coarsening",
-    "section": "10.7 Additional exercises",
-    "text": "10.7 Additional exercises",
+    "title": "9  Semiparametric estimators with monotone coarsening",
+    "section": "9.7 Additional exercises",
+    "text": "9.7 Additional exercises",
     "crumbs": [
       "II. Missing and coarsened data",
-      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Semiparametric estimators with monotone coarsening</span>"
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Semiparametric estimators with monotone coarsening</span>"
     ]
   },
   {
     "objectID": "chapters/09-monotone-coarsening.html#chapter-summary",
     "href": "chapters/09-monotone-coarsening.html#chapter-summary",
-    "title": "10  Semiparametric estimators with monotone coarsening",
-    "section": "10.8 Chapter summary",
-    "text": "10.8 Chapter summary",
+    "title": "9  Semiparametric estimators with monotone coarsening",
+    "section": "9.8 Chapter summary",
+    "text": "9.8 Chapter summary",
     "crumbs": [
       "II. Missing and coarsened data",
-      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Semiparametric estimators with monotone coarsening</span>"
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Semiparametric estimators with monotone coarsening</span>"
     ]
   },
   {
     "objectID": "chapters/10-efficiency-dr.html",
     "href": "chapters/10-efficiency-dr.html",
-    "title": "11  Improving efficiency and double robustness with coarsened data",
+    "title": "10  Improving efficiency and double robustness with coarsened data",
     "section": "",
-    "text": "11.1 Learning objectives",
+    "text": "10.1 Learning objectives",
     "crumbs": [
       "III. Efficiency and robustness",
-      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Improving efficiency and double robustness with coarsened data</span>"
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Improving efficiency and double robustness with coarsened data</span>"
     ]
   },
   {
     "objectID": "chapters/10-efficiency-dr.html#learning-objectives",
     "href": "chapters/10-efficiency-dr.html#learning-objectives",
-    "title": "11  Improving efficiency and double robustness with coarsened data",
+    "title": "10  Improving efficiency and double robustness with coarsened data",
     "section": "",
     "text": "Project influence functions onto augmentation spaces\nConstruct efficient augmented IPW estimators\nExplain double robustness under different coarsening patterns",
     "crumbs": [
       "III. Efficiency and robustness",
-      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Improving efficiency and double robustness with coarsened data</span>"
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Improving efficiency and double robustness with coarsened data</span>"
     ]
   },
   {
     "objectID": "chapters/10-efficiency-dr.html#prerequisites-and-notation",
     "href": "chapters/10-efficiency-dr.html#prerequisites-and-notation",
-    "title": "11  Improving efficiency and double robustness with coarsened data",
-    "section": "11.2 Prerequisites and notation",
-    "text": "11.2 Prerequisites and notation",
+    "title": "10  Improving efficiency and double robustness with coarsened data",
+    "section": "10.2 Prerequisites and notation",
+    "text": "10.2 Prerequisites and notation",
     "crumbs": [
       "III. Efficiency and robustness",
-      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Improving efficiency and double robustness with coarsened data</span>"
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Improving efficiency and double robustness with coarsened data</span>"
     ]
   },
   {
     "objectID": "chapters/10-efficiency-dr.html#expository-notes",
     "href": "chapters/10-efficiency-dr.html#expository-notes",
-    "title": "11  Improving efficiency and double robustness with coarsened data",
-    "section": "11.3 Expository notes",
-    "text": "11.3 Expository notes",
+    "title": "10  Improving efficiency and double robustness with coarsened data",
+    "section": "10.3 Expository notes",
+    "text": "10.3 Expository notes",
     "crumbs": [
       "III. Efficiency and robustness",
-      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Improving efficiency and double robustness with coarsened data</span>"
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Improving efficiency and double robustness with coarsened data</span>"
     ]
   },
   {
     "objectID": "chapters/10-efficiency-dr.html#expanded-derivations",
     "href": "chapters/10-efficiency-dr.html#expanded-derivations",
-    "title": "11  Improving efficiency and double robustness with coarsened data",
-    "section": "11.4 Expanded derivations",
-    "text": "11.4 Expanded derivations",
+    "title": "10  Improving efficiency and double robustness with coarsened data",
+    "section": "10.4 Expanded derivations",
+    "text": "10.4 Expanded derivations",
     "crumbs": [
       "III. Efficiency and robustness",
-      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Improving efficiency and double robustness with coarsened data</span>"
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Improving efficiency and double robustness with coarsened data</span>"
     ]
   },
   {
     "objectID": "chapters/10-efficiency-dr.html#worked-examples",
     "href": "chapters/10-efficiency-dr.html#worked-examples",
-    "title": "11  Improving efficiency and double robustness with coarsened data",
-    "section": "11.5 Worked examples",
-    "text": "11.5 Worked examples",
+    "title": "10  Improving efficiency and double robustness with coarsened data",
+    "section": "10.5 Worked examples",
+    "text": "10.5 Worked examples",
     "crumbs": [
       "III. Efficiency and robustness",
-      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Improving efficiency and double robustness with coarsened data</span>"
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Improving efficiency and double robustness with coarsened data</span>"
     ]
   },
   {
     "objectID": "chapters/10-efficiency-dr.html#solutions-to-exercises",
     "href": "chapters/10-efficiency-dr.html#solutions-to-exercises",
-    "title": "11  Improving efficiency and double robustness with coarsened data",
-    "section": "11.6 Solutions to exercises",
-    "text": "11.6 Solutions to exercises",
+    "title": "10  Improving efficiency and double robustness with coarsened data",
+    "section": "10.6 Solutions to exercises",
+    "text": "10.6 Solutions to exercises",
     "crumbs": [
       "III. Efficiency and robustness",
-      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Improving efficiency and double robustness with coarsened data</span>"
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Improving efficiency and double robustness with coarsened data</span>"
     ]
   },
   {
     "objectID": "chapters/10-efficiency-dr.html#additional-exercises",
     "href": "chapters/10-efficiency-dr.html#additional-exercises",
-    "title": "11  Improving efficiency and double robustness with coarsened data",
-    "section": "11.7 Additional exercises",
-    "text": "11.7 Additional exercises",
+    "title": "10  Improving efficiency and double robustness with coarsened data",
+    "section": "10.7 Additional exercises",
+    "text": "10.7 Additional exercises",
     "crumbs": [
       "III. Efficiency and robustness",
-      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Improving efficiency and double robustness with coarsened data</span>"
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Improving efficiency and double robustness with coarsened data</span>"
     ]
   },
   {
     "objectID": "chapters/10-efficiency-dr.html#chapter-summary",
     "href": "chapters/10-efficiency-dr.html#chapter-summary",
-    "title": "11  Improving efficiency and double robustness with coarsened data",
-    "section": "11.8 Chapter summary",
-    "text": "11.8 Chapter summary",
+    "title": "10  Improving efficiency and double robustness with coarsened data",
+    "section": "10.8 Chapter summary",
+    "text": "10.8 Chapter summary",
     "crumbs": [
       "III. Efficiency and robustness",
-      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Improving efficiency and double robustness with coarsened data</span>"
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Improving efficiency and double robustness with coarsened data</span>"
     ]
   },
   {
     "objectID": "chapters/11-locally-efficient.html",
     "href": "chapters/11-locally-efficient.html",
-    "title": "12  Locally efficient estimators for coarsened-data semiparametric models",
+    "title": "11  Locally efficient estimators for coarsened-data semiparametric models",
     "section": "",
-    "text": "12.1 Learning objectives",
+    "text": "11.1 Learning objectives",
     "crumbs": [
       "III. Efficiency and robustness",
-      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Locally efficient estimators for coarsened-data semiparametric models</span>"
+      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Locally efficient estimators for coarsened-data semiparametric models</span>"
     ]
   },
   {
     "objectID": "chapters/11-locally-efficient.html#learning-objectives",
     "href": "chapters/11-locally-efficient.html#learning-objectives",
-    "title": "12  Locally efficient estimators for coarsened-data semiparametric models",
+    "title": "11  Locally efficient estimators for coarsened-data semiparametric models",
     "section": "",
     "text": "Derive observed-data efficient scores\nCompare likelihood and augmented-IPW representations\nConstruct locally efficient estimators",
     "crumbs": [
       "III. Efficiency and robustness",
-      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Locally efficient estimators for coarsened-data semiparametric models</span>"
+      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Locally efficient estimators for coarsened-data semiparametric models</span>"
     ]
   },
   {
     "objectID": "chapters/11-locally-efficient.html#prerequisites-and-notation",
     "href": "chapters/11-locally-efficient.html#prerequisites-and-notation",
-    "title": "12  Locally efficient estimators for coarsened-data semiparametric models",
-    "section": "12.2 Prerequisites and notation",
-    "text": "12.2 Prerequisites and notation",
+    "title": "11  Locally efficient estimators for coarsened-data semiparametric models",
+    "section": "11.2 Prerequisites and notation",
+    "text": "11.2 Prerequisites and notation",
     "crumbs": [
       "III. Efficiency and robustness",
-      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Locally efficient estimators for coarsened-data semiparametric models</span>"
+      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Locally efficient estimators for coarsened-data semiparametric models</span>"
     ]
   },
   {
     "objectID": "chapters/11-locally-efficient.html#expository-notes",
     "href": "chapters/11-locally-efficient.html#expository-notes",
-    "title": "12  Locally efficient estimators for coarsened-data semiparametric models",
-    "section": "12.3 Expository notes",
-    "text": "12.3 Expository notes",
+    "title": "11  Locally efficient estimators for coarsened-data semiparametric models",
+    "section": "11.3 Expository notes",
+    "text": "11.3 Expository notes",
     "crumbs": [
       "III. Efficiency and robustness",
-      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Locally efficient estimators for coarsened-data semiparametric models</span>"
+      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Locally efficient estimators for coarsened-data semiparametric models</span>"
     ]
   },
   {
     "objectID": "chapters/11-locally-efficient.html#expanded-derivations",
     "href": "chapters/11-locally-efficient.html#expanded-derivations",
-    "title": "12  Locally efficient estimators for coarsened-data semiparametric models",
-    "section": "12.4 Expanded derivations",
-    "text": "12.4 Expanded derivations",
+    "title": "11  Locally efficient estimators for coarsened-data semiparametric models",
+    "section": "11.4 Expanded derivations",
+    "text": "11.4 Expanded derivations",
     "crumbs": [
       "III. Efficiency and robustness",
-      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Locally efficient estimators for coarsened-data semiparametric models</span>"
+      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Locally efficient estimators for coarsened-data semiparametric models</span>"
     ]
   },
   {
     "objectID": "chapters/11-locally-efficient.html#worked-examples",
     "href": "chapters/11-locally-efficient.html#worked-examples",
-    "title": "12  Locally efficient estimators for coarsened-data semiparametric models",
-    "section": "12.5 Worked examples",
-    "text": "12.5 Worked examples",
+    "title": "11  Locally efficient estimators for coarsened-data semiparametric models",
+    "section": "11.5 Worked examples",
+    "text": "11.5 Worked examples",
     "crumbs": [
       "III. Efficiency and robustness",
-      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Locally efficient estimators for coarsened-data semiparametric models</span>"
+      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Locally efficient estimators for coarsened-data semiparametric models</span>"
     ]
   },
   {
     "objectID": "chapters/11-locally-efficient.html#solutions-to-exercises",
     "href": "chapters/11-locally-efficient.html#solutions-to-exercises",
-    "title": "12  Locally efficient estimators for coarsened-data semiparametric models",
-    "section": "12.6 Solutions to exercises",
-    "text": "12.6 Solutions to exercises",
+    "title": "11  Locally efficient estimators for coarsened-data semiparametric models",
+    "section": "11.6 Solutions to exercises",
+    "text": "11.6 Solutions to exercises",
     "crumbs": [
       "III. Efficiency and robustness",
-      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Locally efficient estimators for coarsened-data semiparametric models</span>"
+      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Locally efficient estimators for coarsened-data semiparametric models</span>"
     ]
   },
   {
     "objectID": "chapters/11-locally-efficient.html#additional-exercises",
     "href": "chapters/11-locally-efficient.html#additional-exercises",
-    "title": "12  Locally efficient estimators for coarsened-data semiparametric models",
-    "section": "12.7 Additional exercises",
-    "text": "12.7 Additional exercises",
+    "title": "11  Locally efficient estimators for coarsened-data semiparametric models",
+    "section": "11.7 Additional exercises",
+    "text": "11.7 Additional exercises",
     "crumbs": [
       "III. Efficiency and robustness",
-      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Locally efficient estimators for coarsened-data semiparametric models</span>"
+      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Locally efficient estimators for coarsened-data semiparametric models</span>"
     ]
   },
   {
     "objectID": "chapters/11-locally-efficient.html#chapter-summary",
     "href": "chapters/11-locally-efficient.html#chapter-summary",
-    "title": "12  Locally efficient estimators for coarsened-data semiparametric models",
-    "section": "12.8 Chapter summary",
-    "text": "12.8 Chapter summary",
+    "title": "11  Locally efficient estimators for coarsened-data semiparametric models",
+    "section": "11.8 Chapter summary",
+    "text": "11.8 Chapter summary",
     "crumbs": [
       "III. Efficiency and robustness",
-      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Locally efficient estimators for coarsened-data semiparametric models</span>"
+      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Locally efficient estimators for coarsened-data semiparametric models</span>"
     ]
   },
   {
     "objectID": "chapters/12-approximate-methods.html",
     "href": "chapters/12-approximate-methods.html",
-    "title": "13  Approximate methods for gaining efficiency",
+    "title": "12  Approximate methods for gaining efficiency",
     "section": "",
-    "text": "13.1 Learning objectives",
+    "text": "12.1 Learning objectives",
     "crumbs": [
       "III. Efficiency and robustness",
-      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Approximate methods for gaining efficiency</span>"
+      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Approximate methods for gaining efficiency</span>"
     ]
   },
   {
     "objectID": "chapters/12-approximate-methods.html#learning-objectives",
     "href": "chapters/12-approximate-methods.html#learning-objectives",
-    "title": "13  Approximate methods for gaining efficiency",
+    "title": "12  Approximate methods for gaining efficiency",
     "section": "",
     "text": "Define restricted classes of augmented estimators\nDerive optimal estimators within a restricted class\nBalance efficiency gains against computational feasibility",
     "crumbs": [
       "III. Efficiency and robustness",
-      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Approximate methods for gaining efficiency</span>"
+      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Approximate methods for gaining efficiency</span>"
     ]
   },
   {
     "objectID": "chapters/12-approximate-methods.html#prerequisites-and-notation",
     "href": "chapters/12-approximate-methods.html#prerequisites-and-notation",
-    "title": "13  Approximate methods for gaining efficiency",
-    "section": "13.2 Prerequisites and notation",
-    "text": "13.2 Prerequisites and notation",
+    "title": "12  Approximate methods for gaining efficiency",
+    "section": "12.2 Prerequisites and notation",
+    "text": "12.2 Prerequisites and notation",
     "crumbs": [
       "III. Efficiency and robustness",
-      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Approximate methods for gaining efficiency</span>"
+      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Approximate methods for gaining efficiency</span>"
     ]
   },
   {
     "objectID": "chapters/12-approximate-methods.html#expository-notes",
     "href": "chapters/12-approximate-methods.html#expository-notes",
-    "title": "13  Approximate methods for gaining efficiency",
-    "section": "13.3 Expository notes",
-    "text": "13.3 Expository notes",
+    "title": "12  Approximate methods for gaining efficiency",
+    "section": "12.3 Expository notes",
+    "text": "12.3 Expository notes",
     "crumbs": [
       "III. Efficiency and robustness",
-      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Approximate methods for gaining efficiency</span>"
+      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Approximate methods for gaining efficiency</span>"
     ]
   },
   {
     "objectID": "chapters/12-approximate-methods.html#expanded-derivations",
     "href": "chapters/12-approximate-methods.html#expanded-derivations",
-    "title": "13  Approximate methods for gaining efficiency",
-    "section": "13.4 Expanded derivations",
-    "text": "13.4 Expanded derivations",
+    "title": "12  Approximate methods for gaining efficiency",
+    "section": "12.4 Expanded derivations",
+    "text": "12.4 Expanded derivations",
     "crumbs": [
       "III. Efficiency and robustness",
-      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Approximate methods for gaining efficiency</span>"
+      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Approximate methods for gaining efficiency</span>"
     ]
   },
   {
     "objectID": "chapters/12-approximate-methods.html#worked-examples",
     "href": "chapters/12-approximate-methods.html#worked-examples",
-    "title": "13  Approximate methods for gaining efficiency",
-    "section": "13.5 Worked examples",
-    "text": "13.5 Worked examples",
+    "title": "12  Approximate methods for gaining efficiency",
+    "section": "12.5 Worked examples",
+    "text": "12.5 Worked examples",
     "crumbs": [
       "III. Efficiency and robustness",
-      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Approximate methods for gaining efficiency</span>"
+      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Approximate methods for gaining efficiency</span>"
     ]
   },
   {
     "objectID": "chapters/12-approximate-methods.html#solutions-to-exercises",
     "href": "chapters/12-approximate-methods.html#solutions-to-exercises",
-    "title": "13  Approximate methods for gaining efficiency",
-    "section": "13.6 Solutions to exercises",
-    "text": "13.6 Solutions to exercises",
+    "title": "12  Approximate methods for gaining efficiency",
+    "section": "12.6 Solutions to exercises",
+    "text": "12.6 Solutions to exercises",
     "crumbs": [
       "III. Efficiency and robustness",
-      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Approximate methods for gaining efficiency</span>"
+      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Approximate methods for gaining efficiency</span>"
     ]
   },
   {
     "objectID": "chapters/12-approximate-methods.html#additional-exercises",
     "href": "chapters/12-approximate-methods.html#additional-exercises",
-    "title": "13  Approximate methods for gaining efficiency",
-    "section": "13.7 Additional exercises",
-    "text": "13.7 Additional exercises",
+    "title": "12  Approximate methods for gaining efficiency",
+    "section": "12.7 Additional exercises",
+    "text": "12.7 Additional exercises",
     "crumbs": [
       "III. Efficiency and robustness",
-      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Approximate methods for gaining efficiency</span>"
+      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Approximate methods for gaining efficiency</span>"
     ]
   },
   {
     "objectID": "chapters/12-approximate-methods.html#chapter-summary",
     "href": "chapters/12-approximate-methods.html#chapter-summary",
-    "title": "13  Approximate methods for gaining efficiency",
-    "section": "13.8 Chapter summary",
-    "text": "13.8 Chapter summary",
+    "title": "12  Approximate methods for gaining efficiency",
+    "section": "12.8 Chapter summary",
+    "text": "12.8 Chapter summary",
     "crumbs": [
       "III. Efficiency and robustness",
-      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Approximate methods for gaining efficiency</span>"
+      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Approximate methods for gaining efficiency</span>"
     ]
   },
   {
     "objectID": "chapters/13-causal-effects.html",
     "href": "chapters/13-causal-effects.html",
-    "title": "14  Doubly robust estimation of average causal treatment effects",
+    "title": "13  Doubly robust estimation of average causal treatment effects",
     "section": "",
-    "text": "14.1 Learning objectives",
+    "text": "13.1 Learning objectives",
     "crumbs": [
       "IV. Causal inference and imputation",
-      "<span class='chapter-number'>14</span>  <span class='chapter-title'>Doubly robust estimation of average causal treatment effects</span>"
+      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Doubly robust estimation of average causal treatment effects</span>"
     ]
   },
   {
     "objectID": "chapters/13-causal-effects.html#learning-objectives",
     "href": "chapters/13-causal-effects.html#learning-objectives",
-    "title": "14  Doubly robust estimation of average causal treatment effects",
+    "title": "13  Doubly robust estimation of average causal treatment effects",
     "section": "",
     "text": "State identification assumptions for point-treatment effects\nExpress causal estimation as a coarsened-data problem\nDerive the augmented inverse-probability estimator for the ATE",
     "crumbs": [
       "IV. Causal inference and imputation",
-      "<span class='chapter-number'>14</span>  <span class='chapter-title'>Doubly robust estimation of average causal treatment effects</span>"
+      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Doubly robust estimation of average causal treatment effects</span>"
     ]
   },
   {
     "objectID": "chapters/13-causal-effects.html#prerequisites-and-notation",
     "href": "chapters/13-causal-effects.html#prerequisites-and-notation",
-    "title": "14  Doubly robust estimation of average causal treatment effects",
-    "section": "14.2 Prerequisites and notation",
-    "text": "14.2 Prerequisites and notation",
+    "title": "13  Doubly robust estimation of average causal treatment effects",
+    "section": "13.2 Prerequisites and notation",
+    "text": "13.2 Prerequisites and notation",
     "crumbs": [
       "IV. Causal inference and imputation",
-      "<span class='chapter-number'>14</span>  <span class='chapter-title'>Doubly robust estimation of average causal treatment effects</span>"
+      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Doubly robust estimation of average causal treatment effects</span>"
     ]
   },
   {
     "objectID": "chapters/13-causal-effects.html#expository-notes",
     "href": "chapters/13-causal-effects.html#expository-notes",
-    "title": "14  Doubly robust estimation of average causal treatment effects",
-    "section": "14.3 Expository notes",
-    "text": "14.3 Expository notes",
+    "title": "13  Doubly robust estimation of average causal treatment effects",
+    "section": "13.3 Expository notes",
+    "text": "13.3 Expository notes",
     "crumbs": [
       "IV. Causal inference and imputation",
-      "<span class='chapter-number'>14</span>  <span class='chapter-title'>Doubly robust estimation of average causal treatment effects</span>"
+      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Doubly robust estimation of average causal treatment effects</span>"
     ]
   },
   {
     "objectID": "chapters/13-causal-effects.html#expanded-derivations",
     "href": "chapters/13-causal-effects.html#expanded-derivations",
-    "title": "14  Doubly robust estimation of average causal treatment effects",
-    "section": "14.4 Expanded derivations",
-    "text": "14.4 Expanded derivations",
+    "title": "13  Doubly robust estimation of average causal treatment effects",
+    "section": "13.4 Expanded derivations",
+    "text": "13.4 Expanded derivations",
     "crumbs": [
       "IV. Causal inference and imputation",
-      "<span class='chapter-number'>14</span>  <span class='chapter-title'>Doubly robust estimation of average causal treatment effects</span>"
+      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Doubly robust estimation of average causal treatment effects</span>"
     ]
   },
   {
     "objectID": "chapters/13-causal-effects.html#worked-examples",
     "href": "chapters/13-causal-effects.html#worked-examples",
-    "title": "14  Doubly robust estimation of average causal treatment effects",
-    "section": "14.5 Worked examples",
-    "text": "14.5 Worked examples",
+    "title": "13  Doubly robust estimation of average causal treatment effects",
+    "section": "13.5 Worked examples",
+    "text": "13.5 Worked examples",
     "crumbs": [
       "IV. Causal inference and imputation",
-      "<span class='chapter-number'>14</span>  <span class='chapter-title'>Doubly robust estimation of average causal treatment effects</span>"
+      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Doubly robust estimation of average causal treatment effects</span>"
     ]
   },
   {
     "objectID": "chapters/13-causal-effects.html#solutions-to-exercises",
     "href": "chapters/13-causal-effects.html#solutions-to-exercises",
-    "title": "14  Doubly robust estimation of average causal treatment effects",
-    "section": "14.6 Solutions to exercises",
-    "text": "14.6 Solutions to exercises",
+    "title": "13  Doubly robust estimation of average causal treatment effects",
+    "section": "13.6 Solutions to exercises",
+    "text": "13.6 Solutions to exercises",
     "crumbs": [
       "IV. Causal inference and imputation",
-      "<span class='chapter-number'>14</span>  <span class='chapter-title'>Doubly robust estimation of average causal treatment effects</span>"
+      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Doubly robust estimation of average causal treatment effects</span>"
     ]
   },
   {
     "objectID": "chapters/13-causal-effects.html#additional-exercises",
     "href": "chapters/13-causal-effects.html#additional-exercises",
-    "title": "14  Doubly robust estimation of average causal treatment effects",
-    "section": "14.7 Additional exercises",
-    "text": "14.7 Additional exercises",
+    "title": "13  Doubly robust estimation of average causal treatment effects",
+    "section": "13.7 Additional exercises",
+    "text": "13.7 Additional exercises",
     "crumbs": [
       "IV. Causal inference and imputation",
-      "<span class='chapter-number'>14</span>  <span class='chapter-title'>Doubly robust estimation of average causal treatment effects</span>"
+      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Doubly robust estimation of average causal treatment effects</span>"
     ]
   },
   {
     "objectID": "chapters/13-causal-effects.html#chapter-summary",
     "href": "chapters/13-causal-effects.html#chapter-summary",
-    "title": "14  Doubly robust estimation of average causal treatment effects",
-    "section": "14.8 Chapter summary",
-    "text": "14.8 Chapter summary",
+    "title": "13  Doubly robust estimation of average causal treatment effects",
+    "section": "13.8 Chapter summary",
+    "text": "13.8 Chapter summary",
     "crumbs": [
       "IV. Causal inference and imputation",
-      "<span class='chapter-number'>14</span>  <span class='chapter-title'>Doubly robust estimation of average causal treatment effects</span>"
+      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Doubly robust estimation of average causal treatment effects</span>"
     ]
   },
   {
     "objectID": "chapters/14-multiple-imputation.html",
     "href": "chapters/14-multiple-imputation.html",
-    "title": "15  Multiple imputation from a frequentist perspective",
+    "title": "14  Multiple imputation from a frequentist perspective",
     "section": "",
-    "text": "15.1 Learning objectives",
+    "text": "14.1 Learning objectives",
     "crumbs": [
       "IV. Causal inference and imputation",
-      "<span class='chapter-number'>15</span>  <span class='chapter-title'>Multiple imputation from a frequentist perspective</span>"
+      "<span class='chapter-number'>14</span>  <span class='chapter-title'>Multiple imputation from a frequentist perspective</span>"
     ]
   },
   {
     "objectID": "chapters/14-multiple-imputation.html#learning-objectives",
     "href": "chapters/14-multiple-imputation.html#learning-objectives",
-    "title": "15  Multiple imputation from a frequentist perspective",
+    "title": "14  Multiple imputation from a frequentist perspective",
     "section": "",
     "text": "Compare full-data and observed-data information\nDerive the asymptotic distribution of multiple-imputation estimators\nExplain proper imputation and Rubin’s variance estimator",
     "crumbs": [
       "IV. Causal inference and imputation",
-      "<span class='chapter-number'>15</span>  <span class='chapter-title'>Multiple imputation from a frequentist perspective</span>"
+      "<span class='chapter-number'>14</span>  <span class='chapter-title'>Multiple imputation from a frequentist perspective</span>"
     ]
   },
   {
     "objectID": "chapters/14-multiple-imputation.html#prerequisites-and-notation",
     "href": "chapters/14-multiple-imputation.html#prerequisites-and-notation",
-    "title": "15  Multiple imputation from a frequentist perspective",
-    "section": "15.2 Prerequisites and notation",
-    "text": "15.2 Prerequisites and notation",
+    "title": "14  Multiple imputation from a frequentist perspective",
+    "section": "14.2 Prerequisites and notation",
+    "text": "14.2 Prerequisites and notation",
     "crumbs": [
       "IV. Causal inference and imputation",
-      "<span class='chapter-number'>15</span>  <span class='chapter-title'>Multiple imputation from a frequentist perspective</span>"
+      "<span class='chapter-number'>14</span>  <span class='chapter-title'>Multiple imputation from a frequentist perspective</span>"
     ]
   },
   {
     "objectID": "chapters/14-multiple-imputation.html#expository-notes",
     "href": "chapters/14-multiple-imputation.html#expository-notes",
-    "title": "15  Multiple imputation from a frequentist perspective",
-    "section": "15.3 Expository notes",
-    "text": "15.3 Expository notes",
+    "title": "14  Multiple imputation from a frequentist perspective",
+    "section": "14.3 Expository notes",
+    "text": "14.3 Expository notes",
     "crumbs": [
       "IV. Causal inference and imputation",
-      "<span class='chapter-number'>15</span>  <span class='chapter-title'>Multiple imputation from a frequentist perspective</span>"
+      "<span class='chapter-number'>14</span>  <span class='chapter-title'>Multiple imputation from a frequentist perspective</span>"
     ]
   },
   {
     "objectID": "chapters/14-multiple-imputation.html#expanded-derivations",
     "href": "chapters/14-multiple-imputation.html#expanded-derivations",
-    "title": "15  Multiple imputation from a frequentist perspective",
-    "section": "15.4 Expanded derivations",
-    "text": "15.4 Expanded derivations",
+    "title": "14  Multiple imputation from a frequentist perspective",
+    "section": "14.4 Expanded derivations",
+    "text": "14.4 Expanded derivations",
     "crumbs": [
       "IV. Causal inference and imputation",
-      "<span class='chapter-number'>15</span>  <span class='chapter-title'>Multiple imputation from a frequentist perspective</span>"
+      "<span class='chapter-number'>14</span>  <span class='chapter-title'>Multiple imputation from a frequentist perspective</span>"
     ]
   },
   {
     "objectID": "chapters/14-multiple-imputation.html#worked-examples",
     "href": "chapters/14-multiple-imputation.html#worked-examples",
-    "title": "15  Multiple imputation from a frequentist perspective",
-    "section": "15.5 Worked examples",
-    "text": "15.5 Worked examples",
+    "title": "14  Multiple imputation from a frequentist perspective",
+    "section": "14.5 Worked examples",
+    "text": "14.5 Worked examples",
     "crumbs": [
       "IV. Causal inference and imputation",
-      "<span class='chapter-number'>15</span>  <span class='chapter-title'>Multiple imputation from a frequentist perspective</span>"
+      "<span class='chapter-number'>14</span>  <span class='chapter-title'>Multiple imputation from a frequentist perspective</span>"
     ]
   },
   {
     "objectID": "chapters/14-multiple-imputation.html#additional-exercises",
     "href": "chapters/14-multiple-imputation.html#additional-exercises",
-    "title": "15  Multiple imputation from a frequentist perspective",
-    "section": "15.6 Additional exercises",
-    "text": "15.6 Additional exercises",
+    "title": "14  Multiple imputation from a frequentist perspective",
+    "section": "14.6 Additional exercises",
+    "text": "14.6 Additional exercises",
     "crumbs": [
       "IV. Causal inference and imputation",
-      "<span class='chapter-number'>15</span>  <span class='chapter-title'>Multiple imputation from a frequentist perspective</span>"
+      "<span class='chapter-number'>14</span>  <span class='chapter-title'>Multiple imputation from a frequentist perspective</span>"
     ]
   },
   {
     "objectID": "chapters/14-multiple-imputation.html#chapter-summary",
     "href": "chapters/14-multiple-imputation.html#chapter-summary",
-    "title": "15  Multiple imputation from a frequentist perspective",
-    "section": "15.7 Chapter summary",
-    "text": "15.7 Chapter summary",
+    "title": "14  Multiple imputation from a frequentist perspective",
+    "section": "14.7 Chapter summary",
+    "text": "14.7 Chapter summary",
     "crumbs": [
       "IV. Causal inference and imputation",
-      "<span class='chapter-number'>15</span>  <span class='chapter-title'>Multiple imputation from a frequentist perspective</span>"
+      "<span class='chapter-number'>14</span>  <span class='chapter-title'>Multiple imputation from a frequentist perspective</span>"
     ]
   },
   {
