@@ -1,4 +1,4 @@
-# Notation
+# Notation {.unnumbered}
 
 | Symbol | Meaning |
 |---|---|
@@ -10,7 +10,7 @@
 | $\Lambda$ | Tangent space |
 | $\Lambda^\perp$ | Orthogonal complement of a tangent space |
 | $\varphi$ | Influence function |
-| $\varphi_{\mathrm{eff}}$ | Efficient influence function |
+| $\varphi^{\mathrm{eff}}$ | Efficient influence function |
 | $R$ | Indicator that the full data are observed |
 | $\pi$ | Observation or response probability |
 
