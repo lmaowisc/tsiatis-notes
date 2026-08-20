@@ -1,0 +1,22 @@
+# Locally efficient estimators for coarsened-data semiparametric models
+
+## Learning objectives
+
+- Derive observed-data efficient scores
+- Compare likelihood and augmented-IPW representations
+- Construct locally efficient estimators
+
+## Prerequisites and notation
+
+## Expository notes
+
+## Expanded derivations
+
+## Worked examples
+
+## Solutions to exercises
+
+## Additional exercises
+
+## Chapter summary
+

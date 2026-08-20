@@ -1,0 +1,22 @@
+# Approximate methods for gaining efficiency
+
+## Learning objectives
+
+- Define restricted classes of augmented estimators
+- Derive optimal estimators within a restricted class
+- Balance efficiency gains against computational feasibility
+
+## Prerequisites and notation
+
+## Expository notes
+
+## Expanded derivations
+
+## Worked examples
+
+## Solutions to exercises
+
+## Additional exercises
+
+## Chapter summary
+

@@ -1,0 +1,15 @@
+/.Rproj.user/
+/.quarto/
+/_book/
+/_freeze/
+*.Rproj.user
+*.aux
+*.log
+*.tex
+
+.Rproj.user
+.Rhistory
+.RData
+.httr-oauth
+.DS_Store
+.quarto

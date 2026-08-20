@@ -1,0 +1,10 @@
+# Linear algebra and projections
+
+This appendix will collect matrix identities, projection formulas, and block-matrix calculations used throughout the book.
+
+## Matrix differentiation
+
+## Block-matrix inversion
+
+## Orthogonal projections
+

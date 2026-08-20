@@ -1,0 +1,22 @@
+# Missing and coarsening at random for semiparametric models
+
+## Learning objectives
+
+- Formalize missing and coarsened data
+- State coarsening-at-random assumptions
+- Relate full-data and observed-data models
+
+## Prerequisites and notation
+
+## Expository notes
+
+## Expanded derivations
+
+## Worked examples
+
+## Solutions to exercises
+
+## Additional exercises
+
+## Chapter summary
+

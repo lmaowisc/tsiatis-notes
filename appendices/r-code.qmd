@@ -1,0 +1,19 @@
+# R code and reproducibility
+
+This appendix contains reusable R functions and reproducibility conventions for computational examples.
+
+```{r}
+#| label: setup
+#| include: false
+
+set.seed(2026)
+```
+
+## Session information
+
+```{r}
+#| label: session-info
+
+sessionInfo()
+```
+

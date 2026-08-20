@@ -1,0 +1,22 @@
+# Semiparametric models
+
+## Learning objectives
+
+- Construct parametric submodels
+- Define nuisance tangent spaces
+- Derive influence functions and efficiency bounds in semiparametric models
+
+## Prerequisites and notation
+
+## Expository notes
+
+## Expanded derivations
+
+## Worked examples
+
+## Solutions to exercises
+
+## Additional exercises
+
+## Chapter summary
+

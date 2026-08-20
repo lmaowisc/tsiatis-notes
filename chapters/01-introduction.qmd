@@ -1,0 +1,20 @@
+# Introduction to semiparametric models
+
+## Learning objectives
+
+- Distinguish parametric, nonparametric, and semiparametric models
+- Identify parameters of interest and nuisance parameters
+- Recognize restricted moment and proportional hazards models as semiparametric
+
+## Prerequisites and notation
+
+## Expository notes
+
+## Expanded derivations
+
+## Worked examples
+
+## Additional exercises
+
+## Chapter summary
+

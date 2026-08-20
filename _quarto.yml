@@ -1,0 +1,80 @@
+project:
+  type: book
+  output-dir: _book
+
+book:
+  title: "Notes and Solutions for Semiparametric Theory and Missing Data"
+  subtitle: "A companion to Tsiatis (2006)"
+  author: "Lu Mao"
+  date: today
+  date-format: long
+  search: true
+  repo-actions: [edit, issue]
+  downloads: [pdf]
+  chapters:
+    - index.qmd
+    - preface.qmd
+    - notation.qmd
+    - part: "I. Semiparametric foundations"
+      chapters:
+        - chapters/01-introduction.qmd
+        - chapters/02-hilbert-space.qmd
+        - chapters/03-influence-functions.qmd
+        - chapters/04-semiparametric-models.qmd
+        - chapters/05-examples.qmd
+    - part: "II. Missing and coarsened data"
+      chapters:
+        - chapters/06-missing-data.qmd
+        - chapters/07-car.qmd
+        - chapters/08-ipwcc.qmd
+        - chapters/09-monotone-coarsening.qmd
+    - part: "III. Efficiency and robustness"
+      chapters:
+        - chapters/10-efficiency-dr.qmd
+        - chapters/11-locally-efficient.qmd
+        - chapters/12-approximate-methods.qmd
+    - part: "IV. Causal inference and imputation"
+      chapters:
+        - chapters/13-causal-effects.qmd
+        - chapters/14-multiple-imputation.qmd
+    - references.qmd
+  appendices:
+    - appendices/linear-algebra.qmd
+    - appendices/probability.qmd
+    - appendices/r-code.qmd
+
+bibliography: references.bib
+csl: apa.csl
+
+format:
+  html:
+    theme:
+      light: cosmo
+      dark: darkly
+    css: styles.css
+    code-fold: show
+    code-tools: true
+    code-copy: true
+    number-sections: true
+    toc-depth: 3
+  pdf:
+    documentclass: scrreprt
+    papersize: letter
+    fontsize: 11pt
+    geometry:
+      - margin=1in
+    colorlinks: true
+    keep-tex: false
+    number-sections: true
+    toc-depth: 2
+
+execute:
+  freeze: auto
+  warning: false
+  message: false
+
+crossref:
+  chapters: true
+
+lang: en
+

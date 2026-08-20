@@ -1,0 +1,22 @@
+# Inverse probability weighted complete-case estimators
+
+## Learning objectives
+
+- Construct IPW complete-case estimating equations
+- Establish consistency and asymptotic normality
+- Estimate asymptotic variance when response probabilities are estimated
+
+## Prerequisites and notation
+
+## Expository notes
+
+## Expanded derivations
+
+## Worked examples
+
+## Solutions to exercises
+
+## Additional exercises
+
+## Chapter summary
+

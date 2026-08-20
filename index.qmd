@@ -1,0 +1,25 @@
+
+
+# Home {.unnumbered}
+
+This book develops explanatory notes, derivations, worked examples, and original solutions for exercises accompanying *Semiparametric Theory and Missing Data* by Anastasios A. Tsiatis.
+
+The objective is to make the geometry of semiparametric models and the theory of missing and coarsened data easier to learn and apply. The presentation follows the organization of the source book while remaining independently written.
+
+## How to use the book
+
+Each chapter contains the following components:
+
+- Learning objectives and prerequisites
+- A notation guide
+- Expository notes and geometric intuition
+- Expanded derivations
+- Worked examples
+- Solutions to selected exercises
+- Additional exercises and computational illustrations
+- A short chapter summary
+
+::: {.callout-note title="Source text"}
+Readers should consult @tsiatis2006 for the original statements, examples, and exercises. Exercise numbers in this companion refer to that text.
+:::
+

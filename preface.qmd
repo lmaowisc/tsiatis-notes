@@ -1,0 +1,17 @@
+# Preface {.unnumbered}
+
+## Purpose
+
+These notes are intended for graduate students and researchers in biostatistics and statistics who want a detailed path through semiparametric theory, influence functions, missing-data methods, and causal inference.
+
+## Conventions
+
+- Random variables are written in uppercase and realizations in lowercase
+- Vectors are treated as column vectors unless stated otherwise
+- Expectations and inner products are taken under the true data-generating distribution unless annotated
+- A solution labeled “Exercise *j.k*” corresponds to that numbered exercise in @tsiatis2006
+
+## Scope and attribution
+
+This is a companion volume, not a reproduction of the source. Explanations, derivations, examples, and solutions should be written independently. Page and exercise references identify where the corresponding topic appears in the source.
+

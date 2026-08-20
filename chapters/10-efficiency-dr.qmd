@@ -1,0 +1,22 @@
+# Improving efficiency and double robustness with coarsened data
+
+## Learning objectives
+
+- Project influence functions onto augmentation spaces
+- Construct efficient augmented IPW estimators
+- Explain double robustness under different coarsening patterns
+
+## Prerequisites and notation
+
+## Expository notes
+
+## Expanded derivations
+
+## Worked examples
+
+## Solutions to exercises
+
+## Additional exercises
+
+## Chapter summary
+

@@ -1,0 +1,22 @@
+# Models and methods for missing data
+
+## Learning objectives
+
+- Distinguish MCAR, MAR, and nonignorable missingness
+- Compare likelihood, imputation, and inverse-probability methods
+- Explain the basis of doubly robust estimation
+
+## Prerequisites and notation
+
+## Expository notes
+
+## Expanded derivations
+
+## Worked examples
+
+## Solutions to exercises
+
+## Additional exercises
+
+## Chapter summary
+

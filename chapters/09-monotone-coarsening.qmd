@@ -1,0 +1,22 @@
+# Semiparametric estimators with monotone coarsening
+
+## Learning objectives
+
+- Represent monotone coarsening processes
+- Derive semiparametric estimators under monotone missingness
+- Connect censoring to monotone coarsening
+
+## Prerequisites and notation
+
+## Expository notes
+
+## Expanded derivations
+
+## Worked examples
+
+## Solutions to exercises
+
+## Additional exercises
+
+## Chapter summary
+

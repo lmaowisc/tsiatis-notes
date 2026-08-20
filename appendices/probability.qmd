@@ -1,0 +1,10 @@
+# Probability and asymptotic tools
+
+This appendix will collect conditional-expectation identities, convergence results, empirical-process notation, and asymptotic linearity arguments.
+
+## Conditional expectation
+
+## Modes of convergence
+
+## Central limit arguments
+

@@ -1,0 +1,22 @@
+# The geometry of influence functions
+
+## Learning objectives
+
+- Define regular asymptotically linear estimators
+- Derive influence functions for M-estimators
+- Characterize the efficient influence function geometrically
+
+## Prerequisites and notation
+
+## Expository notes
+
+## Expanded derivations
+
+## Worked examples
+
+## Solutions to exercises
+
+## Additional exercises
+
+## Chapter summary
+

@@ -1,0 +1,32 @@
+# Hilbert space for random vectors
+
+## Learning objectives
+
+- Work with mean-zero, square-integrable random functions
+- Interpret orthogonality through covariance
+- Use the projection theorem in statistical problems
+
+## Prerequisites and notation
+
+## Expository notes
+
+## Expanded derivations
+
+## Worked examples
+
+## Solutions to exercises
+
+### Exercise 2.1
+
+::: {.solution}
+**Key idea.**
+
+**Derivation.**
+
+**Result and interpretation.**
+:::
+
+## Additional exercises
+
+## Chapter summary
+

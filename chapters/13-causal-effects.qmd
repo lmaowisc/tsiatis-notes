@@ -1,0 +1,22 @@
+# Doubly robust estimation of average causal treatment effects
+
+## Learning objectives
+
+- State identification assumptions for point-treatment effects
+- Express causal estimation as a coarsened-data problem
+- Derive the augmented inverse-probability estimator for the ATE
+
+## Prerequisites and notation
+
+## Expository notes
+
+## Expanded derivations
+
+## Worked examples
+
+## Solutions to exercises
+
+## Additional exercises
+
+## Chapter summary
+

@@ -1,0 +1,22 @@
+# Other examples of semiparametric models
+
+## Learning objectives
+
+- Analyze location-shift regression models
+- Connect proportional hazards estimation to tangent-space geometry
+- Derive efficient estimators for means and treatment contrasts
+
+## Prerequisites and notation
+
+## Expository notes
+
+## Expanded derivations
+
+## Worked examples
+
+## Solutions to exercises
+
+## Additional exercises
+
+## Chapter summary
+
