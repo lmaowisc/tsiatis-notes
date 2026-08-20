@@ -1,0 +1,33 @@
+/*-- scss:defaults --*/
+
+:root {
+  --book-accent: #1f4e79;
+}
+
+h1, h2, h3 {
+  color: var(--book-accent);
+}
+
+.solution {
+  border-left: 4px solid #2e7d32;
+  background: #f4faf4;
+  padding: 0.8rem 1rem;
+  margin: 1rem 0;
+}
+
+.derivation {
+  border-left: 4px solid #6a5acd;
+  background: #f7f6fc;
+  padding: 0.8rem 1rem;
+  margin: 1rem 0;
+}
+
+.key-idea {
+  font-weight: 600;
+  color: #7a3e00;
+}
+
+table {
+  font-size: 0.95rem;
+}
+
