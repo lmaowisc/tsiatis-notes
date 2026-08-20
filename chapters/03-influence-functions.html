@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>3&nbsp; The geometry of influence functions – Notes and Solutions for Semiparametric Theory and Missing Data</title>
+<title>3&nbsp; The geometry of influence functions – Notes and Solutions for *Semiparametric Theory and Missing Data*</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -133,9 +133,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
     <div class="pt-lg-2 mt-2 text-left sidebar-header">
     <div class="sidebar-title mb-0 py-0">
-      <a href="../">Notes and Solutions for Semiparametric Theory and Missing Data</a> 
+      <a href="../">Notes and Solutions for <em>Semiparametric Theory and Missing Data</em></a> 
         <div class="sidebar-tools-main">
-    <a href="../Notes-and-Solutions-for-Semiparametric-Theory-and-Missing-Data.pdf" title="Download PDF" class="quarto-navigation-tool px-1" aria-label="Download PDF"><i class="bi bi-file-pdf"></i></a>
+    <a href="../Notes-and-Solutions-for--Semiparametric-Theory-and-Missing-Data-.pdf" title="Download PDF" class="quarto-navigation-tool px-1" aria-label="Download PDF"><i class="bi bi-file-pdf"></i></a>
   <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
 </div>
     </div>
@@ -339,13 +339,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
    
   <ul>
   <li><a href="#learning-objectives" id="toc-learning-objectives" class="nav-link active" data-scroll-target="#learning-objectives"><span class="header-section-number">3.1</span> Learning objectives</a></li>
-  <li><a href="#prerequisites-and-notation" id="toc-prerequisites-and-notation" class="nav-link" data-scroll-target="#prerequisites-and-notation"><span class="header-section-number">3.2</span> Prerequisites and notation</a></li>
-  <li><a href="#expository-notes" id="toc-expository-notes" class="nav-link" data-scroll-target="#expository-notes"><span class="header-section-number">3.3</span> Expository notes</a></li>
-  <li><a href="#expanded-derivations" id="toc-expanded-derivations" class="nav-link" data-scroll-target="#expanded-derivations"><span class="header-section-number">3.4</span> Expanded derivations</a></li>
-  <li><a href="#worked-examples" id="toc-worked-examples" class="nav-link" data-scroll-target="#worked-examples"><span class="header-section-number">3.5</span> Worked examples</a></li>
-  <li><a href="#solutions-to-exercises" id="toc-solutions-to-exercises" class="nav-link" data-scroll-target="#solutions-to-exercises"><span class="header-section-number">3.6</span> Solutions to exercises</a></li>
-  <li><a href="#additional-exercises" id="toc-additional-exercises" class="nav-link" data-scroll-target="#additional-exercises"><span class="header-section-number">3.7</span> Additional exercises</a></li>
-  <li><a href="#chapter-summary" id="toc-chapter-summary" class="nav-link" data-scroll-target="#chapter-summary"><span class="header-section-number">3.8</span> Chapter summary</a></li>
+  <li><a href="#chapter-summary" id="toc-chapter-summary" class="nav-link" data-scroll-target="#chapter-summary"><span class="header-section-number">3.2</span> Chapter Summary</a></li>
+  <li><a href="#notes-and-extensions" id="toc-notes-and-extensions" class="nav-link" data-scroll-target="#notes-and-extensions"><span class="header-section-number">3.3</span> Notes and Extensions</a></li>
+  <li><a href="#solutions-to-exercises" id="toc-solutions-to-exercises" class="nav-link" data-scroll-target="#solutions-to-exercises"><span class="header-section-number">3.4</span> Solutions to Exercises</a>
+  <ul class="collapse">
+  <li><a href="#exercise-3.1" id="toc-exercise-3.1" class="nav-link" data-scroll-target="#exercise-3.1"><span class="header-section-number">3.4.1</span> Exercise 3.1</a></li>
+  </ul></li>
+  <li><a href="#additional-exercises" id="toc-additional-exercises" class="nav-link" data-scroll-target="#additional-exercises"><span class="header-section-number">3.5</span> Additional Exercises</a></li>
   </ul>
 </nav>
     </div>
@@ -379,26 +379,23 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li>Characterize the efficient influence function geometrically</li>
 </ul>
 </section>
-<section id="prerequisites-and-notation" class="level2" data-number="3.2">
-<h2 data-number="3.2" class="anchored" data-anchor-id="prerequisites-and-notation"><span class="header-section-number">3.2</span> Prerequisites and notation</h2>
+<section id="chapter-summary" class="level2" data-number="3.2">
+<h2 data-number="3.2" class="anchored" data-anchor-id="chapter-summary"><span class="header-section-number">3.2</span> Chapter Summary</h2>
 </section>
-<section id="expository-notes" class="level2" data-number="3.3">
-<h2 data-number="3.3" class="anchored" data-anchor-id="expository-notes"><span class="header-section-number">3.3</span> Expository notes</h2>
+<section id="notes-and-extensions" class="level2" data-number="3.3">
+<h2 data-number="3.3" class="anchored" data-anchor-id="notes-and-extensions"><span class="header-section-number">3.3</span> Notes and Extensions</h2>
 </section>
-<section id="expanded-derivations" class="level2" data-number="3.4">
-<h2 data-number="3.4" class="anchored" data-anchor-id="expanded-derivations"><span class="header-section-number">3.4</span> Expanded derivations</h2>
+<section id="solutions-to-exercises" class="level2" data-number="3.4">
+<h2 data-number="3.4" class="anchored" data-anchor-id="solutions-to-exercises"><span class="header-section-number">3.4</span> Solutions to Exercises</h2>
+<section id="exercise-3.1" class="level3" data-number="3.4.1">
+<h3 data-number="3.4.1" class="anchored" data-anchor-id="exercise-3.1"><span class="header-section-number">3.4.1</span> Exercise 3.1</h3>
+<div class="proof solution">
+<p><span class="proof-title"><em>Solution</em>. </span></p>
+</div>
 </section>
-<section id="worked-examples" class="level2" data-number="3.5">
-<h2 data-number="3.5" class="anchored" data-anchor-id="worked-examples"><span class="header-section-number">3.5</span> Worked examples</h2>
 </section>
-<section id="solutions-to-exercises" class="level2" data-number="3.6">
-<h2 data-number="3.6" class="anchored" data-anchor-id="solutions-to-exercises"><span class="header-section-number">3.6</span> Solutions to exercises</h2>
-</section>
-<section id="additional-exercises" class="level2" data-number="3.7">
-<h2 data-number="3.7" class="anchored" data-anchor-id="additional-exercises"><span class="header-section-number">3.7</span> Additional exercises</h2>
-</section>
-<section id="chapter-summary" class="level2" data-number="3.8">
-<h2 data-number="3.8" class="anchored" data-anchor-id="chapter-summary"><span class="header-section-number">3.8</span> Chapter summary</h2>
+<section id="additional-exercises" class="level2" data-number="3.5">
+<h2 data-number="3.5" class="anchored" data-anchor-id="additional-exercises"><span class="header-section-number">3.5</span> Additional Exercises</h2>
 
 
 <!-- -->
@@ -1038,19 +1035,22 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Derive influence functions for M-estimators</span>
 <span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Characterize the efficient influence function geometrically</span>
 <span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="fu">## Prerequisites and notation</span></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="fu">## Chapter Summary</span></span>
 <span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a><span class="fu">## Expository notes</span></span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a><span class="fu">## Notes and Extensions</span></span>
 <span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a><span class="fu">## Expanded derivations</span></span>
-<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a><span class="fu">## Worked examples</span></span>
-<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a><span class="fu">## Solutions to exercises</span></span>
-<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a><span class="fu">## Additional exercises</span></span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a><span class="fu">## Solutions to Exercises</span></span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a><span class="fu">### Exercise 3.1</span></span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a>::: {.solution}</span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a><span class="fu">## Chapter summary</span></span></code><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></pre></div>
+<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a><span class="fu">## Additional Exercises</span></span></code><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></pre></div>
 </div></div></div></div></div>
 </div> <!-- /content -->
 
