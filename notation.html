@@ -416,31 +416,35 @@ window.Quarto = {
 <td>Nuisance parameter, often infinite-dimensional</td>
 </tr>
 <tr class="odd">
+<td><span class="math inline">\(\langle h_1, h_2\rangle = E\{h_1^\top(Z)h_2(Z)\}\)</span></td>
+<td>Inner product in the Hilbert space of mean-zero, square-integrable functions</td>
+</tr>
+<tr class="even">
 <td><span class="math inline">\(S_\beta\)</span></td>
 <td>Score for <span class="math inline">\(\beta\)</span></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td><span class="math inline">\(\Lambda\)</span></td>
-<td>Tangent space</td>
+<td>Nuisance tangent space</td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(\Lambda^\perp\)</span></td>
+<td>Orthogonal complement of a nuisance tangent space</td>
 </tr>
 <tr class="odd">
-<td><span class="math inline">\(\Lambda^\perp\)</span></td>
-<td>Orthogonal complement of a tangent space</td>
-</tr>
-<tr class="even">
 <td><span class="math inline">\(\varphi\)</span></td>
 <td>Influence function</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td><span class="math inline">\(\varphi^{\mathrm{eff}}\)</span></td>
 <td>Efficient influence function</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td><span class="math inline">\(R\)</span></td>
 <td>Indicator that the full data are observed</td>
 </tr>
-<tr class="odd">
-<td><span class="math inline">\(\pi\)</span></td>
+<tr class="even">
+<td><span class="math inline">\(\pi(\cdot)\)</span></td>
 <td>Observation or response probability</td>
 </tr>
 </tbody>
@@ -1084,15 +1088,16 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>| $Z_1,\ldots,Z_n$ | Independent and identically distributed observations |</span>
 <span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>| $\beta$ | Finite-dimensional parameter of interest |</span>
 <span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>| $\eta$ | Nuisance parameter, often infinite-dimensional |</span>
-<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>| $S_\beta$ | Score for $\beta$ |</span>
-<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>| $\Lambda$ | Tangent space |</span>
-<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>| $\Lambda^\perp$ | Orthogonal complement of a tangent space |</span>
-<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>| $\varphi$ | Influence function |</span>
-<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>| $\varphi^{\mathrm{eff}}$ | Efficient influence function |</span>
-<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>| $R$ | Indicator that the full data are observed |</span>
-<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>| $\pi$ | Observation or response probability |</span>
-<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a>I will add chapter-specific notation to this table as the manuscript develops.</span></code><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></pre></div>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>| $\langle h_1, h_2\rangle = E<span class="sc">\{</span>h_1^\top(Z)h_2(Z)<span class="sc">\}</span>$ | Inner product in the Hilbert space of mean-zero, square-integrable functions |</span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>| $S_\beta$ | Score for $\beta$ |</span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>| $\Lambda$ | Nuisance tangent space |</span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>| $\Lambda^\perp$ | Orthogonal complement of a nuisance tangent space |</span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>| $\varphi$ | Influence function |</span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>| $\varphi^{\mathrm{eff}}$ | Efficient influence function |</span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>| $R$ | Indicator that the full data are observed |</span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>| $\pi(\cdot)$ | Observation or response probability |</span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a>I will add chapter-specific notation to this table as the manuscript develops.</span></code><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></pre></div>
 </div></div></div></div></div>
 </div> <!-- /content -->
 

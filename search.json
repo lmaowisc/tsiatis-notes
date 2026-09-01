@@ -1,22 +1,68 @@
 [
   {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Notes and Solutions for Semiparametric Theory and Missing Data",
+    "objectID": "chapters/02-hilbert-space.html",
+    "href": "chapters/02-hilbert-space.html",
+    "title": "2  Hilbert space for random vectors",
     "section": "",
-    "text": "Home\nThis book develops explanatory notes, derivations, worked examples, and original solutions for exercises accompanying Semiparametric Theory and Missing Data by Anastasios A. Tsiatis.\nThe objective is to make the geometry of semiparametric models and the theory of missing and coarsened data easier to learn and apply. The presentation follows the organization of the source book while remaining independently written.",
+    "text": "2.1 Learning Objectives",
     "crumbs": [
-      "Home"
+      "I. Semiparametric foundations",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Hilbert space for random vectors</span>"
     ]
   },
   {
-    "objectID": "index.html#how-to-use-the-book",
-    "href": "index.html#how-to-use-the-book",
-    "title": "Notes and Solutions for Semiparametric Theory and Missing Data",
-    "section": "How to use the book",
-    "text": "How to use the book\nEach chapter contains the following components:\n\nLearning objectives\nA concise chapter summary\nSolutions to selected exercises from the source text\nAdditional exercises\n\n\n\n\n\n\n\nSource text\n\n\n\nReaders should consult Tsiatis (2006) for the original statements, examples, and exercises. Exercise numbers in this companion refer to that text.\n\n\n\n\n\n\n\n\nTsiatis, Anastasios A. (2006). Semiparametric theory and missing data. Springer. https://doi.org/10.1007/0-387-37345-4.",
+    "objectID": "chapters/02-hilbert-space.html#learning-objectives",
+    "href": "chapters/02-hilbert-space.html#learning-objectives",
+    "title": "2  Hilbert space for random vectors",
+    "section": "",
+    "text": "Work with mean-zero, square-integrable random functions\nInterpret orthogonality through covariance\nUse the projection theorem in statistical problems",
     "crumbs": [
-      "Home"
+      "I. Semiparametric foundations",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Hilbert space for random vectors</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/02-hilbert-space.html#chapter-summary",
+    "href": "chapters/02-hilbert-space.html#chapter-summary",
+    "title": "2  Hilbert space for random vectors",
+    "section": "2.2 Chapter Summary",
+    "text": "2.2 Chapter Summary\nThis chapter introduces the Hilbert space of \\(q\\)-dimensional random functions \\(h(Z)\\) with mean zero and finite second moments:\n\\[\nE\\{h(Z)\\} = 0,\n\\qquad\nE\\{h^\\top(Z)h(Z)\\} &lt; \\infty.\n\\]\nThe covariance inner product is defined by\n\\[\n\\langle h_1, h_2\\rangle\n=\nE(h_1^\\top h_2),\n\\]\nwith corresponding norm\n\\[\n\\|h\\|\n=\n\\langle h,h\\rangle^{1/2}.\n\\]\nTwo elements are orthogonal when their inner product is zero. For a closed linear subspace \\(\\mathcal{U}\\subset\\mathcal{H}\\), the projection theorem guarantees a unique projection \\(\\Pi(h\\mid\\mathcal{U})\\in\\mathcal{U}\\) such that\n\\[\n\\Pi(h\\mid\\mathcal{U})\n=\n\\arg\\min_{u\\in\\mathcal{U}}\n\\|h-u\\|.\n\\]\nThe residual after projection is orthogonal to the subspace:\n\\[\nh-\\Pi(h\\mid\\mathcal{U})\n\\perp\n\\mathcal{U}.\n\\]\nFor a finite-dimensional subspace spanned by a random vector \\(u(Z)\\), the projection is a linear function of \\(u\\), whose coefficients are determined by the variance of \\(u(Z)\\) and its covariance with \\(h(Z)\\) (see (2.1) below).",
+    "crumbs": [
+      "I. Semiparametric foundations",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Hilbert space for random vectors</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/02-hilbert-space.html#notes-and-extensions",
+    "href": "chapters/02-hilbert-space.html#notes-and-extensions",
+    "title": "2  Hilbert space for random vectors",
+    "section": "2.3 Notes and Extensions",
+    "text": "2.3 Notes and Extensions\n\n2.3.1 Projection onto linear span vs conditional expectation\nBy definition,\n\\[\n\\Pi\\{h(Z)\\mid\\mathcal{U}\\}\n=\n\\arg\\min_{g\\in\\mathcal{U}}\\|h-g\\|,\n\\]\nfor any closed linear subspace \\(\\mathcal{U}\\subset\\mathcal{H}\\). That is, the projection of \\(h(Z)\\) onto \\(\\mathcal{U}\\) is the element of \\(\\mathcal{U}\\) closest to \\(h(Z)\\) in the norm \\(\\|\\cdot\\|\\).\nExample 1 in Tsiatis (2006) considers the linear span\n\\[\n\\mathcal{U}\n=\n\\left\\{\na^{\\top}u\n:\na\\in\\mathbb{R}^k\n\\right\\}\n\\]\nof a \\(k\\)-dimensional random vector\n\\[\nu(Z)\n=\n\\{u_1(Z),\\ldots,u_k(Z)\\}^{\\top}.\n\\]\nIt establishes that\n\\[\n\\Pi\\{h(Z)\\mid\\mathcal{U}\\}\n=\nE(hu^{\\top})\n\\left\\{\nE(uu^{\\top})\n\\right\\}^{-1}\nu.\n\\tag{2.1}\\]\nIf \\(\\mathcal{U}\\) is expanded to include all measurable square-integrable functions of \\(u(Z)\\), the projection is the conditional expectation of \\(h(Z)\\) given \\(u(Z)\\) (Tsiatis, 2006). Specifically,\n\\[\nE\\{h(Z)\\mid u\\}\n=\n\\Pi\\{h(Z)\\mid\\mathcal{U}^*\\}\n=\n\\arg\\min_{g\\in\\mathcal{U}^*}\n\\|h-g\\|,\n\\]\nwhere\n\\[\n\\mathcal{U}^*\n=\n\\left\\{\na(u)\n:\na(\\cdot) \\text{ is a measurable and square-integrable function on }\n\\mathbb{R}^k\n\\right\\}.\n\\]\nBecause \\(\\mathcal{U}\\subset\\mathcal{U}^*\\), the best approximation of \\(h(Z)\\) in \\(\\mathcal{U}^*\\) is at least as good as the best approximation in \\(\\mathcal{U}\\). Thus,\n\\[\n\\left\\|\nh-E\\{h(Z)\\mid u\\}\n\\right\\|\n\\leq\n\\left\\|\nh-\\Pi\\{h(Z)\\mid\\mathcal{U}\\}\n\\right\\|.\n\\]\nBy a standard property of the multivariate normal distribution, \\(E\\{h(Z)\\mid u\\}\\) is linear in \\(u\\) when \\(h(Z)\\) and \\(u(Z)\\) are jointly multivariate normal. In this case,\n\\[\nE\\{h(Z)\\mid u\\}\n=\n\\Pi\\{h(Z)\\mid\\mathcal{U}\\},\n\\] which is in turn given by (2.1).\n\n\n2.3.2 Dimensionality of \\(\\mathcal{U}=\\{Bv:B\\in\\mathbb{R}^{q\\times r}\\}\\)\nHere, \\(v\\) is an \\(r\\)-dimensional random vector. On page 17, it is claimed that \\(\\mathcal{U}\\) is \\(q\\times r\\)-dimensional because it is the linear span of that many linearly independent functions.\nIndeed, a typical element of \\(\\mathcal{U}\\) is given by \\[\n\\begin{aligned}\nu\n= Bv =\n\\begin{pmatrix}\n\\sum_{j=1}^r B_{1j}v_j \\\\\n\\sum_{j=1}^r B_{2j}v_j \\\\\n\\vdots \\\\\n\\sum_{j=1}^r B_{qj}v_j\n\\end{pmatrix}\n=\n\\sum_{j=1}^r\n\\begin{pmatrix}\nB_{1j}v_j \\\\\nB_{2j}v_j \\\\\n\\vdots \\\\\nB_{qj}v_j\n\\end{pmatrix}\n=\n\\sum_{j=1}^r\\sum_{i=1}^q\nB_{ij} u_{ij}^{q\\times 1},\n\\end{aligned}\n\\]\nwhere \\[\nu_{ij}^{q\\times 1} = (\\underbrace{0,\\ldots, 0}_{i-1}， v_j, \\underbrace{0， \\ldots, 0}_{q-i})^\\top,\n\\] as defined in the book.",
+    "crumbs": [
+      "I. Semiparametric foundations",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Hilbert space for random vectors</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/02-hilbert-space.html#solutions-to-exercises",
+    "href": "chapters/02-hilbert-space.html#solutions-to-exercises",
+    "title": "2  Hilbert space for random vectors",
+    "section": "2.4 Solutions to Exercises",
+    "text": "2.4 Solutions to Exercises\n\n2.4.1 Exercise 2.1\n\nSolution. Let \\(\\mathcal{U}\\) be a closed linear subspace of the Hilbert space \\(\\mathcal{H}\\), and let \\(h\\in\\mathcal{H}\\). We prove:\n\nExistence: There exists \\(u_0\\in\\mathcal{U}\\) such that\n\\[\n\\|h-u_0\\|\n=\n\\inf_{u\\in\\mathcal{U}}\n\\|h-u\\|.\n\\]\nUniqueness: The minimizer \\(u_0\\) is unique.\nOrthogonality: The residual is orthogonal to \\(\\mathcal{U}\\):\n\\[\n\\langle h-u_0,u\\rangle = 0\n\\qquad\n\\text{for every } u\\in\\mathcal{U}.\n\\]\n\nTo show existence, let\n\\[\nd\n=\n\\inf_{u\\in\\mathcal{U}}\n\\|h-u\\|.\n\\]\nChoose a sequence \\(\\{u_n\\}\\subset\\mathcal{U}\\) such that\n\\[\n\\|h-u_n\\| \\longrightarrow d.\n\\]\nWe first show that \\(\\{u_n\\}\\) is a Cauchy sequence. Because \\((u_n+u_m)/2\\in\\mathcal{U}\\),\n\\[\nd\n\\leq\n\\left\\|\nh-\\frac{u_n+u_m}{2}\n\\right\\|.\n\\]\nMoreover,\n\\[\n\\begin{aligned}\n\\|u_n-u_m\\|^2\n&=\n\\left\\|\n(h-u_n)-(h-u_m)\n\\right\\|^2 \\\\\n&=\n\\|h-u_n\\|^2\n+\n\\|h-u_m\\|^2\n-\n2\\langle h-u_n,h-u_m\\rangle.\n\\end{aligned}\n\\]\nTherefore,\n\\[\n\\begin{aligned}\n4d^2\n&\\leq\n4\\left\\|\nh-\\frac{u_n+u_m}{2}\n\\right\\|^2 \\\\\n&=\n\\left\\|\n(h-u_n)+(h-u_m)\n\\right\\|^2 \\\\\n&=\n\\|h-u_n\\|^2\n+\n\\|h-u_m\\|^2\n+\n2\\langle h-u_n,h-u_m\\rangle \\\\\n&=\n2\\|h-u_n\\|^2\n+\n2\\|h-u_m\\|^2\n-\n\\|u_n-u_m\\|^2.\n\\end{aligned}\n\\]\nHence,\n\\[\n\\begin{aligned}\n\\|u_n-u_m\\|^2\n&\\leq\n2\\|h-u_n\\|^2\n+\n2\\|h-u_m\\|^2\n-\n4d^2 \\\\\n&\\longrightarrow 0\n\\qquad\n\\text{as } n,m\\longrightarrow\\infty.\n\\end{aligned}\n\\]\nThus, \\(\\{u_n\\}\\) is Cauchy. Since \\(\\mathcal{H}\\) is complete, there exists \\(u_0\\in\\mathcal{H}\\) such that\n\\[\nu_n\\longrightarrow u_0.\n\\]\nBecause \\(\\mathcal{U}\\) is closed and \\(u_n\\in\\mathcal{U}\\) for every \\(n\\),\n\\[\nu_0\\in\\mathcal{U}.\n\\]\nBy continuity of the norm,\n\\[\n\\|h-u_0\\|\n=\n\\lim_{n\\to\\infty}\\|h-u_n\\|\n=\nd.\n\\]\nThis establishes existence.\nTo show orthogonality, fix \\(u\\in\\mathcal{U}\\) and define\n\\[\ng(\\epsilon)\n=\n\\|h-(u_0-\\epsilon u)\\|^2.\n\\]\nSince \\(u_0-\\epsilon u\\in\\mathcal{U}\\) for every \\(\\epsilon\\in\\mathbb{R}\\), \\(g(\\epsilon)\\) is minimized at \\(\\epsilon=0\\). Hence,\n\\[\n\\begin{aligned}\n0\n&=\n\\left.\n\\frac{\\partial}{\\partial\\epsilon}\ng(\\epsilon)\n\\right|_{\\epsilon=0} \\\\\n&=\n2\\langle h-u_0,u\\rangle.\n\\end{aligned}\n\\]\nTherefore,\n\\[\n\\langle h-u_0,u\\rangle=0\n\\qquad\n\\text{for every } u\\in\\mathcal{U}.\n\\]\nFinally, for uniqueness, suppose that \\(u_0\\) and \\(u_0^*\\) both minimize \\(\\|h-u\\|\\) over \\(\\mathcal{U}\\). Since \\(u_0-u_0^*\\in\\mathcal{U}\\), orthogonality gives\n\\[\n\\begin{aligned}\n\\|h-u_0^*\\|^2\n&=\n\\underbrace{\\|h-u_0\\|^2}_{d^2}\n+\n\\underbrace{\\|u_0-u_0^*\\|^2}_{\\geq 0}.\n\\end{aligned}\n\\]\nBecause \\(\\|h-u_0^*\\|^2=d^2\\), it follows that\n\\[\n\\|u_0-u_0^*\\|^2=0,\n\\]\nand hence \\(u_0=u_0^*\\).\n\n\n\n2.4.2 Exercise 2.2\n\nSolution. This exercise is a direct application of Example 2 in the book.\n\nBecause \\(\\Sigma_{22}=E(Y_2Y_2^{\\mathsf T})\\) is nonsingular, the projection formula in Example 2 gives \\[\n\\begin{aligned}\n\\Pi(Y_1\\mid\\mathcal{U})\n&=\nE(Y_1Y_2^{\\mathsf T})\n\\left\\{\nE(Y_2Y_2^{\\mathsf T})\n\\right\\}^{-1}\nY_2 \\\\\n&=\n\\Sigma_{12}\\Sigma_{22}^{-1}Y_2,\n\\end{aligned}\n\\] which is equal to \\(E(Y_1\\mid Y_2)\\) (see Section 2.3.1).\nThus, the residual is \\[\nY_1-\\Pi(Y_1\\mid\\mathcal{U})\n=\nY_1-\\Sigma_{12}\\Sigma_{22}^{-1}Y_2.\n\\] Its squared norm is\n\n\\[\n\\begin{aligned}\n\\left\\|\nY_1-\\Pi(Y_1\\mid\\mathcal{U})\n\\right\\|^2\n&=\n\\operatorname{tr}\n\\left(\n\\Sigma_{11}\n-\n\\Sigma_{12}\\Sigma_{22}^{-1}\\Sigma_{21}\n\\right).\n\\end{aligned}\n\\]\n\n\n\n2.4.3 Exercise 2.3\n\nSolution. Let\n\\[\nW\n=\nZ_1^2-\\sigma_1^2.\n\\]\nThen\n\\[\n\\mathcal{U}\n=\n\\left\\{\na_1W+a_2Z_2\n:\na_1,a_2\\in\\mathbb{R}\n\\right\\}.\n\\]\nBecause \\((Z_1,Z_2)^{\\mathsf T}\\) is mean-zero multivariate normal, all third moments are zero. Thus,\n\\[\n\\begin{aligned}\nE(Z_1W)\n&=\nE(Z_1^3)-\\sigma_1^2E(Z_1) = 0,\n\\end{aligned}\n\\]\nand\n\\[\n\\begin{aligned}\nE(WZ_2)\n&=\nE(Z_1^2Z_2)-\\sigma_1^2E(Z_2) = 0,\n\\end{aligned}\n\\] where we have used \\[\nE(Z_1^2Z_2) = E\\{Z_2\\underbrace{E(Z_1^2\\mid Z_2)}_{\\sigma_1^2 - \\sigma_2^{-2}\\sigma_{12}^2}\\} = (\\sigma_1^2 - \\sigma_2^{-2}\\sigma_{12}^2)E(Z_2) = 0.\n\\]\nThus, \\(W\\) is orthogonal to both \\(Z_1\\) and \\(Z_2\\). This means that the problem essentially reduces to projecting \\(Z_1\\) onto the linear span of \\(Z_2\\) alone.\n\nThe component of \\(Z_1\\) in the direction of \\(W\\) is zero. Therefore,\n\n\\[\n\\begin{aligned}\n\\Pi(Z_1\\mid\\mathcal{U})\n&=\n\\frac{E(Z_1Z_2)}{E(Z_2^2)}Z_2 =\n\\sigma_{2}^{-2}\\sigma_{12}Z_2.\n\\end{aligned}\n\\]\n\nThe residual is \\[\nZ_1-\\Pi(Z_1\\mid\\mathcal{U})\n=\nZ_1-\\sigma_{2}^{-2}\\sigma_{12}Z_2.\n\\] Its variance is\n\n\\[\n\\begin{aligned}\n\\operatorname{var}\n\\left\\{\nZ_1-\\Pi(Z_1\\mid\\mathcal{U})\n\\right\\}\n&=\n\\sigma_1^2\n-\n\\sigma_{2}^{-2}\\sigma_{12}^2.\n\\end{aligned}\n\\]",
+    "crumbs": [
+      "I. Semiparametric foundations",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Hilbert space for random vectors</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/02-hilbert-space.html#additional-problems",
+    "href": "chapters/02-hilbert-space.html#additional-problems",
+    "title": "2  Hilbert space for random vectors",
+    "section": "2.5 Additional Problems",
+    "text": "2.5 Additional Problems\n\nProblem 2.1\nLet \\(\\mathcal{U}\\) be a closed linear subspace of \\(\\mathcal{H}\\), and let\n\\[\nu_0=\\Pi(h\\mid\\mathcal{U}).\n\\]\nShow that, for every \\(u\\in\\mathcal{U}\\),\n\\[\n\\|h-u\\|^2\n=\n\\|h-u_0\\|^2\n+\n\\|u-u_0\\|^2.\n\\]\n\n\nProblem 2.2\nLet \\(Z\\sim N(0,1)\\), and consider the Hilbert space of one-dimensional mean-zero functions of \\(Z\\) with finite variance. Let\n\\[\n\\mathcal{U}\n=\n\\operatorname{span}\n\\left\\{\nZ,\\,\nZ^2-1\n\\right\\}.\n\\]\n\nShow that \\(Z\\) and \\(Z^2-1\\) are orthogonal.\nFind \\(\\Pi(Z^3\\mid\\mathcal{U})\\).\nCompute the variance of\n\n\\[\nZ^3-\\Pi(Z^3\\mid\\mathcal{U}).\n\\]\n\n\nProblem 2.3\nLet \\(h_1,h_2\\in\\mathcal{H}\\). For any real number \\(a\\), use\n\\[\n\\|h_1-ah_2\\|^2\\geq 0\n\\]\nto prove the Cauchy–Schwarz inequality\n\\[\n\\left|\n\\langle h_1,h_2\\rangle\n\\right|^2\n\\leq\n\\|h_1\\|^2\\|h_2\\|^2.\n\\]\nShow that equality holds if and only if \\(h_1=ah_2\\) for some scalar \\(a\\).\n\n\nProblem 2.4\nLet \\(Z\\) have support \\(\\{z_1,z_2,z_3\\}\\), with positive probabilities \\(\\pi_1,\\pi_2,\\pi_3\\).\n\nFind two linearly independent mean-zero functions of \\(Z\\) that span the space of all one-dimensional mean-zero functions of \\(Z\\).\nWhat is the dimension of the space of all \\(q\\)-dimensional mean-zero functions of \\(Z\\)?\n\n\n\n\n\n\n\nTsiatis, Anastasios A. (2006). Semiparametric theory and missing data. Springer. https://doi.org/10.1007/0-387-37345-4.",
+    "crumbs": [
+      "I. Semiparametric foundations",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Hilbert space for random vectors</span>"
     ]
   },
   {
@@ -54,7 +100,7 @@
     "href": "notation.html",
     "title": "Notation",
     "section": "",
-    "text": "Symbol\nMeaning\n\n\n\n\n\\(Z\\)\nFull observed random vector for one independent unit\n\n\n\\(Z_1,\\ldots,Z_n\\)\nIndependent and identically distributed observations\n\n\n\\(\\beta\\)\nFinite-dimensional parameter of interest\n\n\n\\(\\eta\\)\nNuisance parameter, often infinite-dimensional\n\n\n\\(S_\\beta\\)\nScore for \\(\\beta\\)\n\n\n\\(\\Lambda\\)\nTangent space\n\n\n\\(\\Lambda^\\perp\\)\nOrthogonal complement of a tangent space\n\n\n\\(\\varphi\\)\nInfluence function\n\n\n\\(\\varphi^{\\mathrm{eff}}\\)\nEfficient influence function\n\n\n\\(R\\)\nIndicator that the full data are observed\n\n\n\\(\\pi\\)\nObservation or response probability\n\n\n\nI will add chapter-specific notation to this table as the manuscript develops.",
+    "text": "Symbol\nMeaning\n\n\n\n\n\\(Z\\)\nFull observed random vector for one independent unit\n\n\n\\(Z_1,\\ldots,Z_n\\)\nIndependent and identically distributed observations\n\n\n\\(\\beta\\)\nFinite-dimensional parameter of interest\n\n\n\\(\\eta\\)\nNuisance parameter, often infinite-dimensional\n\n\n\\(\\langle h_1, h_2\\rangle = E\\{h_1^\\top(Z)h_2(Z)\\}\\)\nInner product in the Hilbert space of mean-zero, square-integrable functions\n\n\n\\(S_\\beta\\)\nScore for \\(\\beta\\)\n\n\n\\(\\Lambda\\)\nNuisance tangent space\n\n\n\\(\\Lambda^\\perp\\)\nOrthogonal complement of a nuisance tangent space\n\n\n\\(\\varphi\\)\nInfluence function\n\n\n\\(\\varphi^{\\mathrm{eff}}\\)\nEfficient influence function\n\n\n\\(R\\)\nIndicator that the full data are observed\n\n\n\\(\\pi(\\cdot)\\)\nObservation or response probability\n\n\n\nI will add chapter-specific notation to this table as the manuscript develops.",
     "crumbs": [
       "Notation"
     ]
@@ -86,87 +132,21 @@
     "href": "chapters/01-introduction.html#chapter-summary",
     "title": "1  Introduction to semiparametric models",
     "section": "1.2 Chapter Summary",
-    "text": "1.2 Chapter Summary\nA parametric model specifies the data distribution through a finite-dimensional parameter: \\[\np(z; \\theta), \\qquad \\theta \\in \\mathbb{R}^p.\n\\]\nA semiparametric model retains a finite-dimensional parameter of interest, \\(\\beta\\), while leaving other aspects of the distribution unspecified through an infinite-dimensional nuisance parameter \\(\\eta(\\cdot)\\): \\[\np\\{z; \\beta, \\eta(\\cdot)\\}, \\qquad\n\\beta \\in \\mathbb{R}^q.\n\\]\nThe nuisance parameter is often an unknown function, such as a conditional distribution, a covariate distribution, or a baseline hazard function. This allows the model to target \\(\\beta\\) without imposing a fully parametric model for the data.\nKey examples include:\n\nRestricted moment model. Only the conditional mean is specified: \\[\nE(Y \\mid X) = \\mu(X, \\beta).\n\\]\nProportional hazards model. Covariate effects are modeled by \\(\\beta\\), while the baseline hazard remains unspecified: \\[\n\\lambda(t \\mid X) = \\lambda_0(t)\\exp(\\beta^\\top X).\n\\]\nNonparametric model. The distribution is unrestricted, and the parameter of interest is a functional of that distribution: \\[\np_Z(z) = \\eta(z), \\qquad\n\\beta = E(Z) \\quad \\text{or} \\quad E(Z^2).\n\\]\n\nA semiparametric estimator \\(\\widehat{\\beta}_n\\) is typically required to be consistent and asymptotically normal: \\[\n\\widehat{\\beta}_n \\xrightarrow{P} \\beta,\n\\qquad\nn^{1/2}(\\widehat{\\beta}_n - \\beta)\n\\xrightarrow{D} N(0, \\Sigma).\n\\]\nThe chapter motivates two questions developed throughout the book:\n\nHow can regular semiparametric estimators be constructed?\nHow can the estimator with the smallest asymptotic variance be identified?\n\nThe answers rely on the geometry of influence functions, tangent spaces, orthogonality, and projection in Hilbert spaces.",
+    "text": "1.2 Chapter Summary\nA parametric model specifies the data distribution through a finite-dimensional parameter: \\[\np(z; \\theta), \\qquad \\theta \\in \\mathbb{R}^p.\n\\]\nA semiparametric model retains a finite-dimensional parameter of interest, \\(\\beta\\), while leaving other aspects of the distribution unspecified through an infinite-dimensional nuisance parameter \\(\\eta(\\cdot)\\): \\[\np\\{z; \\beta, \\eta(\\cdot)\\}, \\qquad\n\\beta \\in \\mathbb{R}^q.\n\\]\nThe nuisance parameter is often an unknown function, such as a conditional distribution, a covariate distribution, or a baseline hazard function. But it can also be defined implicitly as the “other” aspects of the distribution that are not of direct interest. This allows the model to target \\(\\beta\\) without imposing a full parametric constraint on the data.\nKey examples include:\n\nRestricted moment model. Only the conditional mean is specified: \\[\nE(Y \\mid X) = \\mu(X, \\beta).\n\\]\n\nHere \\(\\eta\\) relates to aspects of the conditional distribution of \\(Y \\mid X\\) other than the mean, as well as the marginal distribution of \\(X\\).\n\nProportional hazards model. Covariate effects are modeled by \\(\\beta\\), while the baseline hazard remains unspecified: \\[\n\\lambda(t \\mid X) = \\lambda_0(t)\\exp(\\beta^\\top X).\n\\]\n\nHere \\(\\eta = \\lambda_0(t)\\).\n\nNonparametric model. The distribution is unrestricted, and the parameter of interest is a functional of that distribution: \\[\np_Z(z) = \\eta(z), \\qquad\n\\beta = E(Z) \\quad \\text{or} \\quad E(Z^2).\n\\]\n\nA semiparametric estimator \\(\\widehat{\\beta}_n\\) is typically required to be consistent and asymptotically normal: \\[\n\\widehat{\\beta}_n \\xrightarrow{P} \\beta,\n\\qquad\nn^{1/2}(\\widehat{\\beta}_n - \\beta)\n\\xrightarrow{D} N(0, \\Sigma).\n\\] The significance of a semiparametric estimator is that the above holds regardless of the underlying, and potentially complex, state of \\(\\eta\\).\nThe chapter motivates two key questions throughout the book:\n\nConstructing regular semiparametric estimators;\nFinding an optimal semiparametric estimator with the smallest asymptotic variance.\n\nThe answers rely on the geometry of influence functions, tangent spaces, orthogonality, and projection in Hilbert spaces.",
     "crumbs": [
       "I. Semiparametric foundations",
       "<span class='chapter-number'>1</span>  <span class='chapter-title'>Introduction to semiparametric models</span>"
     ]
   },
   {
-    "objectID": "chapters/01-introduction.html#additional-exercises",
-    "href": "chapters/01-introduction.html#additional-exercises",
+    "objectID": "chapters/01-introduction.html#additional-problems",
+    "href": "chapters/01-introduction.html#additional-problems",
     "title": "1  Introduction to semiparametric models",
-    "section": "1.3 Additional Exercises",
-    "text": "1.3 Additional Exercises\n\nExercise 1.1\nClassify each model as parametric, semiparametric, or nonparametric. Identify the parameter of interest and any nuisance parameter.\n\n\\(Y \\sim N(\\mu, \\sigma^2)\\), with interest in \\(\\mu\\).\n\\(E(Y \\mid X) = \\beta_0 + \\beta_1 X\\).\n\\(p_Z(z)\\) is unrestricted, with interest in \\(E(Z)\\)\n\n\n\nExercise 1.2\nSuppose that \\[\nE(Y \\mid X) = \\beta^\\top X,\n\\] where \\(X\\) is a \\(q\\)-dimensional random vector and \\(E(XX^\\top)\\) is nonsingular.\n\nShow that \\(\\beta\\) satisfies \\[\nE\\left[X\\{Y-\\beta^\\top X\\}\\right] = 0.\n\\]\nShow that \\[\n\\beta = \\{E(XX^\\top)\\}^{-1}E(XY).\n\\]\nPropose an estimator of \\(\\beta\\) based on an iid sample \\((Y_i, X_i)\\), \\(i=1,\\ldots,n\\).\nExplain why this estimator does not require a parametric model for \\(Y \\mid X\\).",
+    "section": "1.3 Additional Problems",
+    "text": "1.3 Additional Problems\n\nProblem 1.1\nClassify each model as parametric, semiparametric, or nonparametric. Identify the parameter of interest and any nuisance parameter.\n\n\\(Y \\sim N(\\mu, \\sigma^2)\\), with interest in \\(\\mu\\).\n\\(E(Y \\mid X) = \\beta_0 + \\beta_1 X\\).\n\\(p_Z(z)\\) is unrestricted, with interest in \\(E(Z)\\)\n\n\n\nProblem 1.2\nSuppose that \\[\nE(Y \\mid X) = \\beta^\\top X,\n\\] where \\(X\\) is a \\(q\\)-dimensional random vector and \\(E(XX^\\top)\\) is nonsingular.\n\nShow that \\(\\beta\\) satisfies \\[\nE\\left[X\\{Y-\\beta^\\top X\\}\\right] = 0.\n\\]\nShow that \\[\n\\beta = \\{E(XX^\\top)\\}^{-1}E(XY).\n\\]\nPropose an estimator of \\(\\beta\\) based on an iid sample \\((Y_i, X_i)\\), \\(i=1,\\ldots,n\\).\nExplain why this estimator does not require a parametric model for \\(Y \\mid X\\).",
     "crumbs": [
       "I. Semiparametric foundations",
       "<span class='chapter-number'>1</span>  <span class='chapter-title'>Introduction to semiparametric models</span>"
-    ]
-  },
-  {
-    "objectID": "chapters/02-hilbert-space.html",
-    "href": "chapters/02-hilbert-space.html",
-    "title": "2  Hilbert space for random vectors",
-    "section": "",
-    "text": "2.1 Learning objectives",
-    "crumbs": [
-      "I. Semiparametric foundations",
-      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Hilbert space for random vectors</span>"
-    ]
-  },
-  {
-    "objectID": "chapters/02-hilbert-space.html#learning-objectives",
-    "href": "chapters/02-hilbert-space.html#learning-objectives",
-    "title": "2  Hilbert space for random vectors",
-    "section": "",
-    "text": "Work with mean-zero, square-integrable random functions\nInterpret orthogonality through covariance\nUse the projection theorem in statistical problems",
-    "crumbs": [
-      "I. Semiparametric foundations",
-      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Hilbert space for random vectors</span>"
-    ]
-  },
-  {
-    "objectID": "chapters/02-hilbert-space.html#chapter-summary",
-    "href": "chapters/02-hilbert-space.html#chapter-summary",
-    "title": "2  Hilbert space for random vectors",
-    "section": "2.2 Chapter Summary",
-    "text": "2.2 Chapter Summary",
-    "crumbs": [
-      "I. Semiparametric foundations",
-      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Hilbert space for random vectors</span>"
-    ]
-  },
-  {
-    "objectID": "chapters/02-hilbert-space.html#notes-and-extensions",
-    "href": "chapters/02-hilbert-space.html#notes-and-extensions",
-    "title": "2  Hilbert space for random vectors",
-    "section": "2.3 Notes and Extensions",
-    "text": "2.3 Notes and Extensions",
-    "crumbs": [
-      "I. Semiparametric foundations",
-      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Hilbert space for random vectors</span>"
-    ]
-  },
-  {
-    "objectID": "chapters/02-hilbert-space.html#solutions-to-exercises",
-    "href": "chapters/02-hilbert-space.html#solutions-to-exercises",
-    "title": "2  Hilbert space for random vectors",
-    "section": "2.4 Solutions to Exercises",
-    "text": "2.4 Solutions to Exercises\n\n2.4.1 Exercise 2.1\n\nSolution.",
-    "crumbs": [
-      "I. Semiparametric foundations",
-      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Hilbert space for random vectors</span>"
-    ]
-  },
-  {
-    "objectID": "chapters/02-hilbert-space.html#additional-exercises",
-    "href": "chapters/02-hilbert-space.html#additional-exercises",
-    "title": "2  Hilbert space for random vectors",
-    "section": "2.5 Additional Exercises",
-    "text": "2.5 Additional Exercises",
-    "crumbs": [
-      "I. Semiparametric foundations",
-      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Hilbert space for random vectors</span>"
     ]
   },
   {

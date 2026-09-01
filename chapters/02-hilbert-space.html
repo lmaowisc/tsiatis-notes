@@ -54,7 +54,26 @@ div.sourceCode
 @media screen {
 pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="../site_libs/quarto-nav/quarto-nav.js"></script>
@@ -105,6 +124,35 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   }
 }</script>
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 <link rel="stylesheet" href="../styles.css">
 </head>
@@ -338,14 +386,26 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#learning-objectives" id="toc-learning-objectives" class="nav-link active" data-scroll-target="#learning-objectives"><span class="header-section-number">2.1</span> Learning objectives</a></li>
+  <li><a href="#learning-objectives" id="toc-learning-objectives" class="nav-link active" data-scroll-target="#learning-objectives"><span class="header-section-number">2.1</span> Learning Objectives</a></li>
   <li><a href="#chapter-summary" id="toc-chapter-summary" class="nav-link" data-scroll-target="#chapter-summary"><span class="header-section-number">2.2</span> Chapter Summary</a></li>
-  <li><a href="#notes-and-extensions" id="toc-notes-and-extensions" class="nav-link" data-scroll-target="#notes-and-extensions"><span class="header-section-number">2.3</span> Notes and Extensions</a></li>
+  <li><a href="#notes-and-extensions" id="toc-notes-and-extensions" class="nav-link" data-scroll-target="#notes-and-extensions"><span class="header-section-number">2.3</span> Notes and Extensions</a>
+  <ul class="collapse">
+  <li><a href="#sec-2-proj" id="toc-sec-2-proj" class="nav-link" data-scroll-target="#sec-2-proj"><span class="header-section-number">2.3.1</span> Projection onto linear span vs conditional expectation</a></li>
+  <li><a href="#dimensionality-of-mathcalubvbinmathbbrqtimes-r" id="toc-dimensionality-of-mathcalubvbinmathbbrqtimes-r" class="nav-link" data-scroll-target="#dimensionality-of-mathcalubvbinmathbbrqtimes-r"><span class="header-section-number">2.3.2</span> Dimensionality of <span class="math inline">\(\mathcal{U}=\{Bv:B\in\mathbb{R}^{q\times r}\}\)</span></a></li>
+  </ul></li>
   <li><a href="#solutions-to-exercises" id="toc-solutions-to-exercises" class="nav-link" data-scroll-target="#solutions-to-exercises"><span class="header-section-number">2.4</span> Solutions to Exercises</a>
   <ul class="collapse">
   <li><a href="#exercise-2.1" id="toc-exercise-2.1" class="nav-link" data-scroll-target="#exercise-2.1"><span class="header-section-number">2.4.1</span> Exercise 2.1</a></li>
+  <li><a href="#exercise-2.2" id="toc-exercise-2.2" class="nav-link" data-scroll-target="#exercise-2.2"><span class="header-section-number">2.4.2</span> Exercise 2.2</a></li>
+  <li><a href="#exercise-2.3" id="toc-exercise-2.3" class="nav-link" data-scroll-target="#exercise-2.3"><span class="header-section-number">2.4.3</span> Exercise 2.3</a></li>
   </ul></li>
-  <li><a href="#additional-exercises" id="toc-additional-exercises" class="nav-link" data-scroll-target="#additional-exercises"><span class="header-section-number">2.5</span> Additional Exercises</a></li>
+  <li><a href="#additional-problems" id="toc-additional-problems" class="nav-link" data-scroll-target="#additional-problems"><span class="header-section-number">2.5</span> Additional Problems</a>
+  <ul class="collapse">
+  <li><a href="#problem-2.1" id="toc-problem-2.1" class="nav-link" data-scroll-target="#problem-2.1">Problem 2.1</a></li>
+  <li><a href="#problem-2.2" id="toc-problem-2.2" class="nav-link" data-scroll-target="#problem-2.2">Problem 2.2</a></li>
+  <li><a href="#problem-2.3" id="toc-problem-2.3" class="nav-link" data-scroll-target="#problem-2.3">Problem 2.3</a></li>
+  <li><a href="#problem-2.4" id="toc-problem-2.4" class="nav-link" data-scroll-target="#problem-2.4">Problem 2.4</a></li>
+  </ul></li>
   </ul>
 </nav>
     </div>
@@ -372,7 +432,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 
 <section id="learning-objectives" class="level2" data-number="2.1">
-<h2 data-number="2.1" class="anchored" data-anchor-id="learning-objectives"><span class="header-section-number">2.1</span> Learning objectives</h2>
+<h2 data-number="2.1" class="anchored" data-anchor-id="learning-objectives"><span class="header-section-number">2.1</span> Learning Objectives</h2>
 <ul>
 <li>Work with mean-zero, square-integrable random functions</li>
 <li>Interpret orthogonality through covariance</li>
@@ -381,25 +441,483 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="chapter-summary" class="level2" data-number="2.2">
 <h2 data-number="2.2" class="anchored" data-anchor-id="chapter-summary"><span class="header-section-number">2.2</span> Chapter Summary</h2>
+<p>This chapter introduces the Hilbert space of <span class="math inline">\(q\)</span>-dimensional random functions <span class="math inline">\(h(Z)\)</span> with mean zero and finite second moments:</p>
+<p><span class="math display">\[
+E\{h(Z)\} = 0,
+\qquad
+E\{h^\top(Z)h(Z)\} &lt; \infty.
+\]</span></p>
+<p>The covariance inner product is defined by</p>
+<p><span class="math display">\[
+\langle h_1, h_2\rangle
+=
+E(h_1^\top h_2),
+\]</span></p>
+<p>with corresponding norm</p>
+<p><span class="math display">\[
+\|h\|
+=
+\langle h,h\rangle^{1/2}.
+\]</span></p>
+<p>Two elements are <strong>orthogonal</strong> when their inner product is zero. For a closed linear subspace <span class="math inline">\(\mathcal{U}\subset\mathcal{H}\)</span>, the projection theorem guarantees a unique projection <span class="math inline">\(\Pi(h\mid\mathcal{U})\in\mathcal{U}\)</span> such that</p>
+<p><span class="math display">\[
+\Pi(h\mid\mathcal{U})
+=
+\arg\min_{u\in\mathcal{U}}
+\|h-u\|.
+\]</span></p>
+<p>The residual after projection is orthogonal to the subspace:</p>
+<p><span class="math display">\[
+h-\Pi(h\mid\mathcal{U})
+\perp
+\mathcal{U}.
+\]</span></p>
+<p>For a finite-dimensional subspace spanned by a random vector <span class="math inline">\(u(Z)\)</span>, the projection is a linear function of <span class="math inline">\(u\)</span>, whose coefficients are determined by the variance of <span class="math inline">\(u(Z)\)</span> and its covariance with <span class="math inline">\(h(Z)\)</span> (see (<a href="#eq-projection-ls" class="quarto-xref"><span>2.1</span></a>) below).</p>
 </section>
 <section id="notes-and-extensions" class="level2" data-number="2.3">
 <h2 data-number="2.3" class="anchored" data-anchor-id="notes-and-extensions"><span class="header-section-number">2.3</span> Notes and Extensions</h2>
+<section id="sec-2-proj" class="level3" data-number="2.3.1">
+<h3 data-number="2.3.1" class="anchored" data-anchor-id="sec-2-proj"><span class="header-section-number">2.3.1</span> Projection onto linear span vs conditional expectation</h3>
+<p>By definition,</p>
+<p><span class="math display">\[
+\Pi\{h(Z)\mid\mathcal{U}\}
+=
+\arg\min_{g\in\mathcal{U}}\|h-g\|,
+\]</span></p>
+<p>for any closed linear subspace <span class="math inline">\(\mathcal{U}\subset\mathcal{H}\)</span>. That is, the projection of <span class="math inline">\(h(Z)\)</span> onto <span class="math inline">\(\mathcal{U}\)</span> is the element of <span class="math inline">\(\mathcal{U}\)</span> closest to <span class="math inline">\(h(Z)\)</span> in the norm <span class="math inline">\(\|\cdot\|\)</span>.</p>
+<p><strong>Example 1</strong> in <span class="citation" data-cites="tsiatis2006">Tsiatis (<a href="../references.html#ref-tsiatis2006" role="doc-biblioref">2006</a>)</span> considers the linear span</p>
+<p><span class="math display">\[
+\mathcal{U}
+=
+\left\{
+a^{\top}u
+:
+a\in\mathbb{R}^k
+\right\}
+\]</span></p>
+<p>of a <span class="math inline">\(k\)</span>-dimensional random vector</p>
+<p><span class="math display">\[
+u(Z)
+=
+\{u_1(Z),\ldots,u_k(Z)\}^{\top}.
+\]</span></p>
+<p>It establishes that</p>
+<p><span id="eq-projection-ls"><span class="math display">\[
+\Pi\{h(Z)\mid\mathcal{U}\}
+=
+E(hu^{\top})
+\left\{
+E(uu^{\top})
+\right\}^{-1}
+u.
+\tag{2.1}\]</span></span></p>
+<p>If <span class="math inline">\(\mathcal{U}\)</span> is expanded to include all measurable square-integrable functions of <span class="math inline">\(u(Z)\)</span>, the projection is the conditional expectation of <span class="math inline">\(h(Z)\)</span> given <span class="math inline">\(u(Z)\)</span> <span class="citation" data-cites="tsiatis2006">(<a href="../references.html#ref-tsiatis2006" role="doc-biblioref">Tsiatis, 2006</a>)</span>. Specifically,</p>
+<p><span class="math display">\[
+E\{h(Z)\mid u\}
+=
+\Pi\{h(Z)\mid\mathcal{U}^*\}
+=
+\arg\min_{g\in\mathcal{U}^*}
+\|h-g\|,
+\]</span></p>
+<p>where</p>
+<p><span class="math display">\[
+\mathcal{U}^*
+=
+\left\{
+a(u)
+:
+a(\cdot) \text{ is a measurable and square-integrable function on }
+\mathbb{R}^k
+\right\}.
+\]</span></p>
+<p>Because <span class="math inline">\(\mathcal{U}\subset\mathcal{U}^*\)</span>, the best approximation of <span class="math inline">\(h(Z)\)</span> in <span class="math inline">\(\mathcal{U}^*\)</span> is at least as good as the best approximation in <span class="math inline">\(\mathcal{U}\)</span>. Thus,</p>
+<p><span class="math display">\[
+\left\|
+h-E\{h(Z)\mid u\}
+\right\|
+\leq
+\left\|
+h-\Pi\{h(Z)\mid\mathcal{U}\}
+\right\|.
+\]</span></p>
+<p>By a standard property of the multivariate normal distribution, <span class="math inline">\(E\{h(Z)\mid u\}\)</span> is linear in <span class="math inline">\(u\)</span> when <span class="math inline">\(h(Z)\)</span> and <span class="math inline">\(u(Z)\)</span> are jointly multivariate normal. In this case,</p>
+<p><span class="math display">\[
+E\{h(Z)\mid u\}
+=
+\Pi\{h(Z)\mid\mathcal{U}\},
+\]</span> which is in turn given by (<a href="#eq-projection-ls" class="quarto-xref"><span>2.1</span></a>).</p>
+</section>
+<section id="dimensionality-of-mathcalubvbinmathbbrqtimes-r" class="level3" data-number="2.3.2">
+<h3 data-number="2.3.2" class="anchored" data-anchor-id="dimensionality-of-mathcalubvbinmathbbrqtimes-r"><span class="header-section-number">2.3.2</span> Dimensionality of <span class="math inline">\(\mathcal{U}=\{Bv:B\in\mathbb{R}^{q\times r}\}\)</span></h3>
+<p>Here, <span class="math inline">\(v\)</span> is an <span class="math inline">\(r\)</span>-dimensional random vector. On page 17, it is claimed that <span class="math inline">\(\mathcal{U}\)</span> is <span class="math inline">\(q\times r\)</span>-dimensional because it is the linear span of that many linearly independent functions.</p>
+<p>Indeed, a typical element of <span class="math inline">\(\mathcal{U}\)</span> is given by <span class="math display">\[
+\begin{aligned}
+u
+= Bv =
+\begin{pmatrix}
+\sum_{j=1}^r B_{1j}v_j \\
+\sum_{j=1}^r B_{2j}v_j \\
+\vdots \\
+\sum_{j=1}^r B_{qj}v_j
+\end{pmatrix}
+=
+\sum_{j=1}^r
+\begin{pmatrix}
+B_{1j}v_j \\
+B_{2j}v_j \\
+\vdots \\
+B_{qj}v_j
+\end{pmatrix}
+=
+\sum_{j=1}^r\sum_{i=1}^q
+B_{ij} u_{ij}^{q\times 1},
+\end{aligned}
+\]</span></p>
+<p>where <span class="math display">\[
+u_{ij}^{q\times 1} = (\underbrace{0,\ldots, 0}_{i-1}， v_j, \underbrace{0， \ldots, 0}_{q-i})^\top,
+\]</span> as defined in the book.</p>
+</section>
 </section>
 <section id="solutions-to-exercises" class="level2" data-number="2.4">
 <h2 data-number="2.4" class="anchored" data-anchor-id="solutions-to-exercises"><span class="header-section-number">2.4</span> Solutions to Exercises</h2>
 <section id="exercise-2.1" class="level3" data-number="2.4.1">
 <h3 data-number="2.4.1" class="anchored" data-anchor-id="exercise-2.1"><span class="header-section-number">2.4.1</span> Exercise 2.1</h3>
 <div class="proof solution">
-<p><span class="proof-title"><em>Solution</em>. </span></p>
+<p><span class="proof-title"><em>Solution</em>. </span>Let <span class="math inline">\(\mathcal{U}\)</span> be a closed linear subspace of the Hilbert space <span class="math inline">\(\mathcal{H}\)</span>, and let <span class="math inline">\(h\in\mathcal{H}\)</span>. We prove:</p>
+<ul>
+<li><p><strong>Existence</strong>: There exists <span class="math inline">\(u_0\in\mathcal{U}\)</span> such that</p>
+<p><span class="math display">\[
+\|h-u_0\|
+=
+\inf_{u\in\mathcal{U}}
+\|h-u\|.
+\]</span></p></li>
+<li><p><strong>Uniqueness</strong>: The minimizer <span class="math inline">\(u_0\)</span> is unique.</p></li>
+<li><p><strong>Orthogonality</strong>: The residual is orthogonal to <span class="math inline">\(\mathcal{U}\)</span>:</p>
+<p><span class="math display">\[
+\langle h-u_0,u\rangle = 0
+\qquad
+\text{for every } u\in\mathcal{U}.
+\]</span></p></li>
+</ul>
+<p>To show <strong>existence</strong>, let</p>
+<p><span class="math display">\[
+d
+=
+\inf_{u\in\mathcal{U}}
+\|h-u\|.
+\]</span></p>
+<p>Choose a sequence <span class="math inline">\(\{u_n\}\subset\mathcal{U}\)</span> such that</p>
+<p><span class="math display">\[
+\|h-u_n\| \longrightarrow d.
+\]</span></p>
+<p>We first show that <span class="math inline">\(\{u_n\}\)</span> is a Cauchy sequence. Because <span class="math inline">\((u_n+u_m)/2\in\mathcal{U}\)</span>,</p>
+<p><span class="math display">\[
+d
+\leq
+\left\|
+h-\frac{u_n+u_m}{2}
+\right\|.
+\]</span></p>
+<p>Moreover,</p>
+<p><span class="math display">\[
+\begin{aligned}
+\|u_n-u_m\|^2
+&amp;=
+\left\|
+(h-u_n)-(h-u_m)
+\right\|^2 \\
+&amp;=
+\|h-u_n\|^2
++
+\|h-u_m\|^2
+-
+2\langle h-u_n,h-u_m\rangle.
+\end{aligned}
+\]</span></p>
+<p>Therefore,</p>
+<p><span class="math display">\[
+\begin{aligned}
+4d^2
+&amp;\leq
+4\left\|
+h-\frac{u_n+u_m}{2}
+\right\|^2 \\
+&amp;=
+\left\|
+(h-u_n)+(h-u_m)
+\right\|^2 \\
+&amp;=
+\|h-u_n\|^2
++
+\|h-u_m\|^2
++
+2\langle h-u_n,h-u_m\rangle \\
+&amp;=
+2\|h-u_n\|^2
++
+2\|h-u_m\|^2
+-
+\|u_n-u_m\|^2.
+\end{aligned}
+\]</span></p>
+<p>Hence,</p>
+<p><span class="math display">\[
+\begin{aligned}
+\|u_n-u_m\|^2
+&amp;\leq
+2\|h-u_n\|^2
++
+2\|h-u_m\|^2
+-
+4d^2 \\
+&amp;\longrightarrow 0
+\qquad
+\text{as } n,m\longrightarrow\infty.
+\end{aligned}
+\]</span></p>
+<p>Thus, <span class="math inline">\(\{u_n\}\)</span> is Cauchy. Since <span class="math inline">\(\mathcal{H}\)</span> is complete, there exists <span class="math inline">\(u_0\in\mathcal{H}\)</span> such that</p>
+<p><span class="math display">\[
+u_n\longrightarrow u_0.
+\]</span></p>
+<p>Because <span class="math inline">\(\mathcal{U}\)</span> is closed and <span class="math inline">\(u_n\in\mathcal{U}\)</span> for every <span class="math inline">\(n\)</span>,</p>
+<p><span class="math display">\[
+u_0\in\mathcal{U}.
+\]</span></p>
+<p>By continuity of the norm,</p>
+<p><span class="math display">\[
+\|h-u_0\|
+=
+\lim_{n\to\infty}\|h-u_n\|
+=
+d.
+\]</span></p>
+<p>This establishes existence.</p>
+<p>To show <strong>orthogonality</strong>, fix <span class="math inline">\(u\in\mathcal{U}\)</span> and define</p>
+<p><span class="math display">\[
+g(\epsilon)
+=
+\|h-(u_0-\epsilon u)\|^2.
+\]</span></p>
+<p>Since <span class="math inline">\(u_0-\epsilon u\in\mathcal{U}\)</span> for every <span class="math inline">\(\epsilon\in\mathbb{R}\)</span>, <span class="math inline">\(g(\epsilon)\)</span> is minimized at <span class="math inline">\(\epsilon=0\)</span>. Hence,</p>
+<p><span class="math display">\[
+\begin{aligned}
+0
+&amp;=
+\left.
+\frac{\partial}{\partial\epsilon}
+g(\epsilon)
+\right|_{\epsilon=0} \\
+&amp;=
+2\langle h-u_0,u\rangle.
+\end{aligned}
+\]</span></p>
+<p>Therefore,</p>
+<p><span class="math display">\[
+\langle h-u_0,u\rangle=0
+\qquad
+\text{for every } u\in\mathcal{U}.
+\]</span></p>
+<p>Finally, for <strong>uniqueness</strong>, suppose that <span class="math inline">\(u_0\)</span> and <span class="math inline">\(u_0^*\)</span> both minimize <span class="math inline">\(\|h-u\|\)</span> over <span class="math inline">\(\mathcal{U}\)</span>. Since <span class="math inline">\(u_0-u_0^*\in\mathcal{U}\)</span>, orthogonality gives</p>
+<p><span class="math display">\[
+\begin{aligned}
+\|h-u_0^*\|^2
+&amp;=
+\underbrace{\|h-u_0\|^2}_{d^2}
++
+\underbrace{\|u_0-u_0^*\|^2}_{\geq 0}.
+\end{aligned}
+\]</span></p>
+<p>Because <span class="math inline">\(\|h-u_0^*\|^2=d^2\)</span>, it follows that</p>
+<p><span class="math display">\[
+\|u_0-u_0^*\|^2=0,
+\]</span></p>
+<p>and hence <span class="math inline">\(u_0=u_0^*\)</span>.</p>
+</div>
+</section>
+<section id="exercise-2.2" class="level3" data-number="2.4.2">
+<h3 data-number="2.4.2" class="anchored" data-anchor-id="exercise-2.2"><span class="header-section-number">2.4.2</span> Exercise 2.2</h3>
+<div class="proof solution">
+<p><span class="proof-title"><em>Solution</em>. </span>This exercise is a direct application of Example 2 in the book.</p>
+<ol type="a">
+<li><p>Because <span class="math inline">\(\Sigma_{22}=E(Y_2Y_2^{\mathsf T})\)</span> is nonsingular, the projection formula in Example 2 gives <span class="math display">\[
+\begin{aligned}
+\Pi(Y_1\mid\mathcal{U})
+&amp;=
+E(Y_1Y_2^{\mathsf T})
+\left\{
+E(Y_2Y_2^{\mathsf T})
+\right\}^{-1}
+Y_2 \\
+&amp;=
+\Sigma_{12}\Sigma_{22}^{-1}Y_2,
+\end{aligned}
+\]</span> which is equal to <span class="math inline">\(E(Y_1\mid Y_2)\)</span> (see <a href="#sec-2-proj" class="quarto-xref"><span>Section 2.3.1</span></a>).</p></li>
+<li><p>Thus, the residual is <span class="math display">\[
+Y_1-\Pi(Y_1\mid\mathcal{U})
+=
+Y_1-\Sigma_{12}\Sigma_{22}^{-1}Y_2.
+\]</span> Its squared norm is</p></li>
+</ol>
+<p><span class="math display">\[
+\begin{aligned}
+\left\|
+Y_1-\Pi(Y_1\mid\mathcal{U})
+\right\|^2
+&amp;=
+\operatorname{tr}
+\left(
+\Sigma_{11}
+-
+\Sigma_{12}\Sigma_{22}^{-1}\Sigma_{21}
+\right).
+\end{aligned}
+\]</span></p>
+</div>
+</section>
+<section id="exercise-2.3" class="level3" data-number="2.4.3">
+<h3 data-number="2.4.3" class="anchored" data-anchor-id="exercise-2.3"><span class="header-section-number">2.4.3</span> Exercise 2.3</h3>
+<div class="proof solution">
+<p><span class="proof-title"><em>Solution</em>. </span>Let</p>
+<p><span class="math display">\[
+W
+=
+Z_1^2-\sigma_1^2.
+\]</span></p>
+<p>Then</p>
+<p><span class="math display">\[
+\mathcal{U}
+=
+\left\{
+a_1W+a_2Z_2
+:
+a_1,a_2\in\mathbb{R}
+\right\}.
+\]</span></p>
+<p>Because <span class="math inline">\((Z_1,Z_2)^{\mathsf T}\)</span> is mean-zero multivariate normal, all third moments are zero. Thus,</p>
+<p><span class="math display">\[
+\begin{aligned}
+E(Z_1W)
+&amp;=
+E(Z_1^3)-\sigma_1^2E(Z_1) = 0,
+\end{aligned}
+\]</span></p>
+<p>and</p>
+<p><span class="math display">\[
+\begin{aligned}
+E(WZ_2)
+&amp;=
+E(Z_1^2Z_2)-\sigma_1^2E(Z_2) = 0,
+\end{aligned}
+\]</span> where we have used <span class="math display">\[
+E(Z_1^2Z_2) = E\{Z_2\underbrace{E(Z_1^2\mid Z_2)}_{\sigma_1^2 - \sigma_2^{-2}\sigma_{12}^2}\} = (\sigma_1^2 - \sigma_2^{-2}\sigma_{12}^2)E(Z_2) = 0.
+\]</span></p>
+<p>Thus, <span class="math inline">\(W\)</span> is orthogonal to both <span class="math inline">\(Z_1\)</span> and <span class="math inline">\(Z_2\)</span>. This means that the problem essentially reduces to projecting <span class="math inline">\(Z_1\)</span> onto the linear span of <span class="math inline">\(Z_2\)</span> alone.</p>
+<ol type="a">
+<li>The component of <span class="math inline">\(Z_1\)</span> in the direction of <span class="math inline">\(W\)</span> is zero. Therefore,</li>
+</ol>
+<p><span class="math display">\[
+\begin{aligned}
+\Pi(Z_1\mid\mathcal{U})
+&amp;=
+\frac{E(Z_1Z_2)}{E(Z_2^2)}Z_2 =
+\sigma_{2}^{-2}\sigma_{12}Z_2.
+\end{aligned}
+\]</span></p>
+<ol start="2" type="a">
+<li>The residual is <span class="math display">\[
+Z_1-\Pi(Z_1\mid\mathcal{U})
+=
+Z_1-\sigma_{2}^{-2}\sigma_{12}Z_2.
+\]</span> Its variance is</li>
+</ol>
+<p><span class="math display">\[
+\begin{aligned}
+\operatorname{var}
+\left\{
+Z_1-\Pi(Z_1\mid\mathcal{U})
+\right\}
+&amp;=
+\sigma_1^2
+-
+\sigma_{2}^{-2}\sigma_{12}^2.
+\end{aligned}
+\]</span></p>
 </div>
 </section>
 </section>
-<section id="additional-exercises" class="level2" data-number="2.5">
-<h2 data-number="2.5" class="anchored" data-anchor-id="additional-exercises"><span class="header-section-number">2.5</span> Additional Exercises</h2>
+<section id="additional-problems" class="level2" data-number="2.5">
+<h2 data-number="2.5" class="anchored" data-anchor-id="additional-problems"><span class="header-section-number">2.5</span> Additional Problems</h2>
+<section id="problem-2.1" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="problem-2.1">Problem 2.1</h3>
+<p>Let <span class="math inline">\(\mathcal{U}\)</span> be a closed linear subspace of <span class="math inline">\(\mathcal{H}\)</span>, and let</p>
+<p><span class="math display">\[
+u_0=\Pi(h\mid\mathcal{U}).
+\]</span></p>
+<p>Show that, for every <span class="math inline">\(u\in\mathcal{U}\)</span>,</p>
+<p><span class="math display">\[
+\|h-u\|^2
+=
+\|h-u_0\|^2
++
+\|u-u_0\|^2.
+\]</span></p>
+</section>
+<section id="problem-2.2" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="problem-2.2">Problem 2.2</h3>
+<p>Let <span class="math inline">\(Z\sim N(0,1)\)</span>, and consider the Hilbert space of one-dimensional mean-zero functions of <span class="math inline">\(Z\)</span> with finite variance. Let</p>
+<p><span class="math display">\[
+\mathcal{U}
+=
+\operatorname{span}
+\left\{
+Z,\,
+Z^2-1
+\right\}.
+\]</span></p>
+<ol type="a">
+<li><p>Show that <span class="math inline">\(Z\)</span> and <span class="math inline">\(Z^2-1\)</span> are orthogonal.</p></li>
+<li><p>Find <span class="math inline">\(\Pi(Z^3\mid\mathcal{U})\)</span>.</p></li>
+<li><p>Compute the variance of</p></li>
+</ol>
+<p><span class="math display">\[
+Z^3-\Pi(Z^3\mid\mathcal{U}).
+\]</span></p>
+</section>
+<section id="problem-2.3" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="problem-2.3">Problem 2.3</h3>
+<p>Let <span class="math inline">\(h_1,h_2\in\mathcal{H}\)</span>. For any real number <span class="math inline">\(a\)</span>, use</p>
+<p><span class="math display">\[
+\|h_1-ah_2\|^2\geq 0
+\]</span></p>
+<p>to prove the Cauchy–Schwarz inequality</p>
+<p><span class="math display">\[
+\left|
+\langle h_1,h_2\rangle
+\right|^2
+\leq
+\|h_1\|^2\|h_2\|^2.
+\]</span></p>
+<p>Show that equality holds if and only if <span class="math inline">\(h_1=ah_2\)</span> for some scalar <span class="math inline">\(a\)</span>.</p>
+</section>
+<section id="problem-2.4" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="problem-2.4">Problem 2.4</h3>
+<p>Let <span class="math inline">\(Z\)</span> have support <span class="math inline">\(\{z_1,z_2,z_3\}\)</span>, with positive probabilities <span class="math inline">\(\pi_1,\pi_2,\pi_3\)</span>.</p>
+<ol type="a">
+<li><p>Find two linearly independent mean-zero functions of <span class="math inline">\(Z\)</span> that span the space of all one-dimensional mean-zero functions of <span class="math inline">\(Z\)</span>.</p></li>
+<li><p>What is the dimension of the space of all <span class="math inline">\(q\)</span>-dimensional mean-zero functions of <span class="math inline">\(Z\)</span>?</p></li>
+</ol>
 
 
 <!-- -->
 
+<div id="refs" class="references csl-bib-body hanging-indent" role="list" style="display: none">
+<div id="ref-tsiatis2006" class="csl-entry" role="listitem">
+Tsiatis, Anastasios A. (2006). Semiparametric theory and missing data. Springer. <a href="https://doi.org/10.1007/0-387-37345-4">https://doi.org/10.1007/0-387-37345-4</a>.
+</div>
+</div>
+</section>
 </section>
 
 </main> <!-- /main -->
@@ -1029,30 +1547,604 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </nav><div class="modal fade" id="quarto-embedded-source-code-modal" tabindex="-1" aria-labelledby="quarto-embedded-source-code-modal-label" aria-hidden="true"><div class="modal-dialog modal-dialog-scrollable"><div class="modal-content"><div class="modal-header"><h5 class="modal-title" id="quarto-embedded-source-code-modal-label">Source Code</h5><button class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><div class="">
 <div class="sourceCode" id="cb1" data-shortcodes="false"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu"># Hilbert space for random vectors</span></span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="fu">## Learning objectives</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="fu">## Learning Objectives</span></span>
 <span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Work with mean-zero, square-integrable random functions</span>
 <span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Interpret orthogonality through covariance</span>
 <span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Use the projection theorem in statistical problems</span>
 <span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="fu">## Chapter Summary</span></span>
-<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a><span class="fu">## Notes and Extensions</span></span>
-<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a><span class="fu">## Solutions to Exercises</span></span>
-<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a><span class="fu">### Exercise 2.1</span></span>
-<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a>::: {.solution}</span>
-<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="fu">## Chapter Summary</span></span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>This chapter introduces the Hilbert space of $q$-dimensional random functions</span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>$h(Z)$ with mean zero and finite second moments:</span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>$$</span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>E<span class="sc">\{</span>h(Z)<span class="sc">\}</span> = 0,</span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a>\qquad</span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a>E<span class="sc">\{</span>h^\top(Z)h(Z)<span class="sc">\}</span> &lt; \infty.</span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a>$$</span>
 <span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a><span class="fu">## Additional Exercises</span></span>
-<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a></span></code><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></pre></div>
+<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a>The covariance inner product is defined by</span>
+<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a>$$</span>
+<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a>\langle h_1, h_2\rangle</span>
+<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a>=</span>
+<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a>E(h_1^\top h_2),</span>
+<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a>$$</span>
+<span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a>with corresponding norm</span>
+<span id="cb1-30"><a href="#cb1-30" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-31"><a href="#cb1-31" aria-hidden="true" tabindex="-1"></a>$$</span>
+<span id="cb1-32"><a href="#cb1-32" aria-hidden="true" tabindex="-1"></a>\|h\|</span>
+<span id="cb1-33"><a href="#cb1-33" aria-hidden="true" tabindex="-1"></a>=</span>
+<span id="cb1-34"><a href="#cb1-34" aria-hidden="true" tabindex="-1"></a>\langle h,h\rangle^{1/2}.</span>
+<span id="cb1-35"><a href="#cb1-35" aria-hidden="true" tabindex="-1"></a>$$</span>
+<span id="cb1-36"><a href="#cb1-36" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-37"><a href="#cb1-37" aria-hidden="true" tabindex="-1"></a>Two elements are **orthogonal** when their inner product is zero. For a closed</span>
+<span id="cb1-38"><a href="#cb1-38" aria-hidden="true" tabindex="-1"></a>linear subspace $\mathcal{U}\subset\mathcal{H}$, the projection theorem</span>
+<span id="cb1-39"><a href="#cb1-39" aria-hidden="true" tabindex="-1"></a>guarantees a unique projection $\Pi(h\mid\mathcal{U})\in\mathcal{U}$ such that</span>
+<span id="cb1-40"><a href="#cb1-40" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-41"><a href="#cb1-41" aria-hidden="true" tabindex="-1"></a>$$</span>
+<span id="cb1-42"><a href="#cb1-42" aria-hidden="true" tabindex="-1"></a>\Pi(h\mid\mathcal{U})</span>
+<span id="cb1-43"><a href="#cb1-43" aria-hidden="true" tabindex="-1"></a>=</span>
+<span id="cb1-44"><a href="#cb1-44" aria-hidden="true" tabindex="-1"></a>\arg\min_{u\in\mathcal{U}}</span>
+<span id="cb1-45"><a href="#cb1-45" aria-hidden="true" tabindex="-1"></a>\|h-u\|.</span>
+<span id="cb1-46"><a href="#cb1-46" aria-hidden="true" tabindex="-1"></a>$$</span>
+<span id="cb1-47"><a href="#cb1-47" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-48"><a href="#cb1-48" aria-hidden="true" tabindex="-1"></a>The residual after projection is orthogonal to the subspace:</span>
+<span id="cb1-49"><a href="#cb1-49" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-50"><a href="#cb1-50" aria-hidden="true" tabindex="-1"></a>$$</span>
+<span id="cb1-51"><a href="#cb1-51" aria-hidden="true" tabindex="-1"></a>h-\Pi(h\mid\mathcal{U})</span>
+<span id="cb1-52"><a href="#cb1-52" aria-hidden="true" tabindex="-1"></a>\perp</span>
+<span id="cb1-53"><a href="#cb1-53" aria-hidden="true" tabindex="-1"></a>\mathcal{U}.</span>
+<span id="cb1-54"><a href="#cb1-54" aria-hidden="true" tabindex="-1"></a>$$</span>
+<span id="cb1-55"><a href="#cb1-55" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-56"><a href="#cb1-56" aria-hidden="true" tabindex="-1"></a>For a finite-dimensional subspace spanned by a random vector $u(Z)$, the</span>
+<span id="cb1-57"><a href="#cb1-57" aria-hidden="true" tabindex="-1"></a>projection is a linear function of $u$, whose coefficients are determined by the </span>
+<span id="cb1-58"><a href="#cb1-58" aria-hidden="true" tabindex="-1"></a>variance of $u(Z)$ and its covariance with $h(Z)$ (see (@eq-projection-ls) below).</span>
+<span id="cb1-59"><a href="#cb1-59" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-60"><a href="#cb1-60" aria-hidden="true" tabindex="-1"></a><span class="fu">## Notes and Extensions</span></span>
+<span id="cb1-61"><a href="#cb1-61" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-62"><a href="#cb1-62" aria-hidden="true" tabindex="-1"></a><span class="fu">### Projection onto linear span vs conditional expectation {#sec-2-proj}</span></span>
+<span id="cb1-63"><a href="#cb1-63" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-64"><a href="#cb1-64" aria-hidden="true" tabindex="-1"></a>By definition,</span>
+<span id="cb1-65"><a href="#cb1-65" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-66"><a href="#cb1-66" aria-hidden="true" tabindex="-1"></a>$$</span>
+<span id="cb1-67"><a href="#cb1-67" aria-hidden="true" tabindex="-1"></a>\Pi<span class="sc">\{</span>h(Z)\mid\mathcal{U}<span class="sc">\}</span></span>
+<span id="cb1-68"><a href="#cb1-68" aria-hidden="true" tabindex="-1"></a>=</span>
+<span id="cb1-69"><a href="#cb1-69" aria-hidden="true" tabindex="-1"></a>\arg\min_{g\in\mathcal{U}}\|h-g\|,</span>
+<span id="cb1-70"><a href="#cb1-70" aria-hidden="true" tabindex="-1"></a>$$ </span>
+<span id="cb1-71"><a href="#cb1-71" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-72"><a href="#cb1-72" aria-hidden="true" tabindex="-1"></a>for any closed linear subspace $\mathcal{U}\subset\mathcal{H}$. That is, the</span>
+<span id="cb1-73"><a href="#cb1-73" aria-hidden="true" tabindex="-1"></a>projection of $h(Z)$ onto $\mathcal{U}$ is the element of $\mathcal{U}$ closest</span>
+<span id="cb1-74"><a href="#cb1-74" aria-hidden="true" tabindex="-1"></a>to $h(Z)$ in the norm $\|\cdot\|$.</span>
+<span id="cb1-75"><a href="#cb1-75" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-76"><a href="#cb1-76" aria-hidden="true" tabindex="-1"></a>**Example 1** in @tsiatis2006 considers the linear span</span>
+<span id="cb1-77"><a href="#cb1-77" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-78"><a href="#cb1-78" aria-hidden="true" tabindex="-1"></a>$$</span>
+<span id="cb1-79"><a href="#cb1-79" aria-hidden="true" tabindex="-1"></a>\mathcal{U}</span>
+<span id="cb1-80"><a href="#cb1-80" aria-hidden="true" tabindex="-1"></a>=</span>
+<span id="cb1-81"><a href="#cb1-81" aria-hidden="true" tabindex="-1"></a>\left<span class="sc">\{</span></span>
+<span id="cb1-82"><a href="#cb1-82" aria-hidden="true" tabindex="-1"></a>a^{\top}u</span>
+<span id="cb1-83"><a href="#cb1-83" aria-hidden="true" tabindex="-1"></a>:</span>
+<span id="cb1-84"><a href="#cb1-84" aria-hidden="true" tabindex="-1"></a>a\in\mathbb{R}^k</span>
+<span id="cb1-85"><a href="#cb1-85" aria-hidden="true" tabindex="-1"></a>\right<span class="sc">\}</span></span>
+<span id="cb1-86"><a href="#cb1-86" aria-hidden="true" tabindex="-1"></a>$$</span>
+<span id="cb1-87"><a href="#cb1-87" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-88"><a href="#cb1-88" aria-hidden="true" tabindex="-1"></a>of a $k$-dimensional random vector</span>
+<span id="cb1-89"><a href="#cb1-89" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-90"><a href="#cb1-90" aria-hidden="true" tabindex="-1"></a>$$</span>
+<span id="cb1-91"><a href="#cb1-91" aria-hidden="true" tabindex="-1"></a>u(Z)</span>
+<span id="cb1-92"><a href="#cb1-92" aria-hidden="true" tabindex="-1"></a>=</span>
+<span id="cb1-93"><a href="#cb1-93" aria-hidden="true" tabindex="-1"></a><span class="sc">\{</span>u_1(Z),\ldots,u_k(Z)<span class="sc">\}</span>^{\top}.</span>
+<span id="cb1-94"><a href="#cb1-94" aria-hidden="true" tabindex="-1"></a>$$</span>
+<span id="cb1-95"><a href="#cb1-95" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-96"><a href="#cb1-96" aria-hidden="true" tabindex="-1"></a>It establishes that</span>
+<span id="cb1-97"><a href="#cb1-97" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-98"><a href="#cb1-98" aria-hidden="true" tabindex="-1"></a>$$</span>
+<span id="cb1-99"><a href="#cb1-99" aria-hidden="true" tabindex="-1"></a>\Pi<span class="sc">\{</span>h(Z)\mid\mathcal{U}<span class="sc">\}</span></span>
+<span id="cb1-100"><a href="#cb1-100" aria-hidden="true" tabindex="-1"></a>=</span>
+<span id="cb1-101"><a href="#cb1-101" aria-hidden="true" tabindex="-1"></a>E(hu^{\top})</span>
+<span id="cb1-102"><a href="#cb1-102" aria-hidden="true" tabindex="-1"></a>\left<span class="sc">\{</span></span>
+<span id="cb1-103"><a href="#cb1-103" aria-hidden="true" tabindex="-1"></a>E(uu^{\top})</span>
+<span id="cb1-104"><a href="#cb1-104" aria-hidden="true" tabindex="-1"></a>\right<span class="sc">\}</span>^{-1}</span>
+<span id="cb1-105"><a href="#cb1-105" aria-hidden="true" tabindex="-1"></a>u.</span>
+<span id="cb1-106"><a href="#cb1-106" aria-hidden="true" tabindex="-1"></a>$${#eq-projection-ls}</span>
+<span id="cb1-107"><a href="#cb1-107" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-108"><a href="#cb1-108" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-109"><a href="#cb1-109" aria-hidden="true" tabindex="-1"></a>If $\mathcal{U}$ is expanded to include all measurable square-integrable</span>
+<span id="cb1-110"><a href="#cb1-110" aria-hidden="true" tabindex="-1"></a>functions of $u(Z)$, the projection is the conditional expectation of $h(Z)$</span>
+<span id="cb1-111"><a href="#cb1-111" aria-hidden="true" tabindex="-1"></a>given $u(Z)$ <span class="co">[</span><span class="ot">@tsiatis2006, Section 2.4</span><span class="co">]</span>. Specifically,</span>
+<span id="cb1-112"><a href="#cb1-112" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-113"><a href="#cb1-113" aria-hidden="true" tabindex="-1"></a>$$</span>
+<span id="cb1-114"><a href="#cb1-114" aria-hidden="true" tabindex="-1"></a>E<span class="sc">\{</span>h(Z)\mid u<span class="sc">\}</span></span>
+<span id="cb1-115"><a href="#cb1-115" aria-hidden="true" tabindex="-1"></a>=</span>
+<span id="cb1-116"><a href="#cb1-116" aria-hidden="true" tabindex="-1"></a>\Pi<span class="sc">\{</span>h(Z)\mid\mathcal{U}^*<span class="sc">\}</span></span>
+<span id="cb1-117"><a href="#cb1-117" aria-hidden="true" tabindex="-1"></a>=</span>
+<span id="cb1-118"><a href="#cb1-118" aria-hidden="true" tabindex="-1"></a>\arg\min_{g\in\mathcal{U}^*}</span>
+<span id="cb1-119"><a href="#cb1-119" aria-hidden="true" tabindex="-1"></a>\|h-g\|,</span>
+<span id="cb1-120"><a href="#cb1-120" aria-hidden="true" tabindex="-1"></a>$$</span>
+<span id="cb1-121"><a href="#cb1-121" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-122"><a href="#cb1-122" aria-hidden="true" tabindex="-1"></a>where</span>
+<span id="cb1-123"><a href="#cb1-123" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-124"><a href="#cb1-124" aria-hidden="true" tabindex="-1"></a>$$</span>
+<span id="cb1-125"><a href="#cb1-125" aria-hidden="true" tabindex="-1"></a>\mathcal{U}^*</span>
+<span id="cb1-126"><a href="#cb1-126" aria-hidden="true" tabindex="-1"></a>=</span>
+<span id="cb1-127"><a href="#cb1-127" aria-hidden="true" tabindex="-1"></a>\left<span class="sc">\{</span></span>
+<span id="cb1-128"><a href="#cb1-128" aria-hidden="true" tabindex="-1"></a>a(u)</span>
+<span id="cb1-129"><a href="#cb1-129" aria-hidden="true" tabindex="-1"></a>:</span>
+<span id="cb1-130"><a href="#cb1-130" aria-hidden="true" tabindex="-1"></a>a(\cdot) \text{ is a measurable and square-integrable function on }</span>
+<span id="cb1-131"><a href="#cb1-131" aria-hidden="true" tabindex="-1"></a>\mathbb{R}^k</span>
+<span id="cb1-132"><a href="#cb1-132" aria-hidden="true" tabindex="-1"></a>\right<span class="sc">\}</span>.</span>
+<span id="cb1-133"><a href="#cb1-133" aria-hidden="true" tabindex="-1"></a>$$</span>
+<span id="cb1-134"><a href="#cb1-134" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-135"><a href="#cb1-135" aria-hidden="true" tabindex="-1"></a>Because $\mathcal{U}\subset\mathcal{U}^*$, the best approximation of $h(Z)$ in</span>
+<span id="cb1-136"><a href="#cb1-136" aria-hidden="true" tabindex="-1"></a>$\mathcal{U}^*$ is at least as good as the best approximation in</span>
+<span id="cb1-137"><a href="#cb1-137" aria-hidden="true" tabindex="-1"></a>$\mathcal{U}$. Thus,</span>
+<span id="cb1-138"><a href="#cb1-138" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-139"><a href="#cb1-139" aria-hidden="true" tabindex="-1"></a>$$</span>
+<span id="cb1-140"><a href="#cb1-140" aria-hidden="true" tabindex="-1"></a>\left\|</span>
+<span id="cb1-141"><a href="#cb1-141" aria-hidden="true" tabindex="-1"></a>h-E<span class="sc">\{</span>h(Z)\mid u<span class="sc">\}</span></span>
+<span id="cb1-142"><a href="#cb1-142" aria-hidden="true" tabindex="-1"></a>\right\|</span>
+<span id="cb1-143"><a href="#cb1-143" aria-hidden="true" tabindex="-1"></a>\leq</span>
+<span id="cb1-144"><a href="#cb1-144" aria-hidden="true" tabindex="-1"></a>\left\|</span>
+<span id="cb1-145"><a href="#cb1-145" aria-hidden="true" tabindex="-1"></a>h-\Pi<span class="sc">\{</span>h(Z)\mid\mathcal{U}<span class="sc">\}</span></span>
+<span id="cb1-146"><a href="#cb1-146" aria-hidden="true" tabindex="-1"></a>\right\|.</span>
+<span id="cb1-147"><a href="#cb1-147" aria-hidden="true" tabindex="-1"></a>$$</span>
+<span id="cb1-148"><a href="#cb1-148" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-149"><a href="#cb1-149" aria-hidden="true" tabindex="-1"></a>By a standard property of the multivariate normal distribution,</span>
+<span id="cb1-150"><a href="#cb1-150" aria-hidden="true" tabindex="-1"></a>$E<span class="sc">\{</span>h(Z)\mid u<span class="sc">\}</span>$ is linear in $u$ when $h(Z)$ and $u(Z)$ are jointly</span>
+<span id="cb1-151"><a href="#cb1-151" aria-hidden="true" tabindex="-1"></a>multivariate normal. In this case,</span>
+<span id="cb1-152"><a href="#cb1-152" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-153"><a href="#cb1-153" aria-hidden="true" tabindex="-1"></a>$$</span>
+<span id="cb1-154"><a href="#cb1-154" aria-hidden="true" tabindex="-1"></a>E<span class="sc">\{</span>h(Z)\mid u<span class="sc">\}</span></span>
+<span id="cb1-155"><a href="#cb1-155" aria-hidden="true" tabindex="-1"></a>=</span>
+<span id="cb1-156"><a href="#cb1-156" aria-hidden="true" tabindex="-1"></a>\Pi<span class="sc">\{</span>h(Z)\mid\mathcal{U}<span class="sc">\}</span>,</span>
+<span id="cb1-157"><a href="#cb1-157" aria-hidden="true" tabindex="-1"></a>$$</span>
+<span id="cb1-158"><a href="#cb1-158" aria-hidden="true" tabindex="-1"></a>which is in turn given by (@eq-projection-ls).</span>
+<span id="cb1-159"><a href="#cb1-159" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-160"><a href="#cb1-160" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-161"><a href="#cb1-161" aria-hidden="true" tabindex="-1"></a><span class="fu">### Dimensionality of $\mathcal{U}=\{Bv:B\in\mathbb{R}^{q\times r}\}$</span></span>
+<span id="cb1-162"><a href="#cb1-162" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-163"><a href="#cb1-163" aria-hidden="true" tabindex="-1"></a>Here, $v$ is an $r$-dimensional random vector.</span>
+<span id="cb1-164"><a href="#cb1-164" aria-hidden="true" tabindex="-1"></a>On page 17, it is claimed that $\mathcal{U}$ is $q\times r$-dimensional because</span>
+<span id="cb1-165"><a href="#cb1-165" aria-hidden="true" tabindex="-1"></a>it is the linear span of that many linearly independent functions.</span>
+<span id="cb1-166"><a href="#cb1-166" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-167"><a href="#cb1-167" aria-hidden="true" tabindex="-1"></a>Indeed, a typical element of $\mathcal{U}$ is given by</span>
+<span id="cb1-168"><a href="#cb1-168" aria-hidden="true" tabindex="-1"></a>$$</span>
+<span id="cb1-169"><a href="#cb1-169" aria-hidden="true" tabindex="-1"></a>\begin{aligned}</span>
+<span id="cb1-170"><a href="#cb1-170" aria-hidden="true" tabindex="-1"></a>u</span>
+<span id="cb1-171"><a href="#cb1-171" aria-hidden="true" tabindex="-1"></a>= Bv =</span>
+<span id="cb1-172"><a href="#cb1-172" aria-hidden="true" tabindex="-1"></a>\begin{pmatrix}</span>
+<span id="cb1-173"><a href="#cb1-173" aria-hidden="true" tabindex="-1"></a>\sum_{j=1}^r B_{1j}v_j <span class="sc">\\</span></span>
+<span id="cb1-174"><a href="#cb1-174" aria-hidden="true" tabindex="-1"></a>\sum_{j=1}^r B_{2j}v_j <span class="sc">\\</span></span>
+<span id="cb1-175"><a href="#cb1-175" aria-hidden="true" tabindex="-1"></a>\vdots <span class="sc">\\</span></span>
+<span id="cb1-176"><a href="#cb1-176" aria-hidden="true" tabindex="-1"></a>\sum_{j=1}^r B_{qj}v_j</span>
+<span id="cb1-177"><a href="#cb1-177" aria-hidden="true" tabindex="-1"></a>\end{pmatrix} </span>
+<span id="cb1-178"><a href="#cb1-178" aria-hidden="true" tabindex="-1"></a>=</span>
+<span id="cb1-179"><a href="#cb1-179" aria-hidden="true" tabindex="-1"></a>\sum_{j=1}^r</span>
+<span id="cb1-180"><a href="#cb1-180" aria-hidden="true" tabindex="-1"></a>\begin{pmatrix}</span>
+<span id="cb1-181"><a href="#cb1-181" aria-hidden="true" tabindex="-1"></a>B_{1j}v_j <span class="sc">\\</span></span>
+<span id="cb1-182"><a href="#cb1-182" aria-hidden="true" tabindex="-1"></a>B_{2j}v_j <span class="sc">\\</span></span>
+<span id="cb1-183"><a href="#cb1-183" aria-hidden="true" tabindex="-1"></a>\vdots <span class="sc">\\</span></span>
+<span id="cb1-184"><a href="#cb1-184" aria-hidden="true" tabindex="-1"></a>B_{qj}v_j</span>
+<span id="cb1-185"><a href="#cb1-185" aria-hidden="true" tabindex="-1"></a>\end{pmatrix} </span>
+<span id="cb1-186"><a href="#cb1-186" aria-hidden="true" tabindex="-1"></a>=</span>
+<span id="cb1-187"><a href="#cb1-187" aria-hidden="true" tabindex="-1"></a>\sum_{j=1}^r\sum_{i=1}^q</span>
+<span id="cb1-188"><a href="#cb1-188" aria-hidden="true" tabindex="-1"></a>B_{ij} u_{ij}^{q\times 1},</span>
+<span id="cb1-189"><a href="#cb1-189" aria-hidden="true" tabindex="-1"></a>\end{aligned}</span>
+<span id="cb1-190"><a href="#cb1-190" aria-hidden="true" tabindex="-1"></a>$$</span>
+<span id="cb1-191"><a href="#cb1-191" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-192"><a href="#cb1-192" aria-hidden="true" tabindex="-1"></a>where </span>
+<span id="cb1-193"><a href="#cb1-193" aria-hidden="true" tabindex="-1"></a>$$</span>
+<span id="cb1-194"><a href="#cb1-194" aria-hidden="true" tabindex="-1"></a>u_{ij}^{q\times 1} = (\underbrace{0,\ldots, 0}_{i-1}， v_j, \underbrace{0， \ldots, 0}_{q-i})^\top,</span>
+<span id="cb1-195"><a href="#cb1-195" aria-hidden="true" tabindex="-1"></a>$$</span>
+<span id="cb1-196"><a href="#cb1-196" aria-hidden="true" tabindex="-1"></a>as defined in the book.</span>
+<span id="cb1-197"><a href="#cb1-197" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-198"><a href="#cb1-198" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-199"><a href="#cb1-199" aria-hidden="true" tabindex="-1"></a><span class="fu">## Solutions to Exercises</span></span>
+<span id="cb1-200"><a href="#cb1-200" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-201"><a href="#cb1-201" aria-hidden="true" tabindex="-1"></a><span class="fu">### Exercise 2.1</span></span>
+<span id="cb1-202"><a href="#cb1-202" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-203"><a href="#cb1-203" aria-hidden="true" tabindex="-1"></a>::: {.solution}</span>
+<span id="cb1-204"><a href="#cb1-204" aria-hidden="true" tabindex="-1"></a>Let $\mathcal{U}$ be a closed linear subspace of the Hilbert space</span>
+<span id="cb1-205"><a href="#cb1-205" aria-hidden="true" tabindex="-1"></a>$\mathcal{H}$, and let $h\in\mathcal{H}$. We prove:</span>
+<span id="cb1-206"><a href="#cb1-206" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-207"><a href="#cb1-207" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Existence**: There exists $u_0\in\mathcal{U}$ such that</span>
+<span id="cb1-208"><a href="#cb1-208" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-209"><a href="#cb1-209" aria-hidden="true" tabindex="-1"></a>   $$</span>
+<span id="cb1-210"><a href="#cb1-210" aria-hidden="true" tabindex="-1"></a>   \|h-u_0\|</span>
+<span id="cb1-211"><a href="#cb1-211" aria-hidden="true" tabindex="-1"></a>   =</span>
+<span id="cb1-212"><a href="#cb1-212" aria-hidden="true" tabindex="-1"></a>   \inf_{u\in\mathcal{U}}</span>
+<span id="cb1-213"><a href="#cb1-213" aria-hidden="true" tabindex="-1"></a>   \|h-u\|.</span>
+<span id="cb1-214"><a href="#cb1-214" aria-hidden="true" tabindex="-1"></a>   $$</span>
+<span id="cb1-215"><a href="#cb1-215" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-216"><a href="#cb1-216" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Uniqueness**: The minimizer $u_0$ is unique.</span>
+<span id="cb1-217"><a href="#cb1-217" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-218"><a href="#cb1-218" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Orthogonality**:  The residual is orthogonal to $\mathcal{U}$:</span>
+<span id="cb1-219"><a href="#cb1-219" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-220"><a href="#cb1-220" aria-hidden="true" tabindex="-1"></a>   $$</span>
+<span id="cb1-221"><a href="#cb1-221" aria-hidden="true" tabindex="-1"></a>   \langle h-u_0,u\rangle = 0</span>
+<span id="cb1-222"><a href="#cb1-222" aria-hidden="true" tabindex="-1"></a>   \qquad</span>
+<span id="cb1-223"><a href="#cb1-223" aria-hidden="true" tabindex="-1"></a>   \text{for every } u\in\mathcal{U}.</span>
+<span id="cb1-224"><a href="#cb1-224" aria-hidden="true" tabindex="-1"></a>   $$</span>
+<span id="cb1-225"><a href="#cb1-225" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-226"><a href="#cb1-226" aria-hidden="true" tabindex="-1"></a>To show **existence**, let</span>
+<span id="cb1-227"><a href="#cb1-227" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-228"><a href="#cb1-228" aria-hidden="true" tabindex="-1"></a>$$</span>
+<span id="cb1-229"><a href="#cb1-229" aria-hidden="true" tabindex="-1"></a>d</span>
+<span id="cb1-230"><a href="#cb1-230" aria-hidden="true" tabindex="-1"></a>=</span>
+<span id="cb1-231"><a href="#cb1-231" aria-hidden="true" tabindex="-1"></a>\inf_{u\in\mathcal{U}}</span>
+<span id="cb1-232"><a href="#cb1-232" aria-hidden="true" tabindex="-1"></a>\|h-u\|.</span>
+<span id="cb1-233"><a href="#cb1-233" aria-hidden="true" tabindex="-1"></a>$$</span>
+<span id="cb1-234"><a href="#cb1-234" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-235"><a href="#cb1-235" aria-hidden="true" tabindex="-1"></a>Choose a sequence $<span class="sc">\{</span>u_n<span class="sc">\}</span>\subset\mathcal{U}$ such that</span>
+<span id="cb1-236"><a href="#cb1-236" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-237"><a href="#cb1-237" aria-hidden="true" tabindex="-1"></a>$$</span>
+<span id="cb1-238"><a href="#cb1-238" aria-hidden="true" tabindex="-1"></a>\|h-u_n\| \longrightarrow d.</span>
+<span id="cb1-239"><a href="#cb1-239" aria-hidden="true" tabindex="-1"></a>$$</span>
+<span id="cb1-240"><a href="#cb1-240" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-241"><a href="#cb1-241" aria-hidden="true" tabindex="-1"></a>We first show that $<span class="sc">\{</span>u_n<span class="sc">\}</span>$ is a Cauchy sequence. Because $(u_n+u_m)/2\in\mathcal{U}$,</span>
+<span id="cb1-242"><a href="#cb1-242" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-243"><a href="#cb1-243" aria-hidden="true" tabindex="-1"></a>$$</span>
+<span id="cb1-244"><a href="#cb1-244" aria-hidden="true" tabindex="-1"></a>d</span>
+<span id="cb1-245"><a href="#cb1-245" aria-hidden="true" tabindex="-1"></a>\leq</span>
+<span id="cb1-246"><a href="#cb1-246" aria-hidden="true" tabindex="-1"></a>\left\|</span>
+<span id="cb1-247"><a href="#cb1-247" aria-hidden="true" tabindex="-1"></a>h-\frac{u_n+u_m}{2}</span>
+<span id="cb1-248"><a href="#cb1-248" aria-hidden="true" tabindex="-1"></a>\right\|.</span>
+<span id="cb1-249"><a href="#cb1-249" aria-hidden="true" tabindex="-1"></a>$$</span>
+<span id="cb1-250"><a href="#cb1-250" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-251"><a href="#cb1-251" aria-hidden="true" tabindex="-1"></a>Moreover,</span>
+<span id="cb1-252"><a href="#cb1-252" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-253"><a href="#cb1-253" aria-hidden="true" tabindex="-1"></a>$$</span>
+<span id="cb1-254"><a href="#cb1-254" aria-hidden="true" tabindex="-1"></a>\begin{aligned}</span>
+<span id="cb1-255"><a href="#cb1-255" aria-hidden="true" tabindex="-1"></a>\|u_n-u_m\|^2</span>
+<span id="cb1-256"><a href="#cb1-256" aria-hidden="true" tabindex="-1"></a>&amp;=</span>
+<span id="cb1-257"><a href="#cb1-257" aria-hidden="true" tabindex="-1"></a>\left\|</span>
+<span id="cb1-258"><a href="#cb1-258" aria-hidden="true" tabindex="-1"></a>(h-u_n)-(h-u_m)</span>
+<span id="cb1-259"><a href="#cb1-259" aria-hidden="true" tabindex="-1"></a>\right\|^2 <span class="sc">\\</span></span>
+<span id="cb1-260"><a href="#cb1-260" aria-hidden="true" tabindex="-1"></a>&amp;=</span>
+<span id="cb1-261"><a href="#cb1-261" aria-hidden="true" tabindex="-1"></a>\|h-u_n\|^2</span>
+<span id="cb1-262"><a href="#cb1-262" aria-hidden="true" tabindex="-1"></a>+</span>
+<span id="cb1-263"><a href="#cb1-263" aria-hidden="true" tabindex="-1"></a>\|h-u_m\|^2</span>
+<span id="cb1-264"><a href="#cb1-264" aria-hidden="true" tabindex="-1"></a>-</span>
+<span id="cb1-265"><a href="#cb1-265" aria-hidden="true" tabindex="-1"></a>2\langle h-u_n,h-u_m\rangle.</span>
+<span id="cb1-266"><a href="#cb1-266" aria-hidden="true" tabindex="-1"></a>\end{aligned}</span>
+<span id="cb1-267"><a href="#cb1-267" aria-hidden="true" tabindex="-1"></a>$$</span>
+<span id="cb1-268"><a href="#cb1-268" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-269"><a href="#cb1-269" aria-hidden="true" tabindex="-1"></a>Therefore,</span>
+<span id="cb1-270"><a href="#cb1-270" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-271"><a href="#cb1-271" aria-hidden="true" tabindex="-1"></a>$$</span>
+<span id="cb1-272"><a href="#cb1-272" aria-hidden="true" tabindex="-1"></a>\begin{aligned}</span>
+<span id="cb1-273"><a href="#cb1-273" aria-hidden="true" tabindex="-1"></a>4d^2</span>
+<span id="cb1-274"><a href="#cb1-274" aria-hidden="true" tabindex="-1"></a>&amp;\leq</span>
+<span id="cb1-275"><a href="#cb1-275" aria-hidden="true" tabindex="-1"></a>4\left\|</span>
+<span id="cb1-276"><a href="#cb1-276" aria-hidden="true" tabindex="-1"></a>h-\frac{u_n+u_m}{2}</span>
+<span id="cb1-277"><a href="#cb1-277" aria-hidden="true" tabindex="-1"></a>\right\|^2 <span class="sc">\\</span></span>
+<span id="cb1-278"><a href="#cb1-278" aria-hidden="true" tabindex="-1"></a>&amp;=</span>
+<span id="cb1-279"><a href="#cb1-279" aria-hidden="true" tabindex="-1"></a>\left\|</span>
+<span id="cb1-280"><a href="#cb1-280" aria-hidden="true" tabindex="-1"></a>(h-u_n)+(h-u_m)</span>
+<span id="cb1-281"><a href="#cb1-281" aria-hidden="true" tabindex="-1"></a>\right\|^2 <span class="sc">\\</span></span>
+<span id="cb1-282"><a href="#cb1-282" aria-hidden="true" tabindex="-1"></a>&amp;=</span>
+<span id="cb1-283"><a href="#cb1-283" aria-hidden="true" tabindex="-1"></a>\|h-u_n\|^2</span>
+<span id="cb1-284"><a href="#cb1-284" aria-hidden="true" tabindex="-1"></a>+</span>
+<span id="cb1-285"><a href="#cb1-285" aria-hidden="true" tabindex="-1"></a>\|h-u_m\|^2</span>
+<span id="cb1-286"><a href="#cb1-286" aria-hidden="true" tabindex="-1"></a>+</span>
+<span id="cb1-287"><a href="#cb1-287" aria-hidden="true" tabindex="-1"></a>2\langle h-u_n,h-u_m\rangle <span class="sc">\\</span></span>
+<span id="cb1-288"><a href="#cb1-288" aria-hidden="true" tabindex="-1"></a>&amp;=</span>
+<span id="cb1-289"><a href="#cb1-289" aria-hidden="true" tabindex="-1"></a>2\|h-u_n\|^2</span>
+<span id="cb1-290"><a href="#cb1-290" aria-hidden="true" tabindex="-1"></a>+</span>
+<span id="cb1-291"><a href="#cb1-291" aria-hidden="true" tabindex="-1"></a>2\|h-u_m\|^2</span>
+<span id="cb1-292"><a href="#cb1-292" aria-hidden="true" tabindex="-1"></a>-</span>
+<span id="cb1-293"><a href="#cb1-293" aria-hidden="true" tabindex="-1"></a>\|u_n-u_m\|^2.</span>
+<span id="cb1-294"><a href="#cb1-294" aria-hidden="true" tabindex="-1"></a>\end{aligned}</span>
+<span id="cb1-295"><a href="#cb1-295" aria-hidden="true" tabindex="-1"></a>$$</span>
+<span id="cb1-296"><a href="#cb1-296" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-297"><a href="#cb1-297" aria-hidden="true" tabindex="-1"></a>Hence,</span>
+<span id="cb1-298"><a href="#cb1-298" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-299"><a href="#cb1-299" aria-hidden="true" tabindex="-1"></a>$$</span>
+<span id="cb1-300"><a href="#cb1-300" aria-hidden="true" tabindex="-1"></a>\begin{aligned}</span>
+<span id="cb1-301"><a href="#cb1-301" aria-hidden="true" tabindex="-1"></a>\|u_n-u_m\|^2</span>
+<span id="cb1-302"><a href="#cb1-302" aria-hidden="true" tabindex="-1"></a>&amp;\leq</span>
+<span id="cb1-303"><a href="#cb1-303" aria-hidden="true" tabindex="-1"></a>2\|h-u_n\|^2</span>
+<span id="cb1-304"><a href="#cb1-304" aria-hidden="true" tabindex="-1"></a>+</span>
+<span id="cb1-305"><a href="#cb1-305" aria-hidden="true" tabindex="-1"></a>2\|h-u_m\|^2</span>
+<span id="cb1-306"><a href="#cb1-306" aria-hidden="true" tabindex="-1"></a>-</span>
+<span id="cb1-307"><a href="#cb1-307" aria-hidden="true" tabindex="-1"></a>4d^2 <span class="sc">\\</span></span>
+<span id="cb1-308"><a href="#cb1-308" aria-hidden="true" tabindex="-1"></a>&amp;\longrightarrow 0</span>
+<span id="cb1-309"><a href="#cb1-309" aria-hidden="true" tabindex="-1"></a>\qquad</span>
+<span id="cb1-310"><a href="#cb1-310" aria-hidden="true" tabindex="-1"></a>\text{as } n,m\longrightarrow\infty.</span>
+<span id="cb1-311"><a href="#cb1-311" aria-hidden="true" tabindex="-1"></a>\end{aligned}</span>
+<span id="cb1-312"><a href="#cb1-312" aria-hidden="true" tabindex="-1"></a>$$</span>
+<span id="cb1-313"><a href="#cb1-313" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-314"><a href="#cb1-314" aria-hidden="true" tabindex="-1"></a>Thus, $<span class="sc">\{</span>u_n<span class="sc">\}</span>$ is Cauchy. Since $\mathcal{H}$ is complete, there exists</span>
+<span id="cb1-315"><a href="#cb1-315" aria-hidden="true" tabindex="-1"></a>$u_0\in\mathcal{H}$ such that</span>
+<span id="cb1-316"><a href="#cb1-316" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-317"><a href="#cb1-317" aria-hidden="true" tabindex="-1"></a>$$</span>
+<span id="cb1-318"><a href="#cb1-318" aria-hidden="true" tabindex="-1"></a>u_n\longrightarrow u_0.</span>
+<span id="cb1-319"><a href="#cb1-319" aria-hidden="true" tabindex="-1"></a>$$</span>
+<span id="cb1-320"><a href="#cb1-320" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-321"><a href="#cb1-321" aria-hidden="true" tabindex="-1"></a>Because $\mathcal{U}$ is closed and $u_n\in\mathcal{U}$ for every $n$,</span>
+<span id="cb1-322"><a href="#cb1-322" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-323"><a href="#cb1-323" aria-hidden="true" tabindex="-1"></a>$$</span>
+<span id="cb1-324"><a href="#cb1-324" aria-hidden="true" tabindex="-1"></a>u_0\in\mathcal{U}.</span>
+<span id="cb1-325"><a href="#cb1-325" aria-hidden="true" tabindex="-1"></a>$$</span>
+<span id="cb1-326"><a href="#cb1-326" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-327"><a href="#cb1-327" aria-hidden="true" tabindex="-1"></a>By continuity of the norm,</span>
+<span id="cb1-328"><a href="#cb1-328" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-329"><a href="#cb1-329" aria-hidden="true" tabindex="-1"></a>$$</span>
+<span id="cb1-330"><a href="#cb1-330" aria-hidden="true" tabindex="-1"></a>\|h-u_0\|</span>
+<span id="cb1-331"><a href="#cb1-331" aria-hidden="true" tabindex="-1"></a>=</span>
+<span id="cb1-332"><a href="#cb1-332" aria-hidden="true" tabindex="-1"></a>\lim_{n\to\infty}\|h-u_n\|</span>
+<span id="cb1-333"><a href="#cb1-333" aria-hidden="true" tabindex="-1"></a>=</span>
+<span id="cb1-334"><a href="#cb1-334" aria-hidden="true" tabindex="-1"></a>d.</span>
+<span id="cb1-335"><a href="#cb1-335" aria-hidden="true" tabindex="-1"></a>$$</span>
+<span id="cb1-336"><a href="#cb1-336" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-337"><a href="#cb1-337" aria-hidden="true" tabindex="-1"></a>This establishes existence.</span>
+<span id="cb1-338"><a href="#cb1-338" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-339"><a href="#cb1-339" aria-hidden="true" tabindex="-1"></a>To show **orthogonality**, fix $u\in\mathcal{U}$ and define</span>
+<span id="cb1-340"><a href="#cb1-340" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-341"><a href="#cb1-341" aria-hidden="true" tabindex="-1"></a>$$</span>
+<span id="cb1-342"><a href="#cb1-342" aria-hidden="true" tabindex="-1"></a>g(\epsilon)</span>
+<span id="cb1-343"><a href="#cb1-343" aria-hidden="true" tabindex="-1"></a>=</span>
+<span id="cb1-344"><a href="#cb1-344" aria-hidden="true" tabindex="-1"></a>\|h-(u_0-\epsilon u)\|^2.</span>
+<span id="cb1-345"><a href="#cb1-345" aria-hidden="true" tabindex="-1"></a>$$</span>
+<span id="cb1-346"><a href="#cb1-346" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-347"><a href="#cb1-347" aria-hidden="true" tabindex="-1"></a>Since $u_0-\epsilon u\in\mathcal{U}$ for every $\epsilon\in\mathbb{R}$,</span>
+<span id="cb1-348"><a href="#cb1-348" aria-hidden="true" tabindex="-1"></a>$g(\epsilon)$ is minimized at $\epsilon=0$. Hence,</span>
+<span id="cb1-349"><a href="#cb1-349" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-350"><a href="#cb1-350" aria-hidden="true" tabindex="-1"></a>$$</span>
+<span id="cb1-351"><a href="#cb1-351" aria-hidden="true" tabindex="-1"></a>\begin{aligned}</span>
+<span id="cb1-352"><a href="#cb1-352" aria-hidden="true" tabindex="-1"></a>0</span>
+<span id="cb1-353"><a href="#cb1-353" aria-hidden="true" tabindex="-1"></a>&amp;=</span>
+<span id="cb1-354"><a href="#cb1-354" aria-hidden="true" tabindex="-1"></a>\left.</span>
+<span id="cb1-355"><a href="#cb1-355" aria-hidden="true" tabindex="-1"></a>\frac{\partial}{\partial\epsilon}</span>
+<span id="cb1-356"><a href="#cb1-356" aria-hidden="true" tabindex="-1"></a>g(\epsilon)</span>
+<span id="cb1-357"><a href="#cb1-357" aria-hidden="true" tabindex="-1"></a>\right|_{\epsilon=0} <span class="sc">\\</span></span>
+<span id="cb1-358"><a href="#cb1-358" aria-hidden="true" tabindex="-1"></a>&amp;=</span>
+<span id="cb1-359"><a href="#cb1-359" aria-hidden="true" tabindex="-1"></a>2\langle h-u_0,u\rangle.</span>
+<span id="cb1-360"><a href="#cb1-360" aria-hidden="true" tabindex="-1"></a>\end{aligned}</span>
+<span id="cb1-361"><a href="#cb1-361" aria-hidden="true" tabindex="-1"></a>$$</span>
+<span id="cb1-362"><a href="#cb1-362" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-363"><a href="#cb1-363" aria-hidden="true" tabindex="-1"></a>Therefore,</span>
+<span id="cb1-364"><a href="#cb1-364" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-365"><a href="#cb1-365" aria-hidden="true" tabindex="-1"></a>$$</span>
+<span id="cb1-366"><a href="#cb1-366" aria-hidden="true" tabindex="-1"></a>\langle h-u_0,u\rangle=0</span>
+<span id="cb1-367"><a href="#cb1-367" aria-hidden="true" tabindex="-1"></a>\qquad</span>
+<span id="cb1-368"><a href="#cb1-368" aria-hidden="true" tabindex="-1"></a>\text{for every } u\in\mathcal{U}.</span>
+<span id="cb1-369"><a href="#cb1-369" aria-hidden="true" tabindex="-1"></a>$$</span>
+<span id="cb1-370"><a href="#cb1-370" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-371"><a href="#cb1-371" aria-hidden="true" tabindex="-1"></a>Finally, for **uniqueness**, suppose that $u_0$ and $u_0^*$ both minimize $\|h-u\|$ over</span>
+<span id="cb1-372"><a href="#cb1-372" aria-hidden="true" tabindex="-1"></a>$\mathcal{U}$. Since $u_0-u_0^*\in\mathcal{U}$, orthogonality gives</span>
+<span id="cb1-373"><a href="#cb1-373" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-374"><a href="#cb1-374" aria-hidden="true" tabindex="-1"></a>$$</span>
+<span id="cb1-375"><a href="#cb1-375" aria-hidden="true" tabindex="-1"></a>\begin{aligned}</span>
+<span id="cb1-376"><a href="#cb1-376" aria-hidden="true" tabindex="-1"></a>\|h-u_0^*\|^2</span>
+<span id="cb1-377"><a href="#cb1-377" aria-hidden="true" tabindex="-1"></a>&amp;=</span>
+<span id="cb1-378"><a href="#cb1-378" aria-hidden="true" tabindex="-1"></a>\underbrace{\|h-u_0\|^2}_{d^2}</span>
+<span id="cb1-379"><a href="#cb1-379" aria-hidden="true" tabindex="-1"></a>+</span>
+<span id="cb1-380"><a href="#cb1-380" aria-hidden="true" tabindex="-1"></a>\underbrace{\|u_0-u_0^*\|^2}_{\geq 0}.</span>
+<span id="cb1-381"><a href="#cb1-381" aria-hidden="true" tabindex="-1"></a>\end{aligned}</span>
+<span id="cb1-382"><a href="#cb1-382" aria-hidden="true" tabindex="-1"></a>$$</span>
+<span id="cb1-383"><a href="#cb1-383" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-384"><a href="#cb1-384" aria-hidden="true" tabindex="-1"></a>Because $\|h-u_0^*\|^2=d^2$, it follows that</span>
+<span id="cb1-385"><a href="#cb1-385" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-386"><a href="#cb1-386" aria-hidden="true" tabindex="-1"></a>$$</span>
+<span id="cb1-387"><a href="#cb1-387" aria-hidden="true" tabindex="-1"></a>\|u_0-u_0^*\|^2=0,</span>
+<span id="cb1-388"><a href="#cb1-388" aria-hidden="true" tabindex="-1"></a>$$</span>
+<span id="cb1-389"><a href="#cb1-389" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-390"><a href="#cb1-390" aria-hidden="true" tabindex="-1"></a>and hence $u_0=u_0^*$.</span>
+<span id="cb1-391"><a href="#cb1-391" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb1-392"><a href="#cb1-392" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-393"><a href="#cb1-393" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-394"><a href="#cb1-394" aria-hidden="true" tabindex="-1"></a><span class="fu">### Exercise 2.2</span></span>
+<span id="cb1-395"><a href="#cb1-395" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-396"><a href="#cb1-396" aria-hidden="true" tabindex="-1"></a>::: {.solution}</span>
+<span id="cb1-397"><a href="#cb1-397" aria-hidden="true" tabindex="-1"></a>This exercise is a direct application of Example 2 in the book.</span>
+<span id="cb1-398"><a href="#cb1-398" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-399"><a href="#cb1-399" aria-hidden="true" tabindex="-1"></a>(a) Because $\Sigma_{22}=E(Y_2Y_2^{\mathsf T})$ is nonsingular, the projection</span>
+<span id="cb1-400"><a href="#cb1-400" aria-hidden="true" tabindex="-1"></a>formula in Example 2 gives</span>
+<span id="cb1-401"><a href="#cb1-401" aria-hidden="true" tabindex="-1"></a>$$</span>
+<span id="cb1-402"><a href="#cb1-402" aria-hidden="true" tabindex="-1"></a>\begin{aligned}</span>
+<span id="cb1-403"><a href="#cb1-403" aria-hidden="true" tabindex="-1"></a>\Pi(Y_1\mid\mathcal{U})</span>
+<span id="cb1-404"><a href="#cb1-404" aria-hidden="true" tabindex="-1"></a>&amp;=</span>
+<span id="cb1-405"><a href="#cb1-405" aria-hidden="true" tabindex="-1"></a>E(Y_1Y_2^{\mathsf T})</span>
+<span id="cb1-406"><a href="#cb1-406" aria-hidden="true" tabindex="-1"></a>\left<span class="sc">\{</span></span>
+<span id="cb1-407"><a href="#cb1-407" aria-hidden="true" tabindex="-1"></a>E(Y_2Y_2^{\mathsf T})</span>
+<span id="cb1-408"><a href="#cb1-408" aria-hidden="true" tabindex="-1"></a>\right<span class="sc">\}</span>^{-1}</span>
+<span id="cb1-409"><a href="#cb1-409" aria-hidden="true" tabindex="-1"></a>Y_2 <span class="sc">\\</span></span>
+<span id="cb1-410"><a href="#cb1-410" aria-hidden="true" tabindex="-1"></a>&amp;=</span>
+<span id="cb1-411"><a href="#cb1-411" aria-hidden="true" tabindex="-1"></a>\Sigma_{12}\Sigma_{22}^{-1}Y_2,</span>
+<span id="cb1-412"><a href="#cb1-412" aria-hidden="true" tabindex="-1"></a>\end{aligned}</span>
+<span id="cb1-413"><a href="#cb1-413" aria-hidden="true" tabindex="-1"></a>$$</span>
+<span id="cb1-414"><a href="#cb1-414" aria-hidden="true" tabindex="-1"></a>which is equal to $E(Y_1\mid Y_2)$ (see @sec-2-proj).</span>
+<span id="cb1-415"><a href="#cb1-415" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-416"><a href="#cb1-416" aria-hidden="true" tabindex="-1"></a>(b) Thus, the residual is</span>
+<span id="cb1-417"><a href="#cb1-417" aria-hidden="true" tabindex="-1"></a>$$</span>
+<span id="cb1-418"><a href="#cb1-418" aria-hidden="true" tabindex="-1"></a>Y_1-\Pi(Y_1\mid\mathcal{U})</span>
+<span id="cb1-419"><a href="#cb1-419" aria-hidden="true" tabindex="-1"></a>=</span>
+<span id="cb1-420"><a href="#cb1-420" aria-hidden="true" tabindex="-1"></a>Y_1-\Sigma_{12}\Sigma_{22}^{-1}Y_2.</span>
+<span id="cb1-421"><a href="#cb1-421" aria-hidden="true" tabindex="-1"></a>$$</span>
+<span id="cb1-422"><a href="#cb1-422" aria-hidden="true" tabindex="-1"></a>Its squared norm is</span>
+<span id="cb1-423"><a href="#cb1-423" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-424"><a href="#cb1-424" aria-hidden="true" tabindex="-1"></a>$$</span>
+<span id="cb1-425"><a href="#cb1-425" aria-hidden="true" tabindex="-1"></a>\begin{aligned}</span>
+<span id="cb1-426"><a href="#cb1-426" aria-hidden="true" tabindex="-1"></a>\left\|</span>
+<span id="cb1-427"><a href="#cb1-427" aria-hidden="true" tabindex="-1"></a>Y_1-\Pi(Y_1\mid\mathcal{U})</span>
+<span id="cb1-428"><a href="#cb1-428" aria-hidden="true" tabindex="-1"></a>\right\|^2</span>
+<span id="cb1-429"><a href="#cb1-429" aria-hidden="true" tabindex="-1"></a>&amp;=</span>
+<span id="cb1-430"><a href="#cb1-430" aria-hidden="true" tabindex="-1"></a>\operatorname{tr}</span>
+<span id="cb1-431"><a href="#cb1-431" aria-hidden="true" tabindex="-1"></a>\left(</span>
+<span id="cb1-432"><a href="#cb1-432" aria-hidden="true" tabindex="-1"></a>\Sigma_{11}</span>
+<span id="cb1-433"><a href="#cb1-433" aria-hidden="true" tabindex="-1"></a>-</span>
+<span id="cb1-434"><a href="#cb1-434" aria-hidden="true" tabindex="-1"></a>\Sigma_{12}\Sigma_{22}^{-1}\Sigma_{21}</span>
+<span id="cb1-435"><a href="#cb1-435" aria-hidden="true" tabindex="-1"></a>\right).</span>
+<span id="cb1-436"><a href="#cb1-436" aria-hidden="true" tabindex="-1"></a>\end{aligned}</span>
+<span id="cb1-437"><a href="#cb1-437" aria-hidden="true" tabindex="-1"></a>$$</span>
+<span id="cb1-438"><a href="#cb1-438" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb1-439"><a href="#cb1-439" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-440"><a href="#cb1-440" aria-hidden="true" tabindex="-1"></a><span class="fu">### Exercise 2.3</span></span>
+<span id="cb1-441"><a href="#cb1-441" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-442"><a href="#cb1-442" aria-hidden="true" tabindex="-1"></a>::: {.solution}</span>
+<span id="cb1-443"><a href="#cb1-443" aria-hidden="true" tabindex="-1"></a>Let</span>
+<span id="cb1-444"><a href="#cb1-444" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-445"><a href="#cb1-445" aria-hidden="true" tabindex="-1"></a>$$</span>
+<span id="cb1-446"><a href="#cb1-446" aria-hidden="true" tabindex="-1"></a>W</span>
+<span id="cb1-447"><a href="#cb1-447" aria-hidden="true" tabindex="-1"></a>=</span>
+<span id="cb1-448"><a href="#cb1-448" aria-hidden="true" tabindex="-1"></a>Z_1^2-\sigma_1^2.</span>
+<span id="cb1-449"><a href="#cb1-449" aria-hidden="true" tabindex="-1"></a>$$</span>
+<span id="cb1-450"><a href="#cb1-450" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-451"><a href="#cb1-451" aria-hidden="true" tabindex="-1"></a>Then</span>
+<span id="cb1-452"><a href="#cb1-452" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-453"><a href="#cb1-453" aria-hidden="true" tabindex="-1"></a>$$</span>
+<span id="cb1-454"><a href="#cb1-454" aria-hidden="true" tabindex="-1"></a>\mathcal{U}</span>
+<span id="cb1-455"><a href="#cb1-455" aria-hidden="true" tabindex="-1"></a>=</span>
+<span id="cb1-456"><a href="#cb1-456" aria-hidden="true" tabindex="-1"></a>\left<span class="sc">\{</span></span>
+<span id="cb1-457"><a href="#cb1-457" aria-hidden="true" tabindex="-1"></a>a_1W+a_2Z_2</span>
+<span id="cb1-458"><a href="#cb1-458" aria-hidden="true" tabindex="-1"></a>:</span>
+<span id="cb1-459"><a href="#cb1-459" aria-hidden="true" tabindex="-1"></a>a_1,a_2\in\mathbb{R}</span>
+<span id="cb1-460"><a href="#cb1-460" aria-hidden="true" tabindex="-1"></a>\right<span class="sc">\}</span>.</span>
+<span id="cb1-461"><a href="#cb1-461" aria-hidden="true" tabindex="-1"></a>$$</span>
+<span id="cb1-462"><a href="#cb1-462" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-463"><a href="#cb1-463" aria-hidden="true" tabindex="-1"></a>Because $(Z_1,Z_2)^{\mathsf T}$ is mean-zero multivariate normal, all third</span>
+<span id="cb1-464"><a href="#cb1-464" aria-hidden="true" tabindex="-1"></a>moments are zero. Thus,</span>
+<span id="cb1-465"><a href="#cb1-465" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-466"><a href="#cb1-466" aria-hidden="true" tabindex="-1"></a>$$</span>
+<span id="cb1-467"><a href="#cb1-467" aria-hidden="true" tabindex="-1"></a>\begin{aligned}</span>
+<span id="cb1-468"><a href="#cb1-468" aria-hidden="true" tabindex="-1"></a>E(Z_1W)</span>
+<span id="cb1-469"><a href="#cb1-469" aria-hidden="true" tabindex="-1"></a>&amp;=</span>
+<span id="cb1-470"><a href="#cb1-470" aria-hidden="true" tabindex="-1"></a>E(Z_1^3)-\sigma_1^2E(Z_1) = 0,</span>
+<span id="cb1-471"><a href="#cb1-471" aria-hidden="true" tabindex="-1"></a>\end{aligned}</span>
+<span id="cb1-472"><a href="#cb1-472" aria-hidden="true" tabindex="-1"></a>$$</span>
+<span id="cb1-473"><a href="#cb1-473" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-474"><a href="#cb1-474" aria-hidden="true" tabindex="-1"></a>and</span>
+<span id="cb1-475"><a href="#cb1-475" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-476"><a href="#cb1-476" aria-hidden="true" tabindex="-1"></a>$$</span>
+<span id="cb1-477"><a href="#cb1-477" aria-hidden="true" tabindex="-1"></a>\begin{aligned}</span>
+<span id="cb1-478"><a href="#cb1-478" aria-hidden="true" tabindex="-1"></a>E(WZ_2)</span>
+<span id="cb1-479"><a href="#cb1-479" aria-hidden="true" tabindex="-1"></a>&amp;=</span>
+<span id="cb1-480"><a href="#cb1-480" aria-hidden="true" tabindex="-1"></a>E(Z_1^2Z_2)-\sigma_1^2E(Z_2) = 0,</span>
+<span id="cb1-481"><a href="#cb1-481" aria-hidden="true" tabindex="-1"></a>\end{aligned}</span>
+<span id="cb1-482"><a href="#cb1-482" aria-hidden="true" tabindex="-1"></a>$$</span>
+<span id="cb1-483"><a href="#cb1-483" aria-hidden="true" tabindex="-1"></a>where we have used</span>
+<span id="cb1-484"><a href="#cb1-484" aria-hidden="true" tabindex="-1"></a>$$</span>
+<span id="cb1-485"><a href="#cb1-485" aria-hidden="true" tabindex="-1"></a>E(Z_1^2Z_2) = E<span class="sc">\{</span>Z_2\underbrace{E(Z_1^2\mid Z_2)}_{\sigma_1^2 - \sigma_2^{-2}\sigma_{12}^2}\} = (\sigma_1^2 - \sigma_2^{-2}\sigma_{12}^2)E(Z_2) = 0.</span>
+<span id="cb1-486"><a href="#cb1-486" aria-hidden="true" tabindex="-1"></a>$$</span>
+<span id="cb1-487"><a href="#cb1-487" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-488"><a href="#cb1-488" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-489"><a href="#cb1-489" aria-hidden="true" tabindex="-1"></a>Thus, $W$ is orthogonal to both $Z_1$ and $Z_2$. This means that the problem essentially reduces to projecting $Z_1$ onto the linear span of $Z_2$ alone.</span>
+<span id="cb1-490"><a href="#cb1-490" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-491"><a href="#cb1-491" aria-hidden="true" tabindex="-1"></a>(a) The component of $Z_1$ in the direction of $W$ is zero. Therefore,</span>
+<span id="cb1-492"><a href="#cb1-492" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-493"><a href="#cb1-493" aria-hidden="true" tabindex="-1"></a>$$</span>
+<span id="cb1-494"><a href="#cb1-494" aria-hidden="true" tabindex="-1"></a>\begin{aligned}</span>
+<span id="cb1-495"><a href="#cb1-495" aria-hidden="true" tabindex="-1"></a>\Pi(Z_1\mid\mathcal{U})</span>
+<span id="cb1-496"><a href="#cb1-496" aria-hidden="true" tabindex="-1"></a>&amp;=</span>
+<span id="cb1-497"><a href="#cb1-497" aria-hidden="true" tabindex="-1"></a>\frac{E(Z_1Z_2)}{E(Z_2^2)}Z_2 =</span>
+<span id="cb1-498"><a href="#cb1-498" aria-hidden="true" tabindex="-1"></a>\sigma_{2}^{-2}\sigma_{12}Z_2.</span>
+<span id="cb1-499"><a href="#cb1-499" aria-hidden="true" tabindex="-1"></a>\end{aligned}</span>
+<span id="cb1-500"><a href="#cb1-500" aria-hidden="true" tabindex="-1"></a>$$</span>
+<span id="cb1-501"><a href="#cb1-501" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-502"><a href="#cb1-502" aria-hidden="true" tabindex="-1"></a>(b) The residual is</span>
+<span id="cb1-503"><a href="#cb1-503" aria-hidden="true" tabindex="-1"></a>$$</span>
+<span id="cb1-504"><a href="#cb1-504" aria-hidden="true" tabindex="-1"></a>Z_1-\Pi(Z_1\mid\mathcal{U})</span>
+<span id="cb1-505"><a href="#cb1-505" aria-hidden="true" tabindex="-1"></a>=</span>
+<span id="cb1-506"><a href="#cb1-506" aria-hidden="true" tabindex="-1"></a>Z_1-\sigma_{2}^{-2}\sigma_{12}Z_2.</span>
+<span id="cb1-507"><a href="#cb1-507" aria-hidden="true" tabindex="-1"></a>$$</span>
+<span id="cb1-508"><a href="#cb1-508" aria-hidden="true" tabindex="-1"></a>Its variance is</span>
+<span id="cb1-509"><a href="#cb1-509" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-510"><a href="#cb1-510" aria-hidden="true" tabindex="-1"></a>$$</span>
+<span id="cb1-511"><a href="#cb1-511" aria-hidden="true" tabindex="-1"></a>\begin{aligned}</span>
+<span id="cb1-512"><a href="#cb1-512" aria-hidden="true" tabindex="-1"></a>\operatorname{var}</span>
+<span id="cb1-513"><a href="#cb1-513" aria-hidden="true" tabindex="-1"></a>\left<span class="sc">\{</span></span>
+<span id="cb1-514"><a href="#cb1-514" aria-hidden="true" tabindex="-1"></a>Z_1-\Pi(Z_1\mid\mathcal{U})</span>
+<span id="cb1-515"><a href="#cb1-515" aria-hidden="true" tabindex="-1"></a>\right<span class="sc">\}</span></span>
+<span id="cb1-516"><a href="#cb1-516" aria-hidden="true" tabindex="-1"></a>&amp;=</span>
+<span id="cb1-517"><a href="#cb1-517" aria-hidden="true" tabindex="-1"></a>\sigma_1^2</span>
+<span id="cb1-518"><a href="#cb1-518" aria-hidden="true" tabindex="-1"></a>-</span>
+<span id="cb1-519"><a href="#cb1-519" aria-hidden="true" tabindex="-1"></a>\sigma_{2}^{-2}\sigma_{12}^2.</span>
+<span id="cb1-520"><a href="#cb1-520" aria-hidden="true" tabindex="-1"></a>\end{aligned}</span>
+<span id="cb1-521"><a href="#cb1-521" aria-hidden="true" tabindex="-1"></a>$$</span>
+<span id="cb1-522"><a href="#cb1-522" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb1-523"><a href="#cb1-523" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-524"><a href="#cb1-524" aria-hidden="true" tabindex="-1"></a><span class="fu">## Additional Problems</span></span>
+<span id="cb1-525"><a href="#cb1-525" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-526"><a href="#cb1-526" aria-hidden="true" tabindex="-1"></a><span class="fu">### Problem 2.1 {.unnumbered}</span></span>
+<span id="cb1-527"><a href="#cb1-527" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-528"><a href="#cb1-528" aria-hidden="true" tabindex="-1"></a>Let $\mathcal{U}$ be a closed linear subspace of $\mathcal{H}$, and let</span>
+<span id="cb1-529"><a href="#cb1-529" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-530"><a href="#cb1-530" aria-hidden="true" tabindex="-1"></a>$$</span>
+<span id="cb1-531"><a href="#cb1-531" aria-hidden="true" tabindex="-1"></a>u_0=\Pi(h\mid\mathcal{U}).</span>
+<span id="cb1-532"><a href="#cb1-532" aria-hidden="true" tabindex="-1"></a>$$</span>
+<span id="cb1-533"><a href="#cb1-533" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-534"><a href="#cb1-534" aria-hidden="true" tabindex="-1"></a>Show that, for every $u\in\mathcal{U}$,</span>
+<span id="cb1-535"><a href="#cb1-535" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-536"><a href="#cb1-536" aria-hidden="true" tabindex="-1"></a>$$</span>
+<span id="cb1-537"><a href="#cb1-537" aria-hidden="true" tabindex="-1"></a>\|h-u\|^2</span>
+<span id="cb1-538"><a href="#cb1-538" aria-hidden="true" tabindex="-1"></a>=</span>
+<span id="cb1-539"><a href="#cb1-539" aria-hidden="true" tabindex="-1"></a>\|h-u_0\|^2</span>
+<span id="cb1-540"><a href="#cb1-540" aria-hidden="true" tabindex="-1"></a>+</span>
+<span id="cb1-541"><a href="#cb1-541" aria-hidden="true" tabindex="-1"></a>\|u-u_0\|^2.</span>
+<span id="cb1-542"><a href="#cb1-542" aria-hidden="true" tabindex="-1"></a>$$</span>
+<span id="cb1-543"><a href="#cb1-543" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-544"><a href="#cb1-544" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-545"><a href="#cb1-545" aria-hidden="true" tabindex="-1"></a><span class="fu">### Problem 2.2 {.unnumbered}</span></span>
+<span id="cb1-546"><a href="#cb1-546" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-547"><a href="#cb1-547" aria-hidden="true" tabindex="-1"></a>Let $Z\sim N(0,1)$, and consider the Hilbert space of one-dimensional</span>
+<span id="cb1-548"><a href="#cb1-548" aria-hidden="true" tabindex="-1"></a>mean-zero functions of $Z$ with finite variance. Let</span>
+<span id="cb1-549"><a href="#cb1-549" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-550"><a href="#cb1-550" aria-hidden="true" tabindex="-1"></a>$$</span>
+<span id="cb1-551"><a href="#cb1-551" aria-hidden="true" tabindex="-1"></a>\mathcal{U}</span>
+<span id="cb1-552"><a href="#cb1-552" aria-hidden="true" tabindex="-1"></a>=</span>
+<span id="cb1-553"><a href="#cb1-553" aria-hidden="true" tabindex="-1"></a>\operatorname{span}</span>
+<span id="cb1-554"><a href="#cb1-554" aria-hidden="true" tabindex="-1"></a>\left<span class="sc">\{</span></span>
+<span id="cb1-555"><a href="#cb1-555" aria-hidden="true" tabindex="-1"></a>Z,\,</span>
+<span id="cb1-556"><a href="#cb1-556" aria-hidden="true" tabindex="-1"></a>Z^2-1</span>
+<span id="cb1-557"><a href="#cb1-557" aria-hidden="true" tabindex="-1"></a>\right<span class="sc">\}</span>.</span>
+<span id="cb1-558"><a href="#cb1-558" aria-hidden="true" tabindex="-1"></a>$$</span>
+<span id="cb1-559"><a href="#cb1-559" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-560"><a href="#cb1-560" aria-hidden="true" tabindex="-1"></a>(a) Show that $Z$ and $Z^2-1$ are orthogonal.</span>
+<span id="cb1-561"><a href="#cb1-561" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-562"><a href="#cb1-562" aria-hidden="true" tabindex="-1"></a>(b) Find $\Pi(Z^3\mid\mathcal{U})$.</span>
+<span id="cb1-563"><a href="#cb1-563" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-564"><a href="#cb1-564" aria-hidden="true" tabindex="-1"></a>(c) Compute the variance of</span>
+<span id="cb1-565"><a href="#cb1-565" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-566"><a href="#cb1-566" aria-hidden="true" tabindex="-1"></a>$$</span>
+<span id="cb1-567"><a href="#cb1-567" aria-hidden="true" tabindex="-1"></a>Z^3-\Pi(Z^3\mid\mathcal{U}).</span>
+<span id="cb1-568"><a href="#cb1-568" aria-hidden="true" tabindex="-1"></a>$$</span>
+<span id="cb1-569"><a href="#cb1-569" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-570"><a href="#cb1-570" aria-hidden="true" tabindex="-1"></a><span class="fu">### Problem 2.3 {.unnumbered}</span></span>
+<span id="cb1-571"><a href="#cb1-571" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-572"><a href="#cb1-572" aria-hidden="true" tabindex="-1"></a>Let $h_1,h_2\in\mathcal{H}$. For any real number $a$, use</span>
+<span id="cb1-573"><a href="#cb1-573" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-574"><a href="#cb1-574" aria-hidden="true" tabindex="-1"></a>$$</span>
+<span id="cb1-575"><a href="#cb1-575" aria-hidden="true" tabindex="-1"></a>\|h_1-ah_2\|^2\geq 0</span>
+<span id="cb1-576"><a href="#cb1-576" aria-hidden="true" tabindex="-1"></a>$$</span>
+<span id="cb1-577"><a href="#cb1-577" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-578"><a href="#cb1-578" aria-hidden="true" tabindex="-1"></a>to prove the Cauchy--Schwarz inequality</span>
+<span id="cb1-579"><a href="#cb1-579" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-580"><a href="#cb1-580" aria-hidden="true" tabindex="-1"></a>$$</span>
+<span id="cb1-581"><a href="#cb1-581" aria-hidden="true" tabindex="-1"></a>\left|</span>
+<span id="cb1-582"><a href="#cb1-582" aria-hidden="true" tabindex="-1"></a>\langle h_1,h_2\rangle</span>
+<span id="cb1-583"><a href="#cb1-583" aria-hidden="true" tabindex="-1"></a>\right|^2</span>
+<span id="cb1-584"><a href="#cb1-584" aria-hidden="true" tabindex="-1"></a>\leq</span>
+<span id="cb1-585"><a href="#cb1-585" aria-hidden="true" tabindex="-1"></a>\|h_1\|^2\|h_2\|^2.</span>
+<span id="cb1-586"><a href="#cb1-586" aria-hidden="true" tabindex="-1"></a>$$</span>
+<span id="cb1-587"><a href="#cb1-587" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-588"><a href="#cb1-588" aria-hidden="true" tabindex="-1"></a>Show that equality holds if and only if $h_1=ah_2$ for some scalar $a$.</span>
+<span id="cb1-589"><a href="#cb1-589" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-590"><a href="#cb1-590" aria-hidden="true" tabindex="-1"></a><span class="fu">### Problem 2.4 {.unnumbered}</span></span>
+<span id="cb1-591"><a href="#cb1-591" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-592"><a href="#cb1-592" aria-hidden="true" tabindex="-1"></a>Let $Z$ have support $<span class="sc">\{</span>z_1,z_2,z_3<span class="sc">\}</span>$, with positive probabilities</span>
+<span id="cb1-593"><a href="#cb1-593" aria-hidden="true" tabindex="-1"></a>$\pi_1,\pi_2,\pi_3$.</span>
+<span id="cb1-594"><a href="#cb1-594" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-595"><a href="#cb1-595" aria-hidden="true" tabindex="-1"></a>(a) Find two linearly independent mean-zero functions of $Z$ that span the</span>
+<span id="cb1-596"><a href="#cb1-596" aria-hidden="true" tabindex="-1"></a>space of all one-dimensional mean-zero functions of $Z$.</span>
+<span id="cb1-597"><a href="#cb1-597" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-598"><a href="#cb1-598" aria-hidden="true" tabindex="-1"></a>(b) What is the dimension of the space of all $q$-dimensional mean-zero</span>
+<span id="cb1-599"><a href="#cb1-599" aria-hidden="true" tabindex="-1"></a>functions of $Z$?</span>
+<span id="cb1-600"><a href="#cb1-600" aria-hidden="true" tabindex="-1"></a></span></code><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></pre></div>
 </div></div></div></div></div>
 </div> <!-- /content -->
 
