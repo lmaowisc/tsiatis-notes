@@ -1,14 +1,199 @@
 # Hilbert space for random vectors
 
-## Learning objectives
+## Learning Objectives
 
 - Work with mean-zero, square-integrable random functions
 - Interpret orthogonality through covariance
 - Use the projection theorem in statistical problems
 
+
 ## Chapter Summary
 
+This chapter introduces the Hilbert space of $q$-dimensional random functions
+$h(Z)$ with mean zero and finite second moments:
+
+$$
+E\{h(Z)\} = 0,
+\qquad
+E\{h^\top(Z)h(Z)\} < \infty.
+$$
+
+The covariance inner product is defined by
+
+$$
+\langle h_1, h_2\rangle
+=
+E(h_1^\top h_2),
+$$
+
+with corresponding norm
+
+$$
+\|h\|
+=
+\langle h,h\rangle^{1/2}.
+$$
+
+Two elements are **orthogonal** when their inner product is zero. For a closed
+linear subspace $\mathcal{U}\subset\mathcal{H}$, the projection theorem
+guarantees a unique projection $\Pi(h\mid\mathcal{U})\in\mathcal{U}$ such that
+
+$$
+\Pi(h\mid\mathcal{U})
+=
+\arg\min_{u\in\mathcal{U}}
+\|h-u\|.
+$$
+
+The residual after projection is orthogonal to the subspace:
+
+$$
+h-\Pi(h\mid\mathcal{U})
+\perp
+\mathcal{U}.
+$$
+
+For a finite-dimensional subspace spanned by a random vector $u(Z)$, the
+projection is a linear function of $u$, whose coefficients are determined by the 
+variance of $u(Z)$ and its covariance with $h(Z)$ (see (@eq-projection-ls) below).
+
 ## Notes and Extensions
+
+### Projection onto linear span vs conditional expectation {#sec-2-proj}
+
+By definition,
+
+$$
+\Pi\{h(Z)\mid\mathcal{U}\}
+=
+\arg\min_{g\in\mathcal{U}}\|h-g\|,
+$$ 
+
+for any closed linear subspace $\mathcal{U}\subset\mathcal{H}$. That is, the
+projection of $h(Z)$ onto $\mathcal{U}$ is the element of $\mathcal{U}$ closest
+to $h(Z)$ in the norm $\|\cdot\|$.
+
+**Example 1** in @tsiatis2006 considers the linear span
+
+$$
+\mathcal{U}
+=
+\left\{
+a^{\top}u
+:
+a\in\mathbb{R}^k
+\right\}
+$$
+
+of a $k$-dimensional random vector
+
+$$
+u(Z)
+=
+\{u_1(Z),\ldots,u_k(Z)\}^{\top}.
+$$
+
+It establishes that
+
+$$
+\Pi\{h(Z)\mid\mathcal{U}\}
+=
+E(hu^{\top})
+\left\{
+E(uu^{\top})
+\right\}^{-1}
+u.
+$${#eq-projection-ls}
+
+
+If $\mathcal{U}$ is expanded to include all measurable square-integrable
+functions of $u(Z)$, the projection is the conditional expectation of $h(Z)$
+given $u(Z)$ [@tsiatis2006, Section 2.4]. Specifically,
+
+$$
+E\{h(Z)\mid u\}
+=
+\Pi\{h(Z)\mid\mathcal{U}^*\}
+=
+\arg\min_{g\in\mathcal{U}^*}
+\|h-g\|,
+$$
+
+where
+
+$$
+\mathcal{U}^*
+=
+\left\{
+a(u)
+:
+a(\cdot) \text{ is a measurable and square-integrable function on }
+\mathbb{R}^k
+\right\}.
+$$
+
+Because $\mathcal{U}\subset\mathcal{U}^*$, the best approximation of $h(Z)$ in
+$\mathcal{U}^*$ is at least as good as the best approximation in
+$\mathcal{U}$. Thus,
+
+$$
+\left\|
+h-E\{h(Z)\mid u\}
+\right\|
+\leq
+\left\|
+h-\Pi\{h(Z)\mid\mathcal{U}\}
+\right\|.
+$$
+
+By a standard property of the multivariate normal distribution,
+$E\{h(Z)\mid u\}$ is linear in $u$ when $h(Z)$ and $u(Z)$ are jointly
+multivariate normal. In this case,
+
+$$
+E\{h(Z)\mid u\}
+=
+\Pi\{h(Z)\mid\mathcal{U}\},
+$$
+which is in turn given by (@eq-projection-ls).
+
+
+### Dimensionality of $\mathcal{U}=\{Bv:B\in\mathbb{R}^{q\times r}\}$
+
+Here, $v$ is an $r$-dimensional random vector.
+On page 17, it is claimed that $\mathcal{U}$ is $q\times r$-dimensional because
+it is the linear span of that many linearly independent functions.
+
+Indeed, a typical element of $\mathcal{U}$ is given by
+$$
+\begin{aligned}
+u
+= Bv =
+\begin{pmatrix}
+\sum_{j=1}^r B_{1j}v_j \\
+\sum_{j=1}^r B_{2j}v_j \\
+\vdots \\
+\sum_{j=1}^r B_{qj}v_j
+\end{pmatrix} 
+=
+\sum_{j=1}^r
+\begin{pmatrix}
+B_{1j}v_j \\
+B_{2j}v_j \\
+\vdots \\
+B_{qj}v_j
+\end{pmatrix} 
+=
+\sum_{j=1}^r\sum_{i=1}^q
+B_{ij} u_{ij}^{q\times 1},
+\end{aligned}
+$$
+
+where 
+$$
+u_{ij}^{q\times 1} = (\underbrace{0,\ldots, 0}_{i-1}， v_j, \underbrace{0， \ldots, 0}_{q-i})^\top,
+$$
+as defined in the book.
 
 
 ## Solutions to Exercises
@@ -16,12 +201,401 @@
 ### Exercise 2.1
 
 ::: {.solution}
+Let $\mathcal{U}$ be a closed linear subspace of the Hilbert space
+$\mathcal{H}$, and let $h\in\mathcal{H}$. We prove:
 
+- **Existence**: There exists $u_0\in\mathcal{U}$ such that
 
+   $$
+   \|h-u_0\|
+   =
+   \inf_{u\in\mathcal{U}}
+   \|h-u\|.
+   $$
 
+- **Uniqueness**: The minimizer $u_0$ is unique.
+
+- **Orthogonality**:  The residual is orthogonal to $\mathcal{U}$:
+
+   $$
+   \langle h-u_0,u\rangle = 0
+   \qquad
+   \text{for every } u\in\mathcal{U}.
+   $$
+
+To show **existence**, let
+
+$$
+d
+=
+\inf_{u\in\mathcal{U}}
+\|h-u\|.
+$$
+
+Choose a sequence $\{u_n\}\subset\mathcal{U}$ such that
+
+$$
+\|h-u_n\| \longrightarrow d.
+$$
+
+We first show that $\{u_n\}$ is a Cauchy sequence. Because $(u_n+u_m)/2\in\mathcal{U}$,
+
+$$
+d
+\leq
+\left\|
+h-\frac{u_n+u_m}{2}
+\right\|.
+$$
+
+Moreover,
+
+$$
+\begin{aligned}
+\|u_n-u_m\|^2
+&=
+\left\|
+(h-u_n)-(h-u_m)
+\right\|^2 \\
+&=
+\|h-u_n\|^2
++
+\|h-u_m\|^2
+-
+2\langle h-u_n,h-u_m\rangle.
+\end{aligned}
+$$
+
+Therefore,
+
+$$
+\begin{aligned}
+4d^2
+&\leq
+4\left\|
+h-\frac{u_n+u_m}{2}
+\right\|^2 \\
+&=
+\left\|
+(h-u_n)+(h-u_m)
+\right\|^2 \\
+&=
+\|h-u_n\|^2
++
+\|h-u_m\|^2
++
+2\langle h-u_n,h-u_m\rangle \\
+&=
+2\|h-u_n\|^2
++
+2\|h-u_m\|^2
+-
+\|u_n-u_m\|^2.
+\end{aligned}
+$$
+
+Hence,
+
+$$
+\begin{aligned}
+\|u_n-u_m\|^2
+&\leq
+2\|h-u_n\|^2
++
+2\|h-u_m\|^2
+-
+4d^2 \\
+&\longrightarrow 0
+\qquad
+\text{as } n,m\longrightarrow\infty.
+\end{aligned}
+$$
+
+Thus, $\{u_n\}$ is Cauchy. Since $\mathcal{H}$ is complete, there exists
+$u_0\in\mathcal{H}$ such that
+
+$$
+u_n\longrightarrow u_0.
+$$
+
+Because $\mathcal{U}$ is closed and $u_n\in\mathcal{U}$ for every $n$,
+
+$$
+u_0\in\mathcal{U}.
+$$
+
+By continuity of the norm,
+
+$$
+\|h-u_0\|
+=
+\lim_{n\to\infty}\|h-u_n\|
+=
+d.
+$$
+
+This establishes existence.
+
+To show **orthogonality**, fix $u\in\mathcal{U}$ and define
+
+$$
+g(\epsilon)
+=
+\|h-(u_0-\epsilon u)\|^2.
+$$
+
+Since $u_0-\epsilon u\in\mathcal{U}$ for every $\epsilon\in\mathbb{R}$,
+$g(\epsilon)$ is minimized at $\epsilon=0$. Hence,
+
+$$
+\begin{aligned}
+0
+&=
+\left.
+\frac{\partial}{\partial\epsilon}
+g(\epsilon)
+\right|_{\epsilon=0} \\
+&=
+2\langle h-u_0,u\rangle.
+\end{aligned}
+$$
+
+Therefore,
+
+$$
+\langle h-u_0,u\rangle=0
+\qquad
+\text{for every } u\in\mathcal{U}.
+$$
+
+Finally, for **uniqueness**, suppose that $u_0$ and $u_0^*$ both minimize $\|h-u\|$ over
+$\mathcal{U}$. Since $u_0-u_0^*\in\mathcal{U}$, orthogonality gives
+
+$$
+\begin{aligned}
+\|h-u_0^*\|^2
+&=
+\underbrace{\|h-u_0\|^2}_{d^2}
++
+\underbrace{\|u_0-u_0^*\|^2}_{\geq 0}.
+\end{aligned}
+$$
+
+Because $\|h-u_0^*\|^2=d^2$, it follows that
+
+$$
+\|u_0-u_0^*\|^2=0,
+$$
+
+and hence $u_0=u_0^*$.
 :::
 
-## Additional Exercises
 
+### Exercise 2.2
+
+::: {.solution}
+This exercise is a direct application of Example 2 in the book.
+
+(a) Because $\Sigma_{22}=E(Y_2Y_2^{\mathsf T})$ is nonsingular, the projection
+formula in Example 2 gives
+$$
+\begin{aligned}
+\Pi(Y_1\mid\mathcal{U})
+&=
+E(Y_1Y_2^{\mathsf T})
+\left\{
+E(Y_2Y_2^{\mathsf T})
+\right\}^{-1}
+Y_2 \\
+&=
+\Sigma_{12}\Sigma_{22}^{-1}Y_2,
+\end{aligned}
+$$
+which is equal to $E(Y_1\mid Y_2)$ (see @sec-2-proj).
+
+(b) Thus, the residual is
+$$
+Y_1-\Pi(Y_1\mid\mathcal{U})
+=
+Y_1-\Sigma_{12}\Sigma_{22}^{-1}Y_2.
+$$
+Its squared norm is
+
+$$
+\begin{aligned}
+\left\|
+Y_1-\Pi(Y_1\mid\mathcal{U})
+\right\|^2
+&=
+\operatorname{tr}
+\left(
+\Sigma_{11}
+-
+\Sigma_{12}\Sigma_{22}^{-1}\Sigma_{21}
+\right).
+\end{aligned}
+$$
+:::
+
+### Exercise 2.3
+
+::: {.solution}
+Let
+
+$$
+W
+=
+Z_1^2-\sigma_1^2.
+$$
+
+Then
+
+$$
+\mathcal{U}
+=
+\left\{
+a_1W+a_2Z_2
+:
+a_1,a_2\in\mathbb{R}
+\right\}.
+$$
+
+Because $(Z_1,Z_2)^{\mathsf T}$ is mean-zero multivariate normal, all third
+moments are zero. Thus,
+
+$$
+\begin{aligned}
+E(Z_1W)
+&=
+E(Z_1^3)-\sigma_1^2E(Z_1) = 0,
+\end{aligned}
+$$
+
+and
+
+$$
+\begin{aligned}
+E(WZ_2)
+&=
+E(Z_1^2Z_2)-\sigma_1^2E(Z_2) = 0,
+\end{aligned}
+$$
+where we have used
+$$
+E(Z_1^2Z_2) = E\{Z_2\underbrace{E(Z_1^2\mid Z_2)}_{\sigma_1^2 - \sigma_2^{-2}\sigma_{12}^2}\} = (\sigma_1^2 - \sigma_2^{-2}\sigma_{12}^2)E(Z_2) = 0.
+$$
+
+
+Thus, $W$ is orthogonal to both $Z_1$ and $Z_2$. This means that the problem essentially reduces to projecting $Z_1$ onto the linear span of $Z_2$ alone.
+
+(a) The component of $Z_1$ in the direction of $W$ is zero. Therefore,
+
+$$
+\begin{aligned}
+\Pi(Z_1\mid\mathcal{U})
+&=
+\frac{E(Z_1Z_2)}{E(Z_2^2)}Z_2 =
+\sigma_{2}^{-2}\sigma_{12}Z_2.
+\end{aligned}
+$$
+
+(b) The residual is
+$$
+Z_1-\Pi(Z_1\mid\mathcal{U})
+=
+Z_1-\sigma_{2}^{-2}\sigma_{12}Z_2.
+$$
+Its variance is
+
+$$
+\begin{aligned}
+\operatorname{var}
+\left\{
+Z_1-\Pi(Z_1\mid\mathcal{U})
+\right\}
+&=
+\sigma_1^2
+-
+\sigma_{2}^{-2}\sigma_{12}^2.
+\end{aligned}
+$$
+:::
+
+## Additional Problems
+
+### Problem 2.1 {.unnumbered}
+
+Let $\mathcal{U}$ be a closed linear subspace of $\mathcal{H}$, and let
+
+$$
+u_0=\Pi(h\mid\mathcal{U}).
+$$
+
+Show that, for every $u\in\mathcal{U}$,
+
+$$
+\|h-u\|^2
+=
+\|h-u_0\|^2
++
+\|u-u_0\|^2.
+$$
+
+
+### Problem 2.2 {.unnumbered}
+
+Let $Z\sim N(0,1)$, and consider the Hilbert space of one-dimensional
+mean-zero functions of $Z$ with finite variance. Let
+
+$$
+\mathcal{U}
+=
+\operatorname{span}
+\left\{
+Z,\,
+Z^2-1
+\right\}.
+$$
+
+(a) Show that $Z$ and $Z^2-1$ are orthogonal.
+
+(b) Find $\Pi(Z^3\mid\mathcal{U})$.
+
+(c) Compute the variance of
+
+$$
+Z^3-\Pi(Z^3\mid\mathcal{U}).
+$$
+
+### Problem 2.3 {.unnumbered}
+
+Let $h_1,h_2\in\mathcal{H}$. For any real number $a$, use
+
+$$
+\|h_1-ah_2\|^2\geq 0
+$$
+
+to prove the Cauchy--Schwarz inequality
+
+$$
+\left|
+\langle h_1,h_2\rangle
+\right|^2
+\leq
+\|h_1\|^2\|h_2\|^2.
+$$
+
+Show that equality holds if and only if $h_1=ah_2$ for some scalar $a$.
+
+### Problem 2.4 {.unnumbered}
+
+Let $Z$ have support $\{z_1,z_2,z_3\}$, with positive probabilities
+$\pi_1,\pi_2,\pi_3$.
+
+(a) Find two linearly independent mean-zero functions of $Z$ that span the
+space of all one-dimensional mean-zero functions of $Z$.
+
+(b) What is the dimension of the space of all $q$-dimensional mean-zero
+functions of $Z$?
 
 

@@ -60,7 +60,7 @@ format:
   pdf:
     documentclass: scrreprt
     papersize: letter
-    fontsize: 11pt
+    fontsize: 12pt
     geometry:
       - margin=1in
     colorlinks: true
@@ -75,6 +75,7 @@ execute:
 
 crossref:
   chapters: true
+  eq-prefix: ""
 
 lang: en
 

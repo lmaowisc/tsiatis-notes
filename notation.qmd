@@ -6,13 +6,14 @@
 | $Z_1,\ldots,Z_n$ | Independent and identically distributed observations |
 | $\beta$ | Finite-dimensional parameter of interest |
 | $\eta$ | Nuisance parameter, often infinite-dimensional |
+| $\langle h_1, h_2\rangle = E\{h_1^\top(Z)h_2(Z)\}$ | Inner product in the Hilbert space of mean-zero, square-integrable functions |
 | $S_\beta$ | Score for $\beta$ |
-| $\Lambda$ | Tangent space |
-| $\Lambda^\perp$ | Orthogonal complement of a tangent space |
+| $\Lambda$ | Nuisance tangent space |
+| $\Lambda^\perp$ | Orthogonal complement of a nuisance tangent space |
 | $\varphi$ | Influence function |
 | $\varphi^{\mathrm{eff}}$ | Efficient influence function |
 | $R$ | Indicator that the full data are observed |
-| $\pi$ | Observation or response probability |
+| $\pi(\cdot)$ | Observation or response probability |
 
 I will add chapter-specific notation to this table as the manuscript develops.
 

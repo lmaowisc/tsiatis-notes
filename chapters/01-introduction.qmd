@@ -25,9 +25,9 @@ p\{z; \beta, \eta(\cdot)\}, \qquad
 $$
 
 The nuisance parameter is often an unknown function, such as a conditional
-distribution, a covariate distribution, or a baseline hazard function. This
-allows the model to target $\beta$ without imposing a fully parametric model
-for the data.
+distribution, a covariate distribution, or a baseline hazard function. 
+But it can also be defined *implicitly* as the "other" aspects of the distribution that are not of direct interest. This
+allows the model to target $\beta$ without imposing a full parametric constraint on the data.
 
 Key examples include:
 
@@ -35,13 +35,14 @@ Key examples include:
   $$
   E(Y \mid X) = \mu(X, \beta).
   $$
-
+    - Here $\eta$ relates to aspects of the conditional distribution of $Y \mid X$ other than
+      the mean, as well as the marginal distribution of $X$.
 - **Proportional hazards model.** Covariate effects are modeled by $\beta$,
   while the baseline hazard remains unspecified:
   $$
   \lambda(t \mid X) = \lambda_0(t)\exp(\beta^\top X).
   $$
-
+    - Here $\eta = \lambda_0(t)$.
 - **Nonparametric model.** The distribution is unrestricted, and the parameter
   of interest is a functional of that distribution:
   $$
@@ -57,20 +58,22 @@ $$
 n^{1/2}(\widehat{\beta}_n - \beta)
 \xrightarrow{D} N(0, \Sigma).
 $$
+The significance of a semiparametric estimator is that the above holds regardless of the underlying,
+and potentially complex, state of $\eta$.
 
-The chapter motivates two questions developed throughout the book:
+The chapter motivates two key questions throughout the book:
 
-- How can regular semiparametric estimators be constructed?
-- How can the estimator with the smallest asymptotic variance be identified?
+- Constructing regular semiparametric estimators;
+- Finding an optimal semiparametric estimator with the smallest asymptotic variance.
 
 The answers rely on the geometry of influence functions, tangent spaces,
 orthogonality, and projection in Hilbert spaces.
 
 
 
-## Additional Exercises
+## Additional Problems
 
-### Exercise 1.1 {.unnumbered}
+### Problem 1.1 {.unnumbered}
 
 Classify each model as parametric, semiparametric, or nonparametric. Identify
 the parameter of interest and any nuisance parameter.
@@ -81,7 +84,7 @@ the parameter of interest and any nuisance parameter.
 
 3. $p_Z(z)$ is unrestricted, with interest in $E(Z)$
 
-### Exercise 1.2 {.unnumbered}
+### Problem 1.2 {.unnumbered}
 
 Suppose that
 $$
